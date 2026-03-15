@@ -207,40 +207,28 @@ export function setupWebSocket(server: Server) {
         let room = battleRooms.get(battleId);
 
         if (!room) {
-          // First player joining
           const battle = await prisma.battle.findUnique({
             where: { id: battleId },
             select: { player1Id: true, player2Id: true, questionId: true, status: true },
           });
           if (!battle) {
-            ws.send(
-              JSON.stringify({ type: "error", message: "Battle not found" }),
-            );
+            ws.send(JSON.stringify({ type: "error", message: "Battle not found" }));
             return;
           }
-
           if (battle.status === "COMPLETED" || battle.status === "ABANDONED") {
-            ws.send(
-              JSON.stringify({ type: "error", message: "Battle already ended" }),
-            );
+            ws.send(JSON.stringify({ type: "error", message: "Battle already ended" }));
             return;
           }
-
-          // Verifying the user is a participant
           if (userId !== battle.player1Id && userId !== battle.player2Id) {
-            ws.send(
-              JSON.stringify({ type: "error", message: "Not a participant" }),
-            );
+            ws.send(JSON.stringify({ type: "error", message: "Not a participant" }));
             return;
           }
-
-          const isP1 = userId === battle.player1Id;
 
           battleRooms.set(battleId, {
-            player1: isP1 ? ws : null,
-            player1Id: isP1 ? userId : "",
-            player2: isP1 ? null : ws,
-            player2Id: isP1 ? null : userId,
+            player1: null,
+            player1Id: "",
+            player2: null,
+            player2Id: "",
             timer: null,
             startTime: 0,
             p1Duration: BASE_DURATION,
@@ -254,113 +242,89 @@ export function setupWebSocket(server: Server) {
             p2DisconnectTimer: null,
           });
           room = battleRooms.get(battleId)!;
+        }
 
-          ws.send(JSON.stringify({ type: "battle:waiting", battleId }));
-        } else if (isRoomPlayer1(room, userId)) {
+        if (userId !== room.battlePlayer1Id && userId !== room.battlePlayer2Id) {
+          ws.send(JSON.stringify({ type: "error", message: "Not a participant in this battle" }));
+          return;
+        }
+
+        const isP1 = userId === room.battlePlayer1Id;
+        if (isP1) {
           room.player1 = ws;
           room.player1Id = userId;
-
           if (room.p1DisconnectTimer) {
             clearTimeout(room.p1DisconnectTimer);
             room.p1DisconnectTimer = null;
           }
-
-          if (room.startTime > 0 && ws.readyState === WebSocket.OPEN) {
-            ws.send(
-              JSON.stringify({
-                type: "battle:start",
-                battleId,
-                startTime: room.startTime,
-                duration: room.p1Duration,
-              }),
-            );
-          } else if (!room.player2Id) {
-            ws.send(JSON.stringify({ type: "battle:waiting", battleId }));
-          }
-        } else if (userId === room.battlePlayer2Id) {
+        } else {
           room.player2 = ws;
           room.player2Id = userId;
-
           if (room.p2DisconnectTimer) {
             clearTimeout(room.p2DisconnectTimer);
             room.p2DisconnectTimer = null;
           }
-          // battle already started (reconnect), send current state
-          if (room.startTime > 0) {
-            if (ws.readyState === WebSocket.OPEN) {
-              ws.send(
-                JSON.stringify({
-                  type: "battle:start",
-                  battleId,
-                  startTime: room.startTime,
-                  duration: room.p2Duration,
-                }),
-              );
-            }
-            return;
-          }
-          // start countdown
-          const countdown = JSON.stringify({
-            type: "battle:countdown",
-            seconds: 3,
-          });
-          if (room.player1?.readyState === WebSocket.OPEN)
-            room.player1.send(countdown);
-          if (room.player2?.readyState === WebSocket.OPEN)
-            room.player2.send(countdown);
+        }
 
-          const roomRef = room;
-          setTimeout(async () => {
-            if (roomRef.startTime === 0) {
+        if (room.startTime > 0) {
+          // Battle already started (reconnect)
+          ws.send(
+            JSON.stringify({
+              type: "battle:start",
+              battleId,
+              startTime: room.startTime,
+              duration: isP1 ? room.p1Duration : room.p2Duration,
+            })
+          );
+        } else if (room.player1 && room.player2) {
+          // Both players connected, start countdown if not already counting down
+          if (room.startTime === 0) {
+            room.startTime = -1; // Indicate countdown in progress to prevent duplicates
+
+            const countdown = JSON.stringify({ type: "battle:countdown", seconds: 3 });
+            if (room.player1?.readyState === WebSocket.OPEN) room.player1.send(countdown);
+            if (room.player2?.readyState === WebSocket.OPEN) room.player2.send(countdown);
+
+            const roomRef = room;
+            setTimeout(async () => {
               roomRef.startTime = Date.now();
 
-              // Persist startedAt to DB
               try {
                 await prisma.battle.update({
                   where: { id: battleId },
-                  data: { startedAt: new Date(roomRef.startTime) },
+                  data: { startedAt: new Date(roomRef.startTime), status: "ACTIVE" },
                 });
               } catch (err) {
-                console.error(
-                  `[ws] Failed to persist startedAt for battle ${battleId}:`,
-                  err,
+                console.error(`[ws] Failed to persist startedAt for battle ${battleId}:`, err);
+              }
+
+              if (roomRef.player1?.readyState === WebSocket.OPEN) {
+                roomRef.player1.send(
+                  JSON.stringify({
+                    type: "battle:start",
+                    battleId,
+                    startTime: roomRef.startTime,
+                    duration: roomRef.p1Duration,
+                  })
                 );
               }
-            }
+              if (roomRef.player2?.readyState === WebSocket.OPEN) {
+                roomRef.player2.send(
+                  JSON.stringify({
+                    type: "battle:start",
+                    battleId,
+                    startTime: roomRef.startTime,
+                    duration: roomRef.p2Duration,
+                  })
+                );
+              }
 
-            // Send each player their own duration
-            if (roomRef.player1?.readyState === WebSocket.OPEN) {
-              roomRef.player1.send(
-                JSON.stringify({
-                  type: "battle:start",
-                  battleId,
-                  startTime: roomRef.startTime,
-                  duration: roomRef.p1Duration,
-                }),
-              );
-            }
-            if (roomRef.player2?.readyState === WebSocket.OPEN) {
-              roomRef.player2.send(
-                JSON.stringify({
-                  type: "battle:start",
-                  battleId,
-                  startTime: roomRef.startTime,
-                  duration: roomRef.p2Duration,
-                }),
-              );
-            }
-
-            if (!roomRef.timer) {
-              rescheduleTimer(roomRef, battleId, battleRooms);
-            }
-          }, 3000);
+              if (!roomRef.timer) rescheduleTimer(roomRef, battleId, battleRooms);
+            }, 3000);
+          }
         } else {
-          ws.send(
-            JSON.stringify({
-              type: "error",
-              message: "Not a participant in this battle",
-            }),
-          );
+          // Still waiting for opponent
+          ws.send(JSON.stringify({ type: "battle:waiting", battleId }));
         }
       }
       if (message.type === "battle:submit") {

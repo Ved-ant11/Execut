@@ -56,7 +56,13 @@ export default function SubmissionStatus({ submissionId }: Props) {
     };
 
     ws.onmessage = (event) => {
-      const data = JSON.parse(event.data);
+      let data;
+      try {
+        data = JSON.parse(event.data);
+      } catch (e) {
+        console.error("Failed to parse websocket message:", event.data);
+        return;
+      }
       setStatus(data.status);
       setResult(data.result ?? null);
       setCode(data.code ?? null);
@@ -143,8 +149,8 @@ export default function SubmissionStatus({ submissionId }: Props) {
 
   if (status === "COMPLETED" && result) {
     const r = result.toLowerCase();
-    let diffData = null;
-    if (result){
+    let diffData: any = null;
+    if (result && (result.startsWith("{") || result.startsWith("["))) {
       try {
         diffData = JSON.parse(result);
       } catch (e) {

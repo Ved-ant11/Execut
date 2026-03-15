@@ -1,17 +1,16 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import {API_BASE_URL} from "@/lib/api";
+import { API_BASE_URL } from "@/lib/api";
 import toast from "react-hot-toast";
 import Link from "next/link";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail]       = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
-  
+  const [loading, setLoading]   = useState(false);
   const router = useRouter();
-  
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
@@ -29,86 +28,94 @@ const Login = () => {
         toast.success("Logged in");
         router.push("/problems");
       } else {
-        toast.error("Invalid credentials")
+        toast.error("Invalid credentials");
       }
     } catch (error) {
       console.error(error);
-      toast.error("Invalid credentials")
+      toast.error("Invalid credentials");
     } finally {
       setLoading(false);
     }
   };
-  
-  return (
-    <div className="relative flex min-h-[calc(100vh-3rem)] flex-col items-center justify-center dot-grid overflow-hidden">
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[250px] bg-gradient-to-r from-blue-600/15 via-violet-600/15 to-cyan-500/15 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="relative z-10 w-full max-w-sm rounded-xl border border-neutral-800 bg-neutral-900/60 backdrop-blur-sm p-8">
-        <h1 className="text-2xl font-bold text-center tracking-tight text-neutral-100">
-          Execut<span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">.</span>
-        </h1>
-        <p className="text-sm text-neutral-500 text-center mt-2">Log in to your account</p>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-8">
-          <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-medium text-neutral-400">Email</label>
-            <input
-              className="w-full h-10 rounded-md border border-neutral-800 bg-neutral-950/50 px-3 text-sm text-neutral-200 outline-none transition-colors focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 placeholder:text-neutral-600"
-              type="email"
-              placeholder="you@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-medium text-neutral-400">Password</label>
-            <input
-              className="w-full h-10 rounded-md border border-neutral-800 bg-neutral-950/50 px-3 text-sm text-neutral-200 outline-none transition-colors focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 placeholder:text-neutral-600"
-              type="password"
-              placeholder="••••••••"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <button
-            disabled={loading}
-            className="shrink-0 flex h-10 w-full items-center justify-center rounded-md bg-neutral-100 text-sm font-semibold text-neutral-900 transition-all duration-300 hover:bg-white hover:shadow-[0_0_24px_rgba(255,255,255,0.15)] disabled:opacity-50 disabled:cursor-not-allowed mt-1"
-          >
-            {loading ? (
-              <svg
-                className="h-4 w-4 animate-spin text-neutral-600"
-                viewBox="0 0 24 24"
-                fill="none"
+  const inputClass =
+    "w-full h-10 rounded-md border border-neutral-800/60 hover:border-neutral-700 focus:border-neutral-600 bg-[#0d0d0d] px-3 font-mono-custom text-[12px] text-neutral-300 placeholder:text-neutral-800 outline-none transition-colors duration-200";
+
+  return (
+    <div className="relative flex min-h-[calc(100vh-3rem)] flex-col items-center justify-center bg-[#0a0a0a] overflow-hidden">
+
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:72px_72px]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(255,255,255,0.03),transparent)]" />
+
+      <div className="relative z-10 w-full max-w-sm">
+
+        <div className="text-center mb-8">
+          <span className="font-sans text-[22px] font-bold tracking-[-0.04em] text-white">
+            Execut<span className="text-neutral-600">.</span>
+          </span>
+          <p className="font-mono-custom text-[10px] tracking-[0.2em] uppercase text-neutral-700 mt-2">
+            Log in to your account
+          </p>
+        </div>
+
+        <div className="border border-neutral-800/60 rounded-lg bg-[#0d0d0d] p-7">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+
+            <div className="flex flex-col gap-2">
+              <label className="font-mono-custom text-[9px] tracking-[0.22em] uppercase text-neutral-700">
+                Email
+              </label>
+              <input
+                type="email"
+                placeholder="you@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className={inputClass}
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label className="font-mono-custom text-[9px] tracking-[0.22em] uppercase text-neutral-700">
+                Password
+              </label>
+              <input
+                type="password"
+                placeholder="••••••••"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className={inputClass}
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="mt-1 h-10 w-full flex items-center justify-center gap-2 rounded-md bg-white font-mono-custom text-[11px] tracking-[0.14em] uppercase font-medium text-neutral-900 hover:bg-neutral-200 transition-colors duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              {loading ? (
+                <svg className="h-3.5 w-3.5 animate-spin text-neutral-600" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" strokeOpacity="0.2" />
+                  <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                </svg>
+              ) : "Login"}
+            </button>
+
+            <div className="border-t border-neutral-800/50 pt-5 flex items-center justify-center gap-1.5">
+              <span className="font-mono-custom text-[10px] text-neutral-700">
+                Don&apos;t have an account?
+              </span>
+              <Link
+                href="/signup"
+                className="font-mono-custom text-[10px] text-neutral-500 hover:text-neutral-300 border-b border-neutral-800 hover:border-neutral-600 pb-px transition-colors duration-200"
               >
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  strokeOpacity="0.2"
-                />
-                <path
-                  d="M12 2a10 10 0 0 1 10 10"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ) : (
-              "Login"
-            )}
-          </button>
-          <div className="border-t border-neutral-800 pt-4 mt-1">
-            <div className="flex items-baseline justify-center gap-1 text-sm text-neutral-500">
-              <p>Don&apos;t have an account?</p>
-              <Link href="/signup" className="font-medium text-neutral-300 hover:text-blue-400 transition-colors ease-out duration-300">
-                Sign Up
+                Sign Up →
               </Link>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
-  )
-}  
+  );
+};
+
 export default Login;
