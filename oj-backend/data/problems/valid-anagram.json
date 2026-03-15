@@ -1,0 +1,27 @@
+{
+  "id": "valid-anagram",
+  "title": "Valid Anagram",
+  "difficulty": "EASY",
+  "statement": "Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `false` otherwise.\n\nAn **anagram** is a word formed by rearranging the letters of a different word, using all the original letters exactly once.\n\n**Input:**\n- Line 1: string `s`\n- Line 2: string `t`\n\n**Output:** Print `true` or `false`.",
+  "constraints": "- 1 ≤ s.length, t.length ≤ 5 × 10⁴\n- s and t consist of lowercase English letters.",
+  "examples": [
+    {
+      "input": "s = \"anagram\", t = \"nagaram\"",
+      "output": "true",
+      "explanation": "\"nagaram\" is an anagram of \"anagram\"."
+    },
+    {
+      "input": "s = \"rat\", t = \"car\"",
+      "output": "false",
+      "explanation": "\"car\" is not an anagram of \"rat\"."
+    }
+  ],
+  "testCases": [
+    { "input": "anagram\nnagaram", "expectedOutput": "true",  "order": 1, "isHidden": false },
+    { "input": "rat\ncar",         "expectedOutput": "false", "order": 2, "isHidden": false },
+    { "input": "listen\nsilent",   "expectedOutput": "true",  "order": 3, "isHidden": true },
+    { "input": "hello\nworld",     "expectedOutput": "false", "order": 4, "isHidden": true },
+    { "input": "a\na",             "expectedOutput": "true",  "order": 5, "isHidden": true },
+    { "input": "ab\na",            "expectedOutput": "false", "order": 6, "isHidden": true }
+  ]
+}

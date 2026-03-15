@@ -1,0 +1,26 @@
+{
+  "id": "reverse-string",
+  "title": "Reverse String",
+  "difficulty": "EASY",
+  "statement": "Write a function that reverses a string.\n\nYou are given the string as a single line of input.\nPrint the reversed string as output.",
+  "constraints": "- 1 ≤ s.length ≤ 10⁵\n- s consists of printable ASCII characters.",
+  "examples": [
+    {
+      "input": "s = \"hello\"",
+      "output": "\"olleh\"",
+      "explanation": "The reverse of \"hello\" is \"olleh\"."
+    },
+    {
+      "input": "s = \"Hannah\"",
+      "output": "\"hannaH\"",
+      "explanation": "The reverse of \"Hannah\" is \"hannaH\"."
+    }
+  ],
+  "testCases": [
+    { "input": "hello",          "expectedOutput": "olleh",        "order": 1, "isHidden": false },
+    { "input": "Hannah",         "expectedOutput": "hannaH",       "order": 2, "isHidden": false },
+    { "input": "a",              "expectedOutput": "a",            "order": 3, "isHidden": true },
+    { "input": "racecar",        "expectedOutput": "racecar",      "order": 4, "isHidden": true },
+    { "input": "OpenAI is cool", "expectedOutput": "looc si IAnepO", "order": 5, "isHidden": true }
+  ]
+}

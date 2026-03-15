@@ -1,0 +1,28 @@
+{
+  "id": "product-except-self",
+  "title": "Product of Array Except Self",
+  "difficulty": "MEDIUM",
+  "statement": "Given an integer array `nums`, return an array `answer` such that `answer[i]` is equal to the product of all the elements of `nums` except `nums[i]`.\n\nThe product of any prefix or suffix of `nums` is guaranteed to fit in a 32-bit integer.\n\nYou must write an algorithm that runs in `O(n)` time and **without using the division operation**.\n\n**Input:** Space-separated integers representing the array.\n**Output:** Space-separated integers representing the result.",
+  "constraints": "- 2 ≤ nums.length ≤ 10⁵\n- -30 ≤ nums[i] ≤ 30\n- The product of any prefix or suffix of nums fits in a 32-bit integer.",
+  "examples": [
+    {
+      "input": "nums = [1,2,3,4]",
+      "output": "[24,12,8,6]",
+      "explanation": "answer[0] = 2*3*4 = 24, answer[1] = 1*3*4 = 12, answer[2] = 1*2*4 = 8, answer[3] = 1*2*3 = 6."
+    },
+    {
+      "input": "nums = [-1,1,0,-3,3]",
+      "output": "[0,0,9,0,0]",
+      "explanation": "Any product including the 0 element becomes 0."
+    }
+  ],
+  "testCases": [
+    { "input": "1 2 3 4",      "expectedOutput": "24 12 8 6", "order": 1, "isHidden": false },
+    { "input": "-1 1 0 -3 3",  "expectedOutput": "0 0 9 0 0","order": 2, "isHidden": false },
+    { "input": "2 3",          "expectedOutput": "3 2",       "order": 3, "isHidden": true },
+    { "input": "1 1 1 1",      "expectedOutput": "1 1 1 1",   "order": 4, "isHidden": true },
+    { "input": "0 0",          "expectedOutput": "0 0",       "order": 5, "isHidden": true },
+    { "input": "2 3 4 5",      "expectedOutput": "60 40 30 24","order": 6, "isHidden": true },
+    { "input": "-1 -1 -1",     "expectedOutput": "1 1 1",     "order": 7, "isHidden": true }
+  ]
+}

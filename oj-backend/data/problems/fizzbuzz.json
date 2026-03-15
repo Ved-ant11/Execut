@@ -1,0 +1,26 @@
+{
+  "id": "fizzbuzz",
+  "title": "FizzBuzz",
+  "difficulty": "EASY",
+  "statement": "Given an integer `n`, print a string for each number from `1` to `n` (each on a new line):\n\n- `\"FizzBuzz\"` if the number is divisible by both 3 and 5.\n- `\"Fizz\"` if the number is divisible by 3.\n- `\"Buzz\"` if the number is divisible by 5.\n- The number itself if none of the above conditions are true.\n\n**Input:** A single integer `n`.\n**Output:** Print each result on a new line.",
+  "constraints": "- 1 ≤ n ≤ 10⁴",
+  "examples": [
+    {
+      "input": "n = 5",
+      "output": "1\n2\nFizz\n4\nBuzz",
+      "explanation": "1 → 1, 2 → 2, 3 → Fizz, 4 → 4, 5 → Buzz"
+    },
+    {
+      "input": "n = 15",
+      "output": "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz",
+      "explanation": "15 is divisible by both 3 and 5, so it prints FizzBuzz."
+    }
+  ],
+  "testCases": [
+    { "input": "5",  "expectedOutput": "1\n2\nFizz\n4\nBuzz",                                                                                              "order": 1, "isHidden": false },
+    { "input": "3",  "expectedOutput": "1\n2\nFizz",                                                                                                       "order": 2, "isHidden": false },
+    { "input": "15", "expectedOutput": "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz",                                         "order": 3, "isHidden": true },
+    { "input": "1",  "expectedOutput": "1",                                                                                                                "order": 4, "isHidden": true },
+    { "input": "30", "expectedOutput": "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\nFizz\n22\n23\nFizz\nBuzz\n26\nFizz\n28\n29\nFizzBuzz", "order": 5, "isHidden": true }
+  ]
+}

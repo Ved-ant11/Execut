@@ -1,0 +1,32 @@
+{
+  "id": "palindrome-number",
+  "title": "Palindrome Number",
+  "difficulty": "EASY",
+  "statement": "Given an integer `x`, return `true` if `x` is a palindrome, and `false` otherwise.\n\nAn integer is a palindrome when it reads the same forward and backward.\n\n**Input:** A single integer `x`.\n**Output:** Print `true` or `false`.",
+  "constraints": "- -2³¹ ≤ x ≤ 2³¹ - 1",
+  "examples": [
+    {
+      "input": "x = 121",
+      "output": "true",
+      "explanation": "121 reads as 121 from left to right and from right to left."
+    },
+    {
+      "input": "x = -121",
+      "output": "false",
+      "explanation": "From left to right, it reads -121. From right to left it becomes 121-. Therefore it is not a palindrome."
+    },
+    {
+      "input": "x = 10",
+      "output": "false",
+      "explanation": "Reads 01 from right to left. Therefore it is not a palindrome."
+    }
+  ],
+  "testCases": [
+    { "input": "121",     "expectedOutput": "true",  "order": 1, "isHidden": false },
+    { "input": "-121",    "expectedOutput": "false", "order": 2, "isHidden": false },
+    { "input": "10",      "expectedOutput": "false", "order": 3, "isHidden": false },
+    { "input": "0",       "expectedOutput": "true",  "order": 4, "isHidden": true },
+    { "input": "12321",   "expectedOutput": "true",  "order": 5, "isHidden": true },
+    { "input": "1000021", "expectedOutput": "false", "order": 6, "isHidden": true }
+  ]
+}

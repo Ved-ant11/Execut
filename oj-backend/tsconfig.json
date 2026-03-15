@@ -11,6 +11,6 @@
     "skipLibCheck": true,
     "types": ["node"]
   },
-  "include": ["src/**/*", "prisma/**/*", "prisma.config.ts"],
+  "include": ["src/**/*", "prisma/**/*", "prisma.config.ts", "data/**/*", "scripts/**/*"],
   "exclude": ["node_modules", "dist"]
 }

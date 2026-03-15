@@ -1,0 +1,27 @@
+{
+  "id": "buy-sell-stock",
+  "title": "Best Time to Buy and Sell Stock",
+  "difficulty": "EASY",
+  "statement": "You are given an array `prices` where `prices[i]` is the price of a given stock on the `i`th day.\n\nYou want to maximize your profit by choosing a **single day** to buy one stock and choosing a **different day in the future** to sell that stock.\n\nReturn the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return `0`.\n\n**Input:** Space-separated integers representing stock prices.\n**Output:** Print the maximum profit.",
+  "constraints": "- 1 ≤ prices.length ≤ 10⁵\n- 0 ≤ prices[i] ≤ 10⁴",
+  "examples": [
+    {
+      "input": "prices = [7,1,5,3,6,4]",
+      "output": "5",
+      "explanation": "Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6 - 1 = 5."
+    },
+    {
+      "input": "prices = [7,6,4,3,1]",
+      "output": "0",
+      "explanation": "No profitable transaction is possible, so max profit = 0."
+    }
+  ],
+  "testCases": [
+    { "input": "7 1 5 3 6 4", "expectedOutput": "5", "order": 1, "isHidden": false },
+    { "input": "7 6 4 3 1",   "expectedOutput": "0", "order": 2, "isHidden": false },
+    { "input": "1 2",         "expectedOutput": "1", "order": 3, "isHidden": true },
+    { "input": "2 4 1",       "expectedOutput": "2", "order": 4, "isHidden": true },
+    { "input": "3 3 3",       "expectedOutput": "0", "order": 5, "isHidden": true },
+    { "input": "1 4 2 7",     "expectedOutput": "6", "order": 6, "isHidden": true }
+  ]
+}
