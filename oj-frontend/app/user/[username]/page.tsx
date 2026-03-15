@@ -4,6 +4,7 @@ import { fetchPublicProfile, fetchAuthStatus } from "@/lib/api";
 import Link from "next/link";
 import { ActivityCalendar } from "react-activity-calendar";
 import { useParams } from "next/navigation";
+import { Flame, Trophy } from "lucide-react";
 
 interface Submission {
   id: string;
@@ -279,7 +280,7 @@ export default function PublicProfilePage() {
                     Current Streak
                   </p>
                   <div className="mt-2 flex items-center justify-center gap-2">
-                    <span className="text-3xl">🔥</span>
+                    <Flame className="h-8 w-8 text-orange-500 fill-orange-500 animate-pulse" />
                     <span className="text-3xl font-bold text-neutral-100">
                       {profile.streakData.currentStreak}
                     </span>
@@ -290,7 +291,7 @@ export default function PublicProfilePage() {
                     Longest Streak
                   </p>
                   <div className="mt-2 flex items-center justify-center gap-2">
-                    <span className="text-3xl">🏆</span>
+                    <Trophy className="h-8 w-8 text-yellow-500 fill-yellow-500 animate-bounce" />
                     <span className="text-3xl font-bold text-neutral-100">
                       {profile.streakData.maxStreak}
                     </span>

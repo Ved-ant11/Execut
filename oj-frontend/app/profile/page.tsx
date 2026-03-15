@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { fetchProfile, fetchStreakData } from "@/lib/api";
 import Link from "next/link";
 import {ActivityCalendar} from 'react-activity-calendar';
+import { Flame, Trophy } from "lucide-react";
 
 interface Submission {
   id: string;
@@ -201,14 +202,14 @@ export default function ProfilePage() {
               <div className="text-center">
                 <p className="text-xs font-medium text-neutral-500 tracking-wide">Current Streak</p>
                 <div className="flex items-center justify-center gap-2 mt-2">
-                  <span className="text-3xl ">🔥</span>
+                  <Flame className="h-8 w-8 text-orange-500 fill-orange-500"/>
                   <span className="text-3xl font-bold text-neutral-100">{streakData.currentStreak}</span>
                 </div>
               </div>
               <div className="text-center">
                 <p className="text-xs font-medium text-neutral-500 tracking-wide">Longest Streak</p>
                 <div className="flex items-center justify-center gap-2 mt-2">
-                  <span className="text-3xl">🏆</span>
+                  <Trophy className="h-8 w-8 text-yellow-500 fill-yellow-500"/>
                   <span className="text-3xl font-bold text-neutral-100">{streakData.maxStreak}</span>
                 </div>
               </div>
