@@ -1,0 +1,68 @@
+{
+  "id": "min-cost-connect-ropes",
+  "title": "Minimum Cost to Connect Ropes",
+  "difficulty": "MEDIUM",
+  "statement": "Given `n` ropes of different lengths, connect all ropes into one. The cost to connect two ropes is the sum of their lengths. Find the minimum total cost.\n\n**Input:** Space-separated integers representing rope lengths.\n**Output:** Print the minimum total cost.",
+  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- 1 \u2264 rope[i] \u2264 10\u2074",
+  "examples": [
+    {
+      "input": "ropes=[4,3,2,6]",
+      "output": "29",
+      "explanation": "Connect 2+3=5(cost 5), connect 4+5=9(cost 9), connect 6+9=15(cost 15). Total=29."
+    },
+    {
+      "input": "ropes=[1,2,3]",
+      "output": "9",
+      "explanation": "Connect 1+2=3(cost 3), connect 3+3=6(cost 6). Total=9."
+    },
+    {
+      "input": "ropes=[5]",
+      "output": "0",
+      "explanation": "Only one rope, no cost."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "4 3 2 6",
+      "expectedOutput": "29",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "1 2 3",
+      "expectedOutput": "9",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "5",
+      "expectedOutput": "0",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1 1 1 1",
+      "expectedOutput": "8",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3 4 5",
+      "expectedOutput": "33",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "10 20",
+      "expectedOutput": "30",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1 8 3 5",
+      "expectedOutput": "25",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

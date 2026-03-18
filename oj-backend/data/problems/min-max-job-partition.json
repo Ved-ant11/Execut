@@ -1,0 +1,68 @@
+{
+  "id": "min-max-job-partition",
+  "title": "Minimum Maximum Time to Finish Jobs",
+  "difficulty": "HARD",
+  "statement": "Given `n` jobs and `k` workers, assign all jobs to workers such that each worker gets at least one job and the maximum time any worker spends is minimized. Each worker works sequentially on their assigned jobs.\n\n**Input:**\n- Line 1: two integers `n` and `k`.\n- Line 2: space-separated job durations.\n\n**Output:** Print the minimized maximum time.",
+  "constraints": "- 1 \u2264 k \u2264 n \u2264 12\n- 1 \u2264 jobs[i] \u2264 10\u2077",
+  "examples": [
+    {
+      "input": "n=3, k=3, jobs=[3,2,3]",
+      "output": "3",
+      "explanation": "Assign one job each. Max=3."
+    },
+    {
+      "input": "n=6, k=3, jobs=[1,2,4,7,3,5]",
+      "output": "8",
+      "explanation": "Optimal assignment gives max=8."
+    },
+    {
+      "input": "n=4, k=2, jobs=[5,5,5,5]",
+      "output": "10",
+      "explanation": "Each worker gets 2 jobs, sum=10."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "3 3\n3 2 3",
+      "expectedOutput": "3",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "6 3\n1 2 4 7 3 5",
+      "expectedOutput": "8",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "4 2\n5 5 5 5",
+      "expectedOutput": "10",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "2 1\n3 5",
+      "expectedOutput": "8",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "6 3\n1 1 1 1 1 1",
+      "expectedOutput": "2",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1 1\n7",
+      "expectedOutput": "7",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "4 2\n1 2 3 4",
+      "expectedOutput": "5",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

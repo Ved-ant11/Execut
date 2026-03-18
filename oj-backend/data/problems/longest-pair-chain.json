@@ -1,0 +1,63 @@
+{
+  "id": "longest-pair-chain",
+  "title": "Longest Chain of Pairs",
+  "difficulty": "MEDIUM",
+  "statement": "Given `n` pairs of numbers, a pair `(c,d)` can follow pair `(a,b)` if `b < c`. Find the longest chain of pairs.\n\n**Input:**\n- Line 1: integer `n`.\n- Next `n` lines: two integers `a b` per pair.\n\n**Output:** Print the length of the longest chain.",
+  "constraints": "- 1 \u2264 n \u2264 10\u2074\n- -10\u2079 \u2264 a < b \u2264 10\u2079",
+  "examples": [
+    {
+      "input": "n=3, pairs=[[1,2],[2,3],[3,4]]",
+      "output": "2",
+      "explanation": "Chain: (1,2)\u2192(3,4). Length 2."
+    },
+    {
+      "input": "n=3, pairs=[[1,2],[7,8],[4,5]]",
+      "output": "3",
+      "explanation": "Chain: (1,2)\u2192(4,5)\u2192(7,8). Length 3."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "3\n1 2\n2 3\n3 4",
+      "expectedOutput": "2",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "3\n1 2\n7 8\n4 5",
+      "expectedOutput": "3",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1\n1 10",
+      "expectedOutput": "1",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "4\n1 2\n3 4\n5 6\n7 8",
+      "expectedOutput": "4",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "3\n1 10\n2 9\n3 8",
+      "expectedOutput": "1",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "2\n1 5\n2 3",
+      "expectedOutput": "1",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "4\n1 2\n2 5\n6 7\n8 10",
+      "expectedOutput": "3",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

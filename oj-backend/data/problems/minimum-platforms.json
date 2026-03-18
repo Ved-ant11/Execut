@@ -1,0 +1,63 @@
+{
+  "id": "minimum-platforms",
+  "title": "Minimum Platforms at Railway Station",
+  "difficulty": "MEDIUM",
+  "statement": "Given arrival and departure times of all trains at a station, find the minimum number of platforms required so no train waits.\n\nIf a train arrives at the same time another departs, they need separate platforms.\n\n**Input:**\n- Line 1: integer `n`.\n- Line 2: space-separated arrival times (HHMM format as integers).\n- Line 3: space-separated departure times.\n\n**Output:** Print the minimum platforms needed.",
+  "constraints": "- 1 \u2264 n \u2264 10\u2074\n- 0 \u2264 arrival[i] < departure[i] \u2264 2359",
+  "examples": [
+    {
+      "input": "n=6, arr=[900,940,950,1100,1500,1800], dep=[910,1200,1120,1130,1900,2000]",
+      "output": "3",
+      "explanation": "Maximum 3 trains overlap at some point."
+    },
+    {
+      "input": "n=3, arr=[100,200,300], dep=[150,250,350]",
+      "output": "1",
+      "explanation": "No overlaps, 1 platform suffices."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "6\n900 940 950 1100 1500 1800\n910 1200 1120 1130 1900 2000",
+      "expectedOutput": "3",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "3\n100 200 300\n150 250 350",
+      "expectedOutput": "1",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1\n0\n2359",
+      "expectedOutput": "1",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "3\n100 100 100\n200 200 200",
+      "expectedOutput": "3",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "4\n100 200 700 600\n150 250 750 650",
+      "expectedOutput": "1",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "2\n900 940\n940 1200",
+      "expectedOutput": "2",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "4\n100 200 300 400\n200 300 400 500",
+      "expectedOutput": "2",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

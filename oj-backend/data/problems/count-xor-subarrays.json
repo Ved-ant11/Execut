@@ -1,0 +1,68 @@
+{
+  "id": "count-xor-subarrays",
+  "title": "Count Subarrays with XOR Equal to K",
+  "difficulty": "MEDIUM",
+  "statement": "Given an array `arr` and an integer `k`, count the number of subarrays whose XOR is equal to `k`.\n\n**Input:**\n- Line 1: space-separated integers.\n- Line 2: integer `k`.\n\n**Output:** Print the count of subarrays.",
+  "constraints": "- 1 \u2264 arr.length \u2264 10\u2075\n- 0 \u2264 arr[i] \u2264 10\u2079\n- 0 \u2264 k \u2264 10\u2079",
+  "examples": [
+    {
+      "input": "arr=[4,2,2,6,4], k=6",
+      "output": "4",
+      "explanation": "Subarrays: [4,2],[2,6],[6],[2,2,6,4] all XOR to 6."
+    },
+    {
+      "input": "arr=[5,6,7,8,9], k=5",
+      "output": "2",
+      "explanation": "Subarrays: [5] and [5,6,7,8,9] XOR to 5."
+    },
+    {
+      "input": "arr=[1,2,3], k=0",
+      "output": "1",
+      "explanation": "Only [1,2,3] XORs to 0 (1^2^3=0)."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "4 2 2 6 4\n6",
+      "expectedOutput": "4",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "5 6 7 8 9\n5",
+      "expectedOutput": "2",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1 2 3\n0",
+      "expectedOutput": "1",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1 1 1 1\n0",
+      "expectedOutput": "4",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "3 3\n0",
+      "expectedOutput": "1",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "7\n7",
+      "expectedOutput": "1",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 4 8 16\n7",
+      "expectedOutput": "2",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

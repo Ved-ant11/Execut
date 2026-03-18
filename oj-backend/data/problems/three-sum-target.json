@@ -1,0 +1,68 @@
+{
+  "id": "three-sum-target",
+  "title": "Find All Triplets Summing to Target",
+  "difficulty": "MEDIUM",
+  "statement": "Given an array of integers and a target, find all unique triplets that sum to the target. Each triplet must be in non-decreasing order. Print one triplet per line. If none, print `-1`.\n\n**Input:**\n- Line 1: space-separated integers.\n- Line 2: integer `target`.\n\n**Output:** Each triplet on a new line, sorted ascending. Triplets in lexicographic order.",
+  "constraints": "- 3 \u2264 arr.length \u2264 3000\n- -10\u2075 \u2264 arr[i] \u2264 10\u2075\n- -10\u2075 \u2264 target \u2264 10\u2075",
+  "examples": [
+    {
+      "input": "arr=[-1,0,1,2,-1,-4], target=0",
+      "output": "-1 -1 2\n-1 0 1",
+      "explanation": "Two unique triplets sum to 0."
+    },
+    {
+      "input": "arr=[0,0,0,0], target=0",
+      "output": "0 0 0",
+      "explanation": "One unique triplet."
+    },
+    {
+      "input": "arr=[1,2,3], target=0",
+      "output": "-1",
+      "explanation": "No triplets sum to 0."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "-1 0 1 2 -1 -4\n0",
+      "expectedOutput": "-1 -1 2\n-1 0 1",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "0 0 0 0\n0",
+      "expectedOutput": "0 0 0",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1 2 3\n0",
+      "expectedOutput": "-1",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1 2 3 4 5\n9",
+      "expectedOutput": "1 3 5\n2 3 4",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "-2 0 1 1 2\n0",
+      "expectedOutput": "-2 0 2\n-2 1 1",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1 1 1 1\n3",
+      "expectedOutput": "1 1 1",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "0 0 0\n1",
+      "expectedOutput": "-1",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

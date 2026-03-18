@@ -1,0 +1,68 @@
+{
+  "id": "decode-ways-wildcard",
+  "title": "Decode Ways with Wildcard",
+  "difficulty": "HARD",
+  "statement": "A string of digits and `*` characters can be decoded where `1-26` maps to `A-Z`, and `*` can represent any digit from `1-9`. Return the number of ways to decode the string. Since the answer can be very large, return it as a string.\n\n**Input:** A string of digits and `*` characters.\n**Output:** Print the number of ways.",
+  "constraints": "- 1 \u2264 s.length \u2264 100\n- s contains only digits 0-9 and `*`.",
+  "examples": [
+    {
+      "input": "s=*",
+      "output": "9",
+      "explanation": "* can be 1-9, giving A through I. 9 ways."
+    },
+    {
+      "input": "s=1*",
+      "output": "18",
+      "explanation": "* alone (9 ways) + 1* as two-digit 11-19 (9 ways) = 18."
+    },
+    {
+      "input": "s=**",
+      "output": "96",
+      "explanation": "Each * has multiple combinations."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "*",
+      "expectedOutput": "9",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "1*",
+      "expectedOutput": "18",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "**",
+      "expectedOutput": "96",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "2*",
+      "expectedOutput": "15",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "0",
+      "expectedOutput": "0",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "*0",
+      "expectedOutput": "2",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1",
+      "expectedOutput": "1",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

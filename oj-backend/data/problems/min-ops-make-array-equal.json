@@ -1,0 +1,68 @@
+{
+  "id": "min-ops-make-array-equal",
+  "title": "Minimum Operations to Make Array Equal",
+  "difficulty": "EASY",
+  "statement": "Given an array of integers where all elements have the same sum divisible by n (so a valid integer target exists), find the minimum number of operations to make all elements equal. In one operation you pick two elements, increment one and decrement the other.\n\n**Input:** Space-separated integers.\n**Output:** Print the minimum number of operations.",
+  "constraints": "- 1 \u2264 arr.length \u2264 10\u2075\n- 0 \u2264 arr[i] \u2264 10\u2074\n- Sum of array is divisible by array length.",
+  "examples": [
+    {
+      "input": "arr=[1,2,3]",
+      "output": "1",
+      "explanation": "Target=2. Move 1 from 3 to 1. One operation."
+    },
+    {
+      "input": "arr=[5,5,5,5]",
+      "output": "0",
+      "explanation": "Already equal."
+    },
+    {
+      "input": "arr=[0,3,6]",
+      "output": "3",
+      "explanation": "Target=3. Need 3 operations total."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "1 2 3",
+      "expectedOutput": "1",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "5 5 5 5",
+      "expectedOutput": "0",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "0 3 6",
+      "expectedOutput": "3",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1 4 7",
+      "expectedOutput": "3",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "1 6 8",
+      "expectedOutput": "4",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "3 3 3 3 3",
+      "expectedOutput": "0",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "0 0 6",
+      "expectedOutput": "4",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

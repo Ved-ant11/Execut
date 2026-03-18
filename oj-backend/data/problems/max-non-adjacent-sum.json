@@ -1,0 +1,68 @@
+{
+  "id": "max-non-adjacent-sum",
+  "title": "Maximum Sum of Non-Adjacent Elements",
+  "difficulty": "MEDIUM",
+  "statement": "Given an array of non-negative integers, find the maximum sum of elements such that no two chosen elements are adjacent.\n\n**Input:** Space-separated non-negative integers.\n**Output:** Print the maximum sum.",
+  "constraints": "- 1 \u2264 nums.length \u2264 10\u2075\n- 0 \u2264 nums[i] \u2264 10\u2074",
+  "examples": [
+    {
+      "input": "nums=[2,1,4,9]",
+      "output": "11",
+      "explanation": "Pick 2+9=11. Or pick 4+... 2+9=11 is max."
+    },
+    {
+      "input": "nums=[5,5,10,100,10,5]",
+      "output": "110",
+      "explanation": "Pick 5+100+5=110."
+    },
+    {
+      "input": "nums=[1,2,3]",
+      "output": "4",
+      "explanation": "Pick 1+3=4."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "2 1 4 9",
+      "expectedOutput": "11",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "5 5 10 100 10 5",
+      "expectedOutput": "110",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1 2 3",
+      "expectedOutput": "4",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1",
+      "expectedOutput": "1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "2 4 6 2 5",
+      "expectedOutput": "13",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "0 0 0 0",
+      "expectedOutput": "0",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "3 2 7 10",
+      "expectedOutput": "13",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

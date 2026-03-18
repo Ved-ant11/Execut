@@ -1,0 +1,68 @@
+{
+  "id": "can-jump-trampoline",
+  "title": "Trampoline Jump \u2014 Can You Reach the End?",
+  "difficulty": "EASY",
+  "statement": "You are standing at index 0 of an array. `arr[i]` represents the maximum number of positions you can jump forward from index `i`. Determine if you can reach the last index.\n\n**Input:** Space-separated non-negative integers.\n**Output:** Print `true` or `false`.",
+  "constraints": "- 1 \u2264 arr.length \u2264 10\u2074\n- 0 \u2264 arr[i] \u2264 10\u2074",
+  "examples": [
+    {
+      "input": "arr=[2,3,1,1,4]",
+      "output": "true",
+      "explanation": "Jump 1 to index 1, then 3 steps to end."
+    },
+    {
+      "input": "arr=[3,2,1,0,4]",
+      "output": "false",
+      "explanation": "Always get stuck at index 3 (value 0)."
+    },
+    {
+      "input": "arr=[0]",
+      "output": "true",
+      "explanation": "Already at the last index."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "2 3 1 1 4",
+      "expectedOutput": "true",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "3 2 1 0 4",
+      "expectedOutput": "false",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "0",
+      "expectedOutput": "true",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1 0 0",
+      "expectedOutput": "false",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "2 0 0",
+      "expectedOutput": "true",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1 1 1 1 0",
+      "expectedOutput": "true",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "0 1",
+      "expectedOutput": "false",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

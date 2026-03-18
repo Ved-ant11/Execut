@@ -1,0 +1,68 @@
+{
+  "id": "min-arrows-burst-balloons",
+  "title": "Minimum Arrows to Burst Balloons",
+  "difficulty": "MEDIUM",
+  "statement": "Balloons are represented as intervals `[start, end]`. An arrow shot at position `x` bursts all balloons where `start \u2264 x \u2264 end`. Find the minimum number of arrows needed to burst all balloons.\n\n**Input:**\n- Line 1: integer `n`.\n- Next `n` lines: two integers `start end` per balloon.\n\n**Output:** Print the minimum number of arrows.",
+  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- -2\u00b3\u00b9 \u2264 start < end \u2264 2\u00b3\u00b9 - 1",
+  "examples": [
+    {
+      "input": "n=4, balloons=[[10,16],[2,8],[1,6],[7,12]]",
+      "output": "2",
+      "explanation": "Arrow at x=6 bursts [2,8],[1,6]. Arrow at x=11 bursts [10,16],[7,12]."
+    },
+    {
+      "input": "n=4, balloons=[[1,2],[3,4],[5,6],[7,8]]",
+      "output": "4",
+      "explanation": "No overlaps, each needs its own arrow."
+    },
+    {
+      "input": "n=4, balloons=[[1,2],[2,3],[3,4],[4,5]]",
+      "output": "2",
+      "explanation": "Arrow at 2 bursts [1,2],[2,3]. Arrow at 4 bursts [3,4],[4,5]."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "4\n10 16\n2 8\n1 6\n7 12",
+      "expectedOutput": "2",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "4\n1 2\n3 4\n5 6\n7 8",
+      "expectedOutput": "4",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "4\n1 2\n2 3\n3 4\n4 5",
+      "expectedOutput": "2",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1\n1 2",
+      "expectedOutput": "1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "4\n-1 1\n0 1\n2 3\n-2 0",
+      "expectedOutput": "2",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "3\n1 10\n2 9\n3 8",
+      "expectedOutput": "1",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "5\n1 2\n1 3\n1 4\n1 5\n2 6",
+      "expectedOutput": "1",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

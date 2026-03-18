@@ -1,0 +1,68 @@
+{
+  "id": "min-window-all-distinct-2",
+  "title": "Minimum Swaps to Group All Ones",
+  "difficulty": "MEDIUM",
+  "statement": "Given a binary array `data` (circular), find the minimum number of swaps needed to group all `1`s together (anywhere in the circular array).\n\n**Input:** Space-separated integers (0s and 1s).\n**Output:** Print the minimum swaps.",
+  "constraints": "- 1 \u2264 data.length \u2264 10\u2075\n- data[i] is 0 or 1.",
+  "examples": [
+    {
+      "input": "data=[1,0,1,0,1]",
+      "output": "1",
+      "explanation": "Swap index 1 and 4 to get [1,1,1,0,0]. 1 swap."
+    },
+    {
+      "input": "data=[0,0,0,1,0]",
+      "output": "0",
+      "explanation": "Only one 1, already grouped."
+    },
+    {
+      "input": "data=[1,0,1,0,1,0,0,1,1,0]",
+      "output": "3",
+      "explanation": "Need 3 swaps to group five 1s together."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "1 0 1 0 1",
+      "expectedOutput": "1",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "0 0 0 1 0",
+      "expectedOutput": "0",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1 0 1 0 1 0 0 1 1 0",
+      "expectedOutput": "3",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1 1 1 1",
+      "expectedOutput": "0",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "0 0 0 0",
+      "expectedOutput": "0",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1 0 0 1 0 0 1",
+      "expectedOutput": "2",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1 0 1",
+      "expectedOutput": "1",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

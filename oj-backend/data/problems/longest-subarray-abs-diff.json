@@ -1,0 +1,68 @@
+{
+  "id": "longest-subarray-abs-diff",
+  "title": "Longest Subarray with Absolute Difference Limit",
+  "difficulty": "MEDIUM",
+  "statement": "Given an array of integers `nums` and a limit `limit`, return the size of the longest subarray such that the absolute difference between any two elements is less than or equal to `limit`.\n\n**Input:**\n- Line 1: space-separated integers.\n- Line 2: integer `limit`.\n\n**Output:** Print the length of the longest valid subarray.",
+  "constraints": "- 1 \u2264 nums.length \u2264 10\u2075\n- 1 \u2264 nums[i] \u2264 10\u2079\n- 0 \u2264 limit \u2264 10\u2079",
+  "examples": [
+    {
+      "input": "nums=[8,2,4,7], limit=4",
+      "output": "2",
+      "explanation": "[2,4] has max abs diff 2 \u2264 4."
+    },
+    {
+      "input": "nums=[10,1,2,4,7,2], limit=5",
+      "output": "4",
+      "explanation": "[2,4,7,2] has max diff 5."
+    },
+    {
+      "input": "nums=[4,2,2,2,4,4,2,2], limit=0",
+      "output": "3",
+      "explanation": "[2,2,2] or [4,4,4] (but 4,4 only appears twice). [2,2,2] len=3."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "8 2 4 7\n4",
+      "expectedOutput": "2",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "10 1 2 4 7 2\n5",
+      "expectedOutput": "4",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "4 2 2 2 4 4 2 2\n0",
+      "expectedOutput": "3",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1 1 1 1\n0",
+      "expectedOutput": "4",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "1 5 6 7 8 10 6 5 6\n4",
+      "expectedOutput": "5",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3 4 5\n1",
+      "expectedOutput": "2",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1\n0",
+      "expectedOutput": "1",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

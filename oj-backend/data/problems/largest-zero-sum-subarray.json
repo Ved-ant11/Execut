@@ -1,0 +1,68 @@
+{
+  "id": "largest-zero-sum-subarray",
+  "title": "Largest Subarray with Zero Sum",
+  "difficulty": "MEDIUM",
+  "statement": "Given an array of integers (can include negatives), find the length of the longest subarray whose sum is exactly 0.\n\n**Input:** Space-separated integers.\n**Output:** Print the length of the longest zero-sum subarray. If none, print `0`.",
+  "constraints": "- 1 \u2264 arr.length \u2264 10\u2075\n- -10\u2074 \u2264 arr[i] \u2264 10\u2074",
+  "examples": [
+    {
+      "input": "arr=[15,-2,2,-8,1,7,10,23]",
+      "output": "5",
+      "explanation": "Subarray [-2,2,-8,1,7] sums to 0, length 5."
+    },
+    {
+      "input": "arr=[1,2,3]",
+      "output": "0",
+      "explanation": "No subarray sums to 0."
+    },
+    {
+      "input": "arr=[1,-1,3,-3,2]",
+      "output": "4",
+      "explanation": "Subarray [1,-1,3,-3] sums to 0, length 4."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "15 -2 2 -8 1 7 10 23",
+      "expectedOutput": "5",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "1 2 3",
+      "expectedOutput": "0",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1 -1 3 -3 2",
+      "expectedOutput": "4",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "0",
+      "expectedOutput": "1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "1 -1",
+      "expectedOutput": "2",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 -3 3 -2",
+      "expectedOutput": "5",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "5 -5 10 -10 3",
+      "expectedOutput": "4",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

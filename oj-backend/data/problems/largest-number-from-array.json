@@ -1,0 +1,68 @@
+{
+  "id": "largest-number-from-array",
+  "title": "Largest Number Formed from Array",
+  "difficulty": "MEDIUM",
+  "statement": "Given a list of non-negative integers, arrange them to form the largest possible number.\n\n**Input:** Space-separated non-negative integers.\n**Output:** Print the largest number as a string.",
+  "constraints": "- 1 \u2264 nums.length \u2264 100\n- 0 \u2264 nums[i] \u2264 10\u2079",
+  "examples": [
+    {
+      "input": "nums=[10,2]",
+      "output": "210",
+      "explanation": "'210' > '102'."
+    },
+    {
+      "input": "nums=[3,30,34,5,9]",
+      "output": "9534330",
+      "explanation": "Sorted by concatenation comparison."
+    },
+    {
+      "input": "nums=[0,0]",
+      "output": "0",
+      "explanation": "All zeros = 0."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "10 2",
+      "expectedOutput": "210",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "3 30 34 5 9",
+      "expectedOutput": "9534330",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "0 0",
+      "expectedOutput": "0",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1",
+      "expectedOutput": "1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "999 9 998",
+      "expectedOutput": "9999998",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3",
+      "expectedOutput": "321",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "0 1",
+      "expectedOutput": "10",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

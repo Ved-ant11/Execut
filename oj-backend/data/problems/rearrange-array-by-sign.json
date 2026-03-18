@@ -1,0 +1,68 @@
+{
+  "id": "rearrange-array-by-sign",
+  "title": "Rearrange Array by Sign",
+  "difficulty": "EASY",
+  "statement": "Given an array with an equal number of positive and negative integers, rearrange them so positives and negatives alternate, starting with a positive. Maintain the relative order of positives among themselves and negatives among themselves.\n\n**Input:** Space-separated integers (equal count of positives and negatives).\n**Output:** Print the rearranged array space-separated.",
+  "constraints": "- 2 \u2264 nums.length \u2264 10\u2075 (always even)\n- nums[i] \u2260 0\n- Equal number of positive and negative integers.",
+  "examples": [
+    {
+      "input": "nums=[3,1,-2,-5,2,-4]",
+      "output": "3 -2 1 -5 2 -4",
+      "explanation": "Positives in order: 3,1,2. Negatives in order: -2,-5,-4. Interleave."
+    },
+    {
+      "input": "nums=[1,2,3,-1,-2,-3]",
+      "output": "1 -1 2 -2 3 -3",
+      "explanation": "Maintain relative order."
+    },
+    {
+      "input": "nums=[-1,1]",
+      "output": "1 -1",
+      "explanation": "Positive first."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "3 1 -2 -5 2 -4",
+      "expectedOutput": "3 -2 1 -5 2 -4",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "1 2 3 -1 -2 -3",
+      "expectedOutput": "1 -1 2 -2 3 -3",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "-1 1",
+      "expectedOutput": "1 -1",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1 -1",
+      "expectedOutput": "1 -1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "-5 5 -3 3 -1 1",
+      "expectedOutput": "5 -5 3 -3 1 -1",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "10 -10 20 -20",
+      "expectedOutput": "10 -10 20 -20",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "-4 -2 1 3",
+      "expectedOutput": "1 -4 3 -2",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

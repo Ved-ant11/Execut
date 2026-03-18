@@ -1,0 +1,63 @@
+{
+  "id": "unique-paths-obstacles",
+  "title": "Unique Paths with Obstacles",
+  "difficulty": "MEDIUM",
+  "statement": "Given an `m x n` grid with obstacles (1=obstacle, 0=free), count the number of unique paths from top-left to bottom-right moving only right or down.\n\n**Input:**\n- Line 1: two integers `m` and `n`.\n- Next `m` lines: `n` space-separated integers (0 or 1).\n\n**Output:** Print the number of unique paths.",
+  "constraints": "- 1 \u2264 m, n \u2264 100\n- grid[i][j] is 0 or 1.",
+  "examples": [
+    {
+      "input": "m=3,n=3, grid=[[0,0,0],[0,1,0],[0,0,0]]",
+      "output": "2",
+      "explanation": "Obstacle in center blocks one path. 2 paths remain."
+    },
+    {
+      "input": "m=2,n=2, grid=[[0,1],[0,0]]",
+      "output": "1",
+      "explanation": "Only one path going down then right."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "3 3\n0 0 0\n0 1 0\n0 0 0",
+      "expectedOutput": "2",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "2 2\n0 1\n0 0",
+      "expectedOutput": "1",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1 2\n1 0",
+      "expectedOutput": "0",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "2 2\n0 0\n0 0",
+      "expectedOutput": "2",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "3 3\n0 0 0\n0 0 0\n0 0 0",
+      "expectedOutput": "6",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "2 3\n0 0 1\n0 0 0",
+      "expectedOutput": "1",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1 1\n0",
+      "expectedOutput": "1",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

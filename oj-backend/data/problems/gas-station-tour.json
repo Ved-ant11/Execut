@@ -1,0 +1,63 @@
+{
+  "id": "gas-station-tour",
+  "title": "Gas Station Circular Tour",
+  "difficulty": "MEDIUM",
+  "statement": "There are `n` gas stations arranged in a circle. You are given arrays `gas` and `cost`. `gas[i]` is the gas at station `i`. `cost[i]` is the gas needed to travel from station `i` to `i+1`. Find the starting station index from which you can complete the circuit, or `-1` if impossible.\n\n**Input:**\n- Line 1: space-separated integers for `gas`.\n- Line 2: space-separated integers for `cost`.\n\n**Output:** Print the starting index or `-1`.",
+  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- 0 \u2264 gas[i], cost[i] \u2264 10\u2074\n- The solution is guaranteed unique if it exists.",
+  "examples": [
+    {
+      "input": "gas=[1,2,3,4,5], cost=[3,4,5,1,2]",
+      "output": "3",
+      "explanation": "Start at station 3 (0-indexed), can complete the circuit."
+    },
+    {
+      "input": "gas=[2,3,4], cost=[3,4,3]",
+      "output": "-1",
+      "explanation": "Total gas < total cost, impossible."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "1 2 3 4 5\n3 4 5 1 2",
+      "expectedOutput": "3",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "2 3 4\n3 4 3",
+      "expectedOutput": "-1",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "5 1 2 3 4\n4 4 1 5 1",
+      "expectedOutput": "4",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "3 1 1\n1 2 2",
+      "expectedOutput": "0",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "1\n1",
+      "expectedOutput": "0",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1\n2",
+      "expectedOutput": "-1",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "4 5 1 3\n2 3 5 4",
+      "expectedOutput": "1",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}

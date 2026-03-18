@@ -1,0 +1,68 @@
+{
+  "id": "stock-buy-sell-k-transactions",
+  "title": "Stock Buy Sell \u2014 At Most K Transactions",
+  "difficulty": "HARD",
+  "statement": "Given an array `prices` and integer `k`, find the maximum profit using at most `k` buy-sell transactions. You must sell before buying again.\n\n**Input:**\n- Line 1: integer `k`.\n- Line 2: space-separated stock prices.\n\n**Output:** Print the maximum profit.",
+  "constraints": "- 0 \u2264 k \u2264 100\n- 1 \u2264 prices.length \u2264 10\u00b3\n- 0 \u2264 prices[i] \u2264 10\u2074",
+  "examples": [
+    {
+      "input": "k=2, prices=[3,2,6,5,0,3]",
+      "output": "7",
+      "explanation": "Buy at 2, sell at 6 (profit 4). Buy at 0, sell at 3 (profit 3). Total 7."
+    },
+    {
+      "input": "k=2, prices=[2,4,1]",
+      "output": "2",
+      "explanation": "Buy at 2, sell at 4. Total 2."
+    },
+    {
+      "input": "k=1, prices=[7,6,4,3,1]",
+      "output": "0",
+      "explanation": "Prices only decrease, no profit possible."
+    }
+  ],
+  "testCases": [
+    {
+      "input": "2\n3 2 6 5 0 3",
+      "expectedOutput": "7",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "2\n2 4 1",
+      "expectedOutput": "2",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1\n7 6 4 3 1",
+      "expectedOutput": "0",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "2\n1 2 4 2 5 7 2 4 9 0",
+      "expectedOutput": "13",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "0\n1 2 3",
+      "expectedOutput": "0",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "100\n1 2 3 4 5",
+      "expectedOutput": "4",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "2\n1 4 2 7",
+      "expectedOutput": "8",
+      "order": 7,
+      "isHidden": true
+    }
+  ]
+}
