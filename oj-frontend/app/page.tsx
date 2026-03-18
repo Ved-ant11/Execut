@@ -43,12 +43,13 @@ export default function Home() {
             Start easy →
           </Link>
         </div>
-        <div className="mt-20 grid grid-cols-4 divide-x divide-neutral-800/60 border border-neutral-800/60 rounded-md w-fit overflow-hidden">
+        <div className="mt-20 grid grid-cols-5 divide-x divide-neutral-800/60 border border-neutral-800/60 rounded-md w-fit overflow-hidden">
           {[
             { num: "150+",  label: "Problems"     },
             { num: "3",    label: "Difficulties" },
             { num: "3",    label: "Languages"    },
-            { num: "1v1",  label: "Battle Mode"  },
+            { num: "1v1", label: "Battle Mode" },
+            { num: "∞", label: "Custom Rooms" },
           ].map((s) => (
             <div key={s.label} className="flex flex-col items-center justify-center px-10 py-5 bg-[#0d0d0d]">
               <span className="font-sans text-[32px] font-bold text-white leading-none tracking-[-0.04em]">

@@ -52,21 +52,26 @@ export default function CodeSubmission({ questionId }: { questionId: string }) {
     <div className="flex h-full flex-col gap-2">
       <div className="flex items-center justify-between shrink-0">
         <div className="flex items-center gap-3">
-          <select
-            value={language}
-            onChange={(e) => {
-              const newLang = e.target.value;
-              if (!code.trim() || Object.values(boilerplate).includes(code)) {
-                setCode(boilerplate[newLang] || "");
-              }
-              setLanguage(newLang);
-            }}
-            className="h-8 appearance-none rounded-md border border-neutral-800 bg-neutral-900 px-3 pr-7 text-xs font-medium text-neutral-300 outline-none transition-colors hover:border-neutral-700 focus:border-neutral-600 cursor-pointer"
-          >
-            <option value="javascript">JavaScript</option>
-            <option value="python">Python</option>
-            <option value="cpp">C++</option>
-          </select>
+          <div className="relative">
+            <select
+              value={language}
+              onChange={(e) => {
+                const newLang = e.target.value;
+                if (!code.trim() || Object.values(boilerplate).includes(code)) {
+                  setCode(boilerplate[newLang] || "");
+                }
+                setLanguage(newLang);
+              }}
+              className="h-8 appearance-none rounded-md border border-neutral-800 bg-neutral-900 px-3 pr-7 text-xs font-medium text-neutral-300 outline-none transition-colors hover:border-neutral-700 focus:border-neutral-600 cursor-pointer"
+            >
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="cpp">C++</option>
+            </select>
+            <span className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-neutral-600 text-[10px]">
+              ▾
+            </span>
+          </div>
           <span className="text-xs text-neutral-600 font-mono">
             solution.{fileExtension}
           </span>

@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { fetchDiscussion, postComment, fetchAuthStatus } from "@/lib/api";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -22,7 +22,7 @@ export default function Discussion({ questionId }: { questionId: string }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const loadDiscussion = async () => {
+  const loadDiscussion = useCallback(async () => {
     try {
       setLoading(true);
       const data = await fetchDiscussion(questionId);
@@ -32,14 +32,14 @@ export default function Discussion({ questionId }: { questionId: string }) {
     } finally {
       setLoading(false);
     }
-  };
-
+  }, [questionId])
+  
   useEffect(() => {
     fetchAuthStatus().then((res) => {
       setIsLoggedIn(!!res);
     });
     loadDiscussion();
-  }, [questionId, loadDiscussion]);
+  }, [questionId]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
