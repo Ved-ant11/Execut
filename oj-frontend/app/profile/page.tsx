@@ -35,6 +35,8 @@ export default function ProfilePage() {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [streakData, setStreakData] = useState<StreakData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [subPage, setSubPage] = useState(1);
+  const subPerPage = 15;
 
   useEffect(() => {
     const loadData = async () => {
@@ -228,31 +230,81 @@ export default function ProfilePage() {
               <span className="font-mono-custom text-[9px] tracking-[0.22em] uppercase text-neutral-700 text-right">Date</span>
             </div>
             <div className="divide-y divide-neutral-800/40">
-              {profile.submissions
-                .slice()
-                .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
-                .map((submission) => (
-                  <Link
-                    key={submission.id}
-                    href={`/problems/${submission.question.id}`}
-                    className="grid grid-cols-[1fr_100px_160px_100px] gap-4 px-5 py-3.5 items-center hover:bg-neutral-800/20 transition-colors duration-150 group"
-                  >
-                    <span className="font-sans text-[13px] font-medium text-neutral-400 group-hover:text-neutral-200 transition-colors duration-150 truncate tracking-[-0.01em]">
-                      {submission.question.title}
-                    </span>
-                    <span className="font-mono-custom text-[10px] tracking-[0.1em] uppercase text-neutral-600">
-                      {submission.language}
-                    </span>
-                    <span className={`font-mono-custom text-[10px] tracking-[0.1em] font-medium ${verdictColor[submission.verdict || ""] || "text-neutral-600"}`}>
-                      {submission.verdict ? (verdictLabel[submission.verdict] || submission.verdict) : "Pending"}
-                    </span>
-                    <span className="font-mono-custom text-[10px] text-neutral-700 text-right tabular-nums">
-                      {new Date(submission.createdAt).toLocaleDateString("en-US", {
-                        month: "short", day: "numeric",
-                      })}
-                    </span>
-                  </Link>
-                ))}
+              {(() => {
+                const sorted = profile.submissions
+                  .slice()
+                  .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+                const subTotalPages = Math.max(1, Math.ceil(sorted.length / subPerPage));
+                const paginated = sorted.slice((subPage - 1) * subPerPage, subPage * subPerPage);
+                return (
+                  <>
+                    {paginated.map((submission) => (
+                      <Link
+                        key={submission.id}
+                        href={`/problems/${submission.question.id}`}
+                        className="grid grid-cols-[1fr_100px_160px_100px] gap-4 px-5 py-3.5 items-center hover:bg-neutral-800/20 transition-colors duration-150 group"
+                      >
+                        <span className="font-sans text-[13px] font-medium text-neutral-400 group-hover:text-neutral-200 transition-colors duration-150 truncate tracking-[-0.01em]">
+                          {submission.question.title}
+                        </span>
+                        <span className="font-mono-custom text-[10px] tracking-[0.1em] uppercase text-neutral-600">
+                          {submission.language}
+                        </span>
+                        <span className={`font-mono-custom text-[10px] tracking-[0.1em] font-medium ${verdictColor[submission.verdict || ""] || "text-neutral-600"}`}>
+                          {submission.verdict ? (verdictLabel[submission.verdict] || submission.verdict) : "Pending"}
+                        </span>
+                        <span className="font-mono-custom text-[10px] text-neutral-700 text-right tabular-nums">
+                          {new Date(submission.createdAt).toLocaleDateString("en-US", {
+                            month: "short", day: "numeric",
+                          })}
+                        </span>
+                      </Link>
+                    ))}
+                    {subTotalPages > 1 && (
+                      <div className="flex items-center justify-between px-5 py-3 bg-[#0d0d0d] border-t border-neutral-800/60">
+                        <span className="font-mono-custom text-[10px] text-neutral-700">
+                          {sorted.length} submissions
+                        </span>
+                        <div className="flex items-center gap-1">
+                          <button
+                            onClick={() => setSubPage((p) => Math.max(1, p - 1))}
+                            disabled={subPage === 1}
+                            className="font-mono-custom text-[10px] px-3 py-1.5 border border-neutral-800/60 rounded-md text-neutral-500 hover:text-neutral-300 hover:border-neutral-700 transition-colors duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+                          >
+                            Prev
+                          </button>
+                          {Array.from({ length: subTotalPages }, (_, i) => i + 1)
+                            .filter((p) => p === 1 || p === subTotalPages || Math.abs(p - subPage) <= 1)
+                            .map((p, i, arr) => (
+                              <span key={p} className="flex items-center">
+                                {i > 0 && arr[i - 1] !== p - 1 && (
+                                  <span className="font-mono-custom text-[10px] text-neutral-800 px-1">...</span>
+                                )}
+                                <button
+                                  onClick={() => setSubPage(p)}
+                                  className={`font-mono-custom text-[10px] w-8 py-1.5 rounded-md transition-colors duration-200 ${
+                                    p === subPage
+                                      ? "bg-neutral-800 text-white border border-neutral-700"
+                                      : "text-neutral-600 hover:text-neutral-300 border border-transparent"
+                                  }`}
+                                >
+                                  {p}
+                                </button>
+                              </span>
+                            ))}
+                          <button
+                            onClick={() => setSubPage((p) => Math.min(subTotalPages, p + 1))}
+                            disabled={subPage === subTotalPages}
+                            className="font-mono-custom text-[10px] px-3 py-1.5 border border-neutral-800/60 rounded-md text-neutral-500 hover:text-neutral-300 hover:border-neutral-700 transition-colors duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+                          >
+                            Next
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </>
+                );
+              })()}
             </div>
           </div>
         )}

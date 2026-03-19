@@ -11,6 +11,8 @@ export default function ProblemsPage() {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState<string>("");
   const [difficulty, setDifficulty] = useState<string>("all");
+  const [page, setPage] = useState(1);
+  const perPage = 20;
 
   useEffect(() => {
     const load = async () => {
@@ -41,6 +43,9 @@ export default function ProblemsPage() {
     const matchesDifficulty = difficulty === "all" || q.difficulty.toLowerCase() === difficulty;
     return matchesSearch && matchesDifficulty;
   });
+
+  const totalPages = Math.max(1, Math.ceil(filteredQuestions.length / perPage));
+  const paginatedQuestions = filteredQuestions.slice((page - 1) * perPage, page * perPage);
 
   if (loading) {
     return (
@@ -78,7 +83,7 @@ export default function ProblemsPage() {
             type="text"
             placeholder="Search problems..."
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => { setSearch(e.target.value); setPage(1); }}
             className="bg-[#0d0d0d] border border-neutral-800 hover:border-neutral-700 focus:border-neutral-600 text-neutral-300 placeholder:text-neutral-700 rounded-md pl-9 pr-4 py-2 font-mono-custom text-[11px] tracking-wide outline-none transition-colors duration-200 w-64"
           />
         </div>
@@ -86,7 +91,7 @@ export default function ProblemsPage() {
         <div className="relative flex items-center">
           <select
             value={difficulty}
-            onChange={(e) => setDifficulty(e.target.value)}
+            onChange={(e) => { setDifficulty(e.target.value); setPage(1); }}
             style={{ colorScheme: "dark" }}
             className="appearance-none bg-[#0d0d0d] border border-neutral-800 hover:border-neutral-700 focus:border-neutral-600 text-neutral-500 rounded-md pl-3 pr-8 py-2 font-mono-custom text-[11px] tracking-[0.1em] uppercase outline-none cursor-pointer transition-colors duration-200"
           >
@@ -107,9 +112,10 @@ export default function ProblemsPage() {
         </div>
 
         <div className="divide-y divide-neutral-800/40">
-          {filteredQuestions.map((question, index) => {
+          {paginatedQuestions.map((question, index) => {
             const diff = question.difficulty.toLowerCase();
             const isSolved = solvedIds.has(question.id);
+            const globalIndex = (page - 1) * perPage + index;
             return (
               <Link
                 key={question.id}
@@ -117,7 +123,7 @@ export default function ProblemsPage() {
                 className="grid grid-cols-[1fr_120px_80px] gap-4 px-5 py-3.5 items-center hover:bg-neutral-800/20 transition-colors duration-150 group"
               >
                 <span className="font-sans text-[13px] font-medium text-neutral-400 group-hover:text-neutral-200 transition-colors duration-150 truncate tracking-[-0.01em]">
-                  <span className="font-mono-custom text-[11px] text-neutral-700 mr-3">{index + 1}.</span>
+                  <span className="font-mono-custom text-[11px] text-neutral-700 mr-3">{globalIndex + 1}.</span>
                   {question.title}
                 </span>
                 <span className={`font-mono-custom text-[10px] tracking-[0.15em] uppercase font-medium ${difficultyColor[diff] || "text-neutral-600"}`}>
@@ -148,6 +154,49 @@ export default function ProblemsPage() {
           <p className="font-mono-custom text-[11px] text-neutral-700">
             No problems match your search.
           </p>
+        </div>
+      )}
+
+      {totalPages > 1 && (
+        <div className="flex items-center justify-between mt-6">
+          <span className="font-mono-custom text-[10px] text-neutral-700">
+            {filteredQuestions.length} problems
+          </span>
+          <div className="flex items-center gap-1">
+            <button
+              onClick={() => setPage((p) => Math.max(1, p - 1))}
+              disabled={page === 1}
+              className="font-mono-custom text-[10px] px-3 py-1.5 border border-neutral-800/60 rounded-md text-neutral-500 hover:text-neutral-300 hover:border-neutral-700 transition-colors duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              Prev
+            </button>
+            {Array.from({ length: totalPages }, (_, i) => i + 1)
+              .filter((p) => p === 1 || p === totalPages || Math.abs(p - page) <= 1)
+              .map((p, i, arr) => (
+                <span key={p} className="flex items-center">
+                  {i > 0 && arr[i - 1] !== p - 1 && (
+                    <span className="font-mono-custom text-[10px] text-neutral-800 px-1">...</span>
+                  )}
+                  <button
+                    onClick={() => setPage(p)}
+                    className={`font-mono-custom text-[10px] w-8 py-1.5 rounded-md transition-colors duration-200 ${
+                      p === page
+                        ? "bg-neutral-800 text-white border border-neutral-700"
+                        : "text-neutral-600 hover:text-neutral-300 border border-transparent"
+                    }`}
+                  >
+                    {p}
+                  </button>
+                </span>
+              ))}
+            <button
+              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+              disabled={page === totalPages}
+              className="font-mono-custom text-[10px] px-3 py-1.5 border border-neutral-800/60 rounded-md text-neutral-500 hover:text-neutral-300 hover:border-neutral-700 transition-colors duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              Next
+            </button>
+          </div>
         </div>
       )}
 
