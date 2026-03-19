@@ -160,15 +160,6 @@ const processSubmission = async (id: string) => {
       ...(result.stdout ? { stdout: result.stdout.slice(0, 500) } : {}),
     });
 
-    // await prisma.submission.update({
-    //   where: { id },
-    //   data: {
-    //     status: SubmissionStatus.COMPLETED,
-    //     verdict: result.verdict,
-    //     result: result.message,
-    //   },
-    // });
-
     if (result.verdict === Verdict.WA && result.failedTestCaseIndex !== undefined) {
       const failedTC = testCases[result.failedTestCaseIndex];
       await prisma.submission.update({
