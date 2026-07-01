@@ -3,7 +3,7 @@
   "title": "Minimum Maximum Time to Finish Jobs",
   "difficulty": "HARD",
   "statement": "Given `n` jobs and `k` workers, assign all jobs to workers such that each worker gets at least one job and the maximum time any worker spends is minimized. Each worker works sequentially on their assigned jobs.\n\n**Input:**\n- Line 1: two integers `n` and `k`.\n- Line 2: space-separated job durations.\n\n**Output:** Print the minimized maximum time.",
-  "constraints": "- 1 \u2264 k \u2264 n \u2264 12\n- 1 \u2264 jobs[i] \u2264 10\u2077",
+  "constraints": "- 1 ≤ k ≤ n ≤ 12\n- 1 ≤ jobs[i] ≤ 10⁷",
   "examples": [
     {
       "input": "n=3, k=3, jobs=[3,2,3]",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Binary Search",
+    "Greedy"
   ]
 }

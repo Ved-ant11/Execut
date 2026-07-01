@@ -3,7 +3,7 @@
   "title": "Task Scheduler with Cooldown",
   "difficulty": "MEDIUM",
   "statement": "You have a list of tasks (uppercase letters). After executing a task, you must wait at least `n` intervals before running the **same task** again. Idle intervals fill gaps. Find the **minimum total time** to finish all tasks.\n\n**Input:** First line: space-separated task characters. Second line: cooldown n.\n**Output:** Minimum total time units.",
-  "constraints": "- 1 \u2264 tasks.length \u2264 10\u2074\n- 0 \u2264 n \u2264 100\n- Tasks are uppercase A-Z",
+  "constraints": "- 1 ≤ tasks.length ≤ 10⁴\n- 0 ≤ n ≤ 100\n- Tasks are uppercase A-Z",
   "examples": [
     {
       "input": "A A A B B B\n2",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Greedy",
+    "Hash Map"
   ]
 }

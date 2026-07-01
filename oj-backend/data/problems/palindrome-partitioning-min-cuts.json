@@ -1,14 +1,14 @@
 {
   "id": "palindrome-partitioning-min-cuts",
-  "title": "Palindrome Partitioning \u2014 Minimum Cuts",
+  "title": "Palindrome Partitioning — Minimum Cuts",
   "difficulty": "HARD",
   "statement": "Given a string `s`, partition it such that every substring of the partition is a palindrome. Return the **minimum number of cuts** needed.\n\nFor example, `\"aab\"` requires 1 cut: `\"aa\" | \"b\"`. `\"a\"` requires 0 cuts.\n\n**Input:** A single string `s`.\n**Output:** Print the minimum number of cuts.",
-  "constraints": "- 1 \u2264 s.length \u2264 2000\n- s consists of lowercase English letters only.",
+  "constraints": "- 1 ≤ s.length ≤ 2000\n- s consists of lowercase English letters only.",
   "examples": [
     {
       "input": "s = \"aab\"",
       "output": "1",
-      "explanation": "\"aa\" | \"b\" \u2014 1 cut."
+      "explanation": "\"aa\" | \"b\" — 1 cut."
     },
     {
       "input": "s = \"a\"",
@@ -18,7 +18,7 @@
     {
       "input": "s = \"ab\"",
       "output": "1",
-      "explanation": "\"a\" | \"b\" \u2014 1 cut."
+      "explanation": "\"a\" | \"b\" — 1 cut."
     },
     {
       "input": "s = \"abcba\"",
@@ -69,5 +69,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Strings"
   ]
 }

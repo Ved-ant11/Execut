@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ProblemsPage() {
   const [questions, setQuestions] = useState<
-    { id: string; title: string; difficulty: string }[]
+    { id: string; title: string; difficulty: string; tags?: string[] }[]
   >([]);
   const [solvedIds, setSolvedIds] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(true);
@@ -125,6 +125,18 @@ export default function ProblemsPage() {
                 <span className="font-sans text-[13px] font-medium text-neutral-400 group-hover:text-neutral-200 transition-colors duration-150 truncate tracking-[-0.01em]">
                   <span className="font-mono-custom text-[11px] text-neutral-700 mr-3">{globalIndex + 1}.</span>
                   {question.title}
+                  {question.tags && question.tags.length > 0 && (
+                    <span className="ml-3 inline-flex gap-1.5 align-middle">
+                      {question.tags.slice(0, 2).map((tag) => (
+                        <span
+                          key={tag}
+                          className="font-mono-custom text-[8px] tracking-[0.1em] uppercase text-neutral-700 border border-neutral-800/70 rounded-full px-2 py-0.5"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </span>
+                  )}
                 </span>
                 <span className={`font-mono-custom text-[10px] tracking-[0.15em] uppercase font-medium ${difficultyColor[diff] || "text-neutral-600"}`}>
                   {question.difficulty}

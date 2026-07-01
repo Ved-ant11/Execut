@@ -5,17 +5,68 @@
   "statement": "Given an array `nums` where `nums[i]` is the maximum jump length from index `i`, return the minimum number of jumps to reach the last index. You can always reach the last index.\n\n**Input:** Space-separated non-negative integers.\n**Output:** Print the minimum number of jumps.",
   "constraints": "- 1 ≤ nums.length ≤ 10⁴\n- 0 ≤ nums[i] ≤ 1000\n- It is guaranteed you can reach the last index.",
   "examples": [
-    { "input": "nums = [2,3,1,1,4]", "output": "2", "explanation": "Jump 1 to index 1, then 3 to last. 2 jumps." },
-    { "input": "nums = [2,3,0,1,4]", "output": "2", "explanation": "Jump 1 to index 1, then 3 to last." },
-    { "input": "nums = [1,1,1,1]",   "output": "3", "explanation": "Must hop one step at a time." }
+    {
+      "input": "nums = [2,3,1,1,4]",
+      "output": "2",
+      "explanation": "Jump 1 to index 1, then 3 to last. 2 jumps."
+    },
+    {
+      "input": "nums = [2,3,0,1,4]",
+      "output": "2",
+      "explanation": "Jump 1 to index 1, then 3 to last."
+    },
+    {
+      "input": "nums = [1,1,1,1]",
+      "output": "3",
+      "explanation": "Must hop one step at a time."
+    }
   ],
   "testCases": [
-    { "input": "2 3 1 1 4",     "expectedOutput": "2", "order": 1, "isHidden": false },
-    { "input": "2 3 0 1 4",     "expectedOutput": "2", "order": 2, "isHidden": false },
-    { "input": "1 1 1 1",       "expectedOutput": "3", "order": 3, "isHidden": false },
-    { "input": "0",             "expectedOutput": "0", "order": 4, "isHidden": true },
-    { "input": "1",             "expectedOutput": "0", "order": 5, "isHidden": true },
-    { "input": "10 1 1 1 1",    "expectedOutput": "1", "order": 6, "isHidden": true },
-    { "input": "1 2 3 4 5 6",   "expectedOutput": "3", "order": 7, "isHidden": true }
+    {
+      "input": "2 3 1 1 4",
+      "expectedOutput": "2",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "2 3 0 1 4",
+      "expectedOutput": "2",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1 1 1 1",
+      "expectedOutput": "3",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "0",
+      "expectedOutput": "0",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "1",
+      "expectedOutput": "0",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "10 1 1 1 1",
+      "expectedOutput": "1",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3 4 5 6",
+      "expectedOutput": "3",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Greedy",
+    "Arrays"
   ]
 }

@@ -5,17 +5,68 @@
   "statement": "Given two strings `word1` and `word2`, return the minimum number of operations required to convert `word1` to `word2`.\n\nYou have three operations:\n- **Insert** a character\n- **Delete** a character\n- **Replace** a character\n\n**Input:**\n- Line 1: string `word1`.\n- Line 2: string `word2`.\n\n**Output:** Print the minimum edit distance.",
   "constraints": "- 0 ≤ word1.length, word2.length ≤ 500\n- word1 and word2 consist of lowercase English letters.",
   "examples": [
-    { "input": "word1 = \"horse\", word2 = \"ros\"", "output": "3", "explanation": "horse→rorse (replace h→r), rorse→rose (delete r), rose→ros (delete e)." },
-    { "input": "word1 = \"intention\", word2 = \"execution\"", "output": "5", "explanation": "5 operations minimum." },
-    { "input": "word1 = \"\", word2 = \"abc\"", "output": "3", "explanation": "Insert a, b, c." }
+    {
+      "input": "word1 = \"horse\", word2 = \"ros\"",
+      "output": "3",
+      "explanation": "horse→rorse (replace h→r), rorse→rose (delete r), rose→ros (delete e)."
+    },
+    {
+      "input": "word1 = \"intention\", word2 = \"execution\"",
+      "output": "5",
+      "explanation": "5 operations minimum."
+    },
+    {
+      "input": "word1 = \"\", word2 = \"abc\"",
+      "output": "3",
+      "explanation": "Insert a, b, c."
+    }
   ],
   "testCases": [
-    { "input": "horse\nros",       "expectedOutput": "3", "order": 1, "isHidden": false },
-    { "input": "intention\nexecution","expectedOutput": "5","order": 2,"isHidden": false },
-    { "input": "\nabc",            "expectedOutput": "3", "order": 3, "isHidden": false },
-    { "input": "abc\n",            "expectedOutput": "3", "order": 4, "isHidden": true },
-    { "input": "abc\nabc",        "expectedOutput": "0", "order": 5, "isHidden": true },
-    { "input": "a\nb",             "expectedOutput": "1", "order": 6, "isHidden": true },
-    { "input": "saturday\nsunday", "expectedOutput": "3", "order": 7, "isHidden": true }
+    {
+      "input": "horse\nros",
+      "expectedOutput": "3",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "intention\nexecution",
+      "expectedOutput": "5",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "\nabc",
+      "expectedOutput": "3",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "abc\n",
+      "expectedOutput": "3",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "abc\nabc",
+      "expectedOutput": "0",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "a\nb",
+      "expectedOutput": "1",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "saturday\nsunday",
+      "expectedOutput": "3",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Strings"
   ]
 }

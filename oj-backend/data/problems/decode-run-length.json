@@ -5,17 +5,67 @@
   "statement": "A string is encoded using run-length encoding where each character is preceded by its count. Given the encoded string `s`, decode and return the original string.\n\nFor example, `\"3a2b1c\"` decodes to `\"aaabbc\"`.\n\n**Input:** A single encoded string `s` (alternating digits and characters, digits can be multi-digit).\n**Output:** Print the decoded string.",
   "constraints": "- 1 ≤ s.length ≤ 10⁴\n- Each count is a positive integer between 1 and 10³.\n- s is always a valid encoded string.",
   "examples": [
-    { "input": "s = \"3a2b1c\"",    "output": "aaabbc",     "explanation": "3 a's, 2 b's, 1 c." },
-    { "input": "s = \"10a3b\"",     "output": "aaaaaaaaaabbb","explanation": "10 a's, 3 b's." },
-    { "input": "s = \"1z\"",        "output": "z",           "explanation": "1 z." }
+    {
+      "input": "s = \"3a2b1c\"",
+      "output": "aaabbc",
+      "explanation": "3 a's, 2 b's, 1 c."
+    },
+    {
+      "input": "s = \"10a3b\"",
+      "output": "aaaaaaaaaabbb",
+      "explanation": "10 a's, 3 b's."
+    },
+    {
+      "input": "s = \"1z\"",
+      "output": "z",
+      "explanation": "1 z."
+    }
   ],
   "testCases": [
-    { "input": "3a2b1c",  "expectedOutput": "aaabbc",        "order": 1, "isHidden": false },
-    { "input": "10a3b",   "expectedOutput": "aaaaaaaaaabbb", "order": 2, "isHidden": false },
-    { "input": "1z",      "expectedOutput": "z",             "order": 3, "isHidden": false },
-    { "input": "4x",      "expectedOutput": "xxxx",          "order": 4, "isHidden": true },
-    { "input": "2a2b2c",  "expectedOutput": "aabbcc",        "order": 5, "isHidden": true },
-    { "input": "100a",    "expectedOutput": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "order": 6, "isHidden": true },
-    { "input": "1a1b1c1d","expectedOutput": "abcd",          "order": 7, "isHidden": true }
+    {
+      "input": "3a2b1c",
+      "expectedOutput": "aaabbc",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "10a3b",
+      "expectedOutput": "aaaaaaaaaabbb",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1z",
+      "expectedOutput": "z",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "4x",
+      "expectedOutput": "xxxx",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "2a2b2c",
+      "expectedOutput": "aabbcc",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "100a",
+      "expectedOutput": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1a1b1c1d",
+      "expectedOutput": "abcd",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Strings"
   ]
 }

@@ -3,7 +3,7 @@
   "title": "Zero Array in Minimum Operations",
   "difficulty": "EASY",
   "statement": "You have an array of non-negative integers. In one operation, pick any subarray and decrement every element in it by 1 (elements already at 0 are unaffected). Find the **minimum number of operations** to make the entire array zero.\n\n**Input:** Space-separated non-negative integers.\n**Output:** Minimum operations.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- 0 \u2264 nums[i] \u2264 10\u2074",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- 0 ≤ nums[i] ≤ 10⁴",
   "examples": [
     {
       "input": "3 2 1 4 2",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Prefix Sum",
+    "Arrays"
   ]
 }

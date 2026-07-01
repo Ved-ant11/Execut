@@ -3,7 +3,7 @@
   "title": "Climb Stairs with 1, 2, or 3 Steps",
   "difficulty": "EASY",
   "statement": "A staircase has `n` steps. You can climb 1, 2, or 3 steps at a time. Count the number of distinct ways to reach the top.\n\n**Input:** A single integer `n`.\n**Output:** Print the number of distinct ways.",
-  "constraints": "- 1 \u2264 n \u2264 35",
+  "constraints": "- 1 ≤ n ≤ 35",
   "examples": [
     {
       "input": "n=3",
@@ -64,5 +64,8 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

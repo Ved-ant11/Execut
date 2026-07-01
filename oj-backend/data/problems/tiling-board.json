@@ -2,8 +2,8 @@
   "id": "tiling-board",
   "title": "Tiling a Board",
   "difficulty": "EASY",
-  "statement": "Count the number of ways to completely tile a `2 \u00d7 N` board using `1 \u00d7 2` dominoes. Return the answer modulo 10\u2079+7.\n\n**Input:** Single integer N.\n**Output:** Number of tilings mod 10\u2079+7.",
-  "constraints": "- 0 \u2264 N \u2264 10\u2075",
+  "statement": "Count the number of ways to completely tile a `2 × N` board using `1 × 2` dominoes. Return the answer modulo 10⁹+7.\n\n**Input:** Single integer N.\n**Output:** Number of tilings mod 10⁹+7.",
+  "constraints": "- 0 ≤ N ≤ 10⁵",
   "examples": [
     {
       "input": "2",
@@ -13,7 +13,7 @@
     {
       "input": "3",
       "output": "3",
-      "explanation": "Three tilings for a 2\u00d73 board."
+      "explanation": "Three tilings for a 2×3 board."
     },
     {
       "input": "0",
@@ -70,5 +70,8 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

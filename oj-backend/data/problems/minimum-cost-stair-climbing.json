@@ -3,7 +3,7 @@
   "title": "Minimum Cost Stair Climbing",
   "difficulty": "EASY",
   "statement": "You are given an array `cost` where `cost[i]` is the cost to step on stair `i`. Once you pay the cost, you can climb 1 or 2 stairs. You can start from index 0 or 1. Find the minimum cost to reach the top (beyond the last stair).\n\n**Input:** Space-separated non-negative integers.\n**Output:** Print the minimum cost.",
-  "constraints": "- 2 \u2264 cost.length \u2264 1000\n- 0 \u2264 cost[i] \u2264 999",
+  "constraints": "- 2 ≤ cost.length ≤ 1000\n- 0 ≤ cost[i] ≤ 999",
   "examples": [
     {
       "input": "cost=[10,15,20]",
@@ -64,5 +64,8 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

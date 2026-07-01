@@ -2,13 +2,13 @@
   "id": "count-range-sum",
   "title": "Count of Range Sum",
   "difficulty": "HARD",
-  "statement": "Given an integer array `nums` and two integers `lower` and `upper`, return the number of range sums that lie in `[lower, upper]` inclusive. A range sum is the sum of elements between indices `i` and `j` where `i \u2264 j`.\n\n**Input:**\n- Line 1: space-separated integers.\n- Line 2: two integers `lower upper`.\n\n**Output:** Print the count.",
-  "constraints": "- 1 \u2264 nums.length \u2264 10\u2074\n- -10\u2075 \u2264 nums[i] \u2264 10\u2075\n- -10\u2079 \u2264 lower \u2264 upper \u2264 10\u2079",
+  "statement": "Given an integer array `nums` and two integers `lower` and `upper`, return the number of range sums that lie in `[lower, upper]` inclusive. A range sum is the sum of elements between indices `i` and `j` where `i ≤ j`.\n\n**Input:**\n- Line 1: space-separated integers.\n- Line 2: two integers `lower upper`.\n\n**Output:** Print the count.",
+  "constraints": "- 1 ≤ nums.length ≤ 10⁴\n- -10⁵ ≤ nums[i] ≤ 10⁵\n- -10⁹ ≤ lower ≤ upper ≤ 10⁹",
   "examples": [
     {
       "input": "nums=[-2,5,-1], lower=-2, upper=2",
       "output": "3",
-      "explanation": "Ranges: [-2],[-2,5,-1],[5,-1] have sums -2,2,4. Those in [-2,2]: -2 and 2. Wait recount: [-2]=\u22122\u2713,[5]=5\u2717,[-1]=\u22121\u2713,[-2,5]=3\u2717,[5,-1]=4\u2717,[-2,5,-1]=2\u2713. Count=3."
+      "explanation": "Ranges: [-2],[-2,5,-1],[5,-1] have sums -2,2,4. Those in [-2,2]: -2 and 2. Wait recount: [-2]=−2✓,[5]=5✗,[-1]=−1✓,[-2,5]=3✗,[5,-1]=4✗,[-2,5,-1]=2✓. Count=3."
     },
     {
       "input": "nums=[0], lower=0, upper=0",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Prefix Sum",
+    "Divide and Conquer"
   ]
 }

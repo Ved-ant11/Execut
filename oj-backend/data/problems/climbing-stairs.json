@@ -17,12 +17,50 @@
     }
   ],
   "testCases": [
-    { "input": "2",  "expectedOutput": "2",          "order": 1, "isHidden": false },
-    { "input": "3",  "expectedOutput": "3",          "order": 2, "isHidden": false },
-    { "input": "1",  "expectedOutput": "1",          "order": 3, "isHidden": true },
-    { "input": "4",  "expectedOutput": "5",          "order": 4, "isHidden": true },
-    { "input": "5",  "expectedOutput": "8",          "order": 5, "isHidden": true },
-    { "input": "10", "expectedOutput": "89",         "order": 6, "isHidden": true },
-    { "input": "45", "expectedOutput": "1836311903", "order": 7, "isHidden": true }
+    {
+      "input": "2",
+      "expectedOutput": "2",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "3",
+      "expectedOutput": "3",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1",
+      "expectedOutput": "1",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "4",
+      "expectedOutput": "5",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "5",
+      "expectedOutput": "8",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "10",
+      "expectedOutput": "89",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "45",
+      "expectedOutput": "1836311903",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

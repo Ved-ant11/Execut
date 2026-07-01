@@ -3,7 +3,7 @@
   "title": "Maximum Product Subarray",
   "difficulty": "MEDIUM",
   "statement": "Given an integer array, find the contiguous subarray with the largest product. Track both max and min products since multiplying by a negative flips them.\n\n**Input:** Space-separated integers.\n**Output:** Print the maximum product.",
-  "constraints": "- 1 \u2264 nums.length \u2264 2 \u00d7 10\u2074\n- -10 \u2264 nums[i] \u2264 10",
+  "constraints": "- 1 ≤ nums.length ≤ 2 × 10⁴\n- -10 ≤ nums[i] ≤ 10",
   "examples": [
     {
       "input": "[2,3,-2,4]",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Arrays"
   ]
 }

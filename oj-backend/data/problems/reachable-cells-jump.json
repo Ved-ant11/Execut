@@ -3,22 +3,22 @@
   "title": "Reachable Cells",
   "difficulty": "EASY",
   "statement": "You are at index 0 of an array. From index `i`, you move to index `i + arr[i]` (which can be negative, moving backwards). Count how many **distinct indices** are reachable from index 0, including index 0 itself.\n\n**Input:** First line: n. Second line: n space-separated integers.\n**Output:** Number of reachable indices.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- -n \u2264 arr[i] \u2264 n",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- -n ≤ arr[i] ≤ n",
   "examples": [
     {
       "input": "5\n2 3 0 1 4",
       "output": "2",
-      "explanation": "0\u21922\u21920 (cycle). Reachable: {0, 2}."
+      "explanation": "0→2→0 (cycle). Reachable: {0, 2}."
     },
     {
       "input": "4\n1 1 1 1",
       "output": "4",
-      "explanation": "0\u21921\u21922\u21923\u2192out. All 4 indices reachable."
+      "explanation": "0→1→2→3→out. All 4 indices reachable."
     },
     {
       "input": "2\n1 -1",
       "output": "2",
-      "explanation": "0\u21921\u21920 (cycle). Reachable: {0, 1}."
+      "explanation": "0→1→0 (cycle). Reachable: {0, 1}."
     }
   ],
   "testCases": [
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Graphs",
+    "BFS"
   ]
 }

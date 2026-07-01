@@ -1,9 +1,9 @@
 {
   "id": "tower-of-hanoi-moves",
-  "title": "Tower of Hanoi \u2014 Count Moves",
+  "title": "Tower of Hanoi — Count Moves",
   "difficulty": "EASY",
   "statement": "Given `n` disks, find the minimum number of moves required to move all disks from peg A to peg C using peg B as auxiliary. You can only move one disk at a time and cannot place a larger disk on a smaller one.\n\nThe formula is `2^n - 1`.\n\n**Input:** A single integer `n`.\n**Output:** Print the minimum number of moves.",
-  "constraints": "- 1 \u2264 n \u2264 30",
+  "constraints": "- 1 ≤ n ≤ 30",
   "examples": [
     {
       "input": "n = 1",
@@ -13,7 +13,7 @@
     {
       "input": "n = 2",
       "output": "3",
-      "explanation": "A\u2192B, A\u2192C, B\u2192C."
+      "explanation": "A→B, A→C, B→C."
     },
     {
       "input": "n = 3",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Math",
+    "Recursion"
   ]
 }

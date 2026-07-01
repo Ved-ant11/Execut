@@ -3,7 +3,7 @@
   "title": "Decode Ways with Wildcard",
   "difficulty": "HARD",
   "statement": "A string of digits and `*` characters can be decoded where `1-26` maps to `A-Z`, and `*` can represent any digit from `1-9`. Return the number of ways to decode the string. Since the answer can be very large, return it as a string.\n\n**Input:** A string of digits and `*` characters.\n**Output:** Print the number of ways.",
-  "constraints": "- 1 \u2264 s.length \u2264 100\n- s contains only digits 0-9 and `*`.",
+  "constraints": "- 1 ≤ s.length ≤ 100\n- s contains only digits 0-9 and `*`.",
   "examples": [
     {
       "input": "s=*",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Strings"
   ]
 }

@@ -3,7 +3,7 @@
   "title": "Median from Data Stream",
   "difficulty": "HARD",
   "statement": "Given a stream of integers, after each insertion print the current median. If even count, print the average of two middle elements with one decimal place. If odd count, print the middle element as integer.\n\n**Input:** Space-separated integers (stream order).\n**Output:** Space-separated median after each insertion.",
-  "constraints": "- 1 \u2264 nums.length \u2264 10\u2074\n- -10\u2075 \u2264 nums[i] \u2264 10\u2075",
+  "constraints": "- 1 ≤ nums.length ≤ 10⁴\n- -10⁵ ≤ nums[i] ≤ 10⁵",
   "examples": [
     {
       "input": "nums=[5,3,8,4]",
@@ -64,5 +64,8 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Heap"
   ]
 }

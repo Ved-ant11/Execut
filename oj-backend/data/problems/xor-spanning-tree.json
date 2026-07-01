@@ -2,8 +2,8 @@
   "id": "xor-spanning-tree",
   "title": "Maximum XOR Spanning Tree",
   "difficulty": "HARD",
-  "statement": "You have `n` nodes labeled 0 to n-1. Between every pair of nodes `(i, j)` there is an implicit edge with weight `i XOR j`. Find the **maximum spanning tree weight** \u2014 the total weight of a spanning tree that maximizes the sum of edge weights.\n\n**Input:** Single integer n.\n**Output:** Maximum spanning tree weight.",
-  "constraints": "- 2 \u2264 n \u2264 200000",
+  "statement": "You have `n` nodes labeled 0 to n-1. Between every pair of nodes `(i, j)` there is an implicit edge with weight `i XOR j`. Find the **maximum spanning tree weight** — the total weight of a spanning tree that maximizes the sum of edge weights.\n\n**Input:** Single integer n.\n**Output:** Maximum spanning tree weight.",
+  "constraints": "- 2 ≤ n ≤ 200000",
   "examples": [
     {
       "input": "4",
@@ -58,5 +58,9 @@
       "order": 6,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Graphs",
+    "Trees"
   ]
 }

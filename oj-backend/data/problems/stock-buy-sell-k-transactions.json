@@ -1,9 +1,9 @@
 {
   "id": "stock-buy-sell-k-transactions",
-  "title": "Stock Buy Sell \u2014 At Most K Transactions",
+  "title": "Stock Buy Sell — At Most K Transactions",
   "difficulty": "HARD",
   "statement": "Given an array `prices` and integer `k`, find the maximum profit using at most `k` buy-sell transactions. You must sell before buying again.\n\n**Input:**\n- Line 1: integer `k`.\n- Line 2: space-separated stock prices.\n\n**Output:** Print the maximum profit.",
-  "constraints": "- 0 \u2264 k \u2264 100\n- 1 \u2264 prices.length \u2264 10\u00b3\n- 0 \u2264 prices[i] \u2264 10\u2074",
+  "constraints": "- 0 ≤ k ≤ 100\n- 1 ≤ prices.length ≤ 10³\n- 0 ≤ prices[i] ≤ 10⁴",
   "examples": [
     {
       "input": "k=2, prices=[3,2,6,5,0,3]",
@@ -64,5 +64,8 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

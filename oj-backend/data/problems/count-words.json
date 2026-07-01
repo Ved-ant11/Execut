@@ -5,17 +5,67 @@
   "statement": "Given a string `s` representing a sentence, count the number of words. Words are separated by one or more spaces. Leading and trailing spaces should be ignored.\n\n**Input:** A single string `s`.\n**Output:** Print the number of words.",
   "constraints": "- 0 ≤ s.length ≤ 10⁴\n- s consists of lowercase/uppercase letters and spaces.",
   "examples": [
-    { "input": "s = \"hello world\"",          "output": "2", "explanation": "Two words." },
-    { "input": "s = \"  spaces   around  \"", "output": "2", "explanation": "Leading/trailing spaces ignored." },
-    { "input": "s = \"one\"",                  "output": "1", "explanation": "Single word." }
+    {
+      "input": "s = \"hello world\"",
+      "output": "2",
+      "explanation": "Two words."
+    },
+    {
+      "input": "s = \"  spaces   around  \"",
+      "output": "2",
+      "explanation": "Leading/trailing spaces ignored."
+    },
+    {
+      "input": "s = \"one\"",
+      "output": "1",
+      "explanation": "Single word."
+    }
   ],
   "testCases": [
-    { "input": "hello world",         "expectedOutput": "2", "order": 1, "isHidden": false },
-    { "input": "  spaces   around  ", "expectedOutput": "2", "order": 2, "isHidden": false },
-    { "input": "one",                 "expectedOutput": "1", "order": 3, "isHidden": false },
-    { "input": "   ",                 "expectedOutput": "0", "order": 4, "isHidden": true },
-    { "input": "a b c d e",          "expectedOutput": "5", "order": 5, "isHidden": true },
-    { "input": "The Quick Brown Fox", "expectedOutput": "4", "order": 6, "isHidden": true },
-    { "input": "x",                   "expectedOutput": "1", "order": 7, "isHidden": true }
+    {
+      "input": "hello world",
+      "expectedOutput": "2",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "  spaces   around  ",
+      "expectedOutput": "2",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "one",
+      "expectedOutput": "1",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "   ",
+      "expectedOutput": "0",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "a b c d e",
+      "expectedOutput": "5",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "The Quick Brown Fox",
+      "expectedOutput": "4",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "x",
+      "expectedOutput": "1",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Strings"
   ]
 }

@@ -3,7 +3,7 @@
   "title": "Unique Paths with Obstacles",
   "difficulty": "MEDIUM",
   "statement": "Given an `m x n` grid with obstacles (1=obstacle, 0=free), count the number of unique paths from top-left to bottom-right moving only right or down.\n\n**Input:**\n- Line 1: two integers `m` and `n`.\n- Next `m` lines: `n` space-separated integers (0 or 1).\n\n**Output:** Print the number of unique paths.",
-  "constraints": "- 1 \u2264 m, n \u2264 100\n- grid[i][j] is 0 or 1.",
+  "constraints": "- 1 ≤ m, n ≤ 100\n- grid[i][j] is 0 or 1.",
   "examples": [
     {
       "input": "m=3,n=3, grid=[[0,0,0],[0,1,0],[0,0,0]]",
@@ -59,5 +59,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Matrix"
   ]
 }

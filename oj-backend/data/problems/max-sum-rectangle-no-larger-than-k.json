@@ -2,23 +2,23 @@
   "id": "max-sum-rectangle-no-larger-than-k",
   "title": "Max Sum Rectangle No Larger Than K",
   "difficulty": "HARD",
-  "statement": "Given an `m x n` matrix and integer `k`, find the maximum sum of a rectangle in the matrix such that the sum is no larger than `k`.\n\n**Input:**\n- Line 1: three integers `m`, `n`, and `k`.\n- Next `m` lines: `n` space-separated integers.\n\n**Output:** Print the maximum rectangle sum \u2264 k.",
-  "constraints": "- 1 \u2264 m, n \u2264 100\n- -100 \u2264 matrix[i][j] \u2264 100\n- -10\u2075 \u2264 k \u2264 10\u2075",
+  "statement": "Given an `m x n` matrix and integer `k`, find the maximum sum of a rectangle in the matrix such that the sum is no larger than `k`.\n\n**Input:**\n- Line 1: three integers `m`, `n`, and `k`.\n- Next `m` lines: `n` space-separated integers.\n\n**Output:** Print the maximum rectangle sum ≤ k.",
+  "constraints": "- 1 ≤ m, n ≤ 100\n- -100 ≤ matrix[i][j] ≤ 100\n- -10⁵ ≤ k ≤ 10⁵",
   "examples": [
     {
       "input": "m=3, n=3, k=2, matrix=[[1,0,1],[0,-2,3]]",
       "output": "2",
-      "explanation": "Rectangle [[0,1],[\u22122,3]] has sum 2 \u2264 2."
+      "explanation": "Rectangle [[0,1],[−2,3]] has sum 2 ≤ 2."
     },
     {
       "input": "m=1, n=1, k=1, matrix=[[1]]",
       "output": "1",
-      "explanation": "Only cell, sum=1 \u2264 1."
+      "explanation": "Only cell, sum=1 ≤ 1."
     },
     {
       "input": "m=2, n=2, k=3, matrix=[[2,2],[2,2]]",
       "output": "3",
-      "explanation": "No single rectangle sums to exactly 3 but 2+2\u22121... wait, [[2,2]] row sum=4>3. single cell =2. Two adj cells =4>3. So max \u22643 is 2."
+      "explanation": "No single rectangle sums to exactly 3 but 2+2−1... wait, [[2,2]] row sum=4>3. single cell =2. Two adj cells =4>3. So max ≤3 is 2."
     }
   ],
   "testCases": [
@@ -64,5 +64,10 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Matrix",
+    "Binary Search"
   ]
 }

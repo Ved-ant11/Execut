@@ -5,17 +5,67 @@
   "statement": "Given an array of integers `heights` representing the histogram bar heights where each bar has a width of 1, return the area of the largest rectangle in the histogram.\n\n**Input:** Space-separated non-negative integers representing bar heights.\n**Output:** Print the area of the largest rectangle.",
   "constraints": "- 1 ≤ heights.length ≤ 10⁵\n- 0 ≤ heights[i] ≤ 10⁴",
   "examples": [
-    { "input": "heights = [2,1,5,6,2,3]", "output": "10", "explanation": "The rectangle spanning bars 3 and 4 (heights 5 and 6) gives area 10." },
-    { "input": "heights = [2,4]",          "output": "4",  "explanation": "Single bar of height 4." },
-    { "input": "heights = [6,2,5,4,5,1,6]","output": "12","explanation": "Rectangle of height 4 spanning 4 bars." }
+    {
+      "input": "heights = [2,1,5,6,2,3]",
+      "output": "10",
+      "explanation": "The rectangle spanning bars 3 and 4 (heights 5 and 6) gives area 10."
+    },
+    {
+      "input": "heights = [2,4]",
+      "output": "4",
+      "explanation": "Single bar of height 4."
+    },
+    {
+      "input": "heights = [6,2,5,4,5,1,6]",
+      "output": "12",
+      "explanation": "Rectangle of height 4 spanning 4 bars."
+    }
   ],
   "testCases": [
-    { "input": "2 1 5 6 2 3",   "expectedOutput": "10", "order": 1, "isHidden": false },
-    { "input": "2 4",            "expectedOutput": "4",  "order": 2, "isHidden": false },
-    { "input": "6 2 5 4 5 1 6", "expectedOutput": "12", "order": 3, "isHidden": false },
-    { "input": "1",              "expectedOutput": "1",  "order": 4, "isHidden": true },
-    { "input": "0",              "expectedOutput": "0",  "order": 5, "isHidden": true },
-    { "input": "5 5 5 5 5",     "expectedOutput": "25", "order": 6, "isHidden": true },
-    { "input": "1 2 3 4 5",     "expectedOutput": "9",  "order": 7, "isHidden": true }
+    {
+      "input": "2 1 5 6 2 3",
+      "expectedOutput": "10",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "2 4",
+      "expectedOutput": "4",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "6 2 5 4 5 1 6",
+      "expectedOutput": "12",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1",
+      "expectedOutput": "1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "0",
+      "expectedOutput": "0",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "5 5 5 5 5",
+      "expectedOutput": "25",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3 4 5",
+      "expectedOutput": "9",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Stack"
   ]
 }

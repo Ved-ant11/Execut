@@ -3,7 +3,7 @@
   "title": "Maximum Sum Circular Subarray",
   "difficulty": "MEDIUM",
   "statement": "Given a circular integer array (the last element is adjacent to the first), find the maximum sum of a non-empty subarray.\n\n**Input:** Space-separated integers.\n**Output:** Print the maximum circular subarray sum.",
-  "constraints": "- 1 \u2264 nums.length \u2264 3 \u00d7 10\u2074\n- -3 \u00d7 10\u2074 \u2264 nums[i] \u2264 3 \u00d7 10\u2074",
+  "constraints": "- 1 ≤ nums.length ≤ 3 × 10⁴\n- -3 × 10⁴ ≤ nums[i] ≤ 3 × 10⁴",
   "examples": [
     {
       "input": "nums=[1,-2,3,-2]",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Arrays"
   ]
 }

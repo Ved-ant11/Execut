@@ -3,7 +3,7 @@
   "title": "Largest Number Formed from Array",
   "difficulty": "MEDIUM",
   "statement": "Given a list of non-negative integers, arrange them to form the largest possible number.\n\n**Input:** Space-separated non-negative integers.\n**Output:** Print the largest number as a string.",
-  "constraints": "- 1 \u2264 nums.length \u2264 100\n- 0 \u2264 nums[i] \u2264 10\u2079",
+  "constraints": "- 1 ≤ nums.length ≤ 100\n- 0 ≤ nums[i] ≤ 10⁹",
   "examples": [
     {
       "input": "nums=[10,2]",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Arrays",
+    "Sorting"
   ]
 }

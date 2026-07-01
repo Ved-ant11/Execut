@@ -2,13 +2,13 @@
   "id": "partition-labels-merge",
   "title": "Partition Labels with Merge",
   "difficulty": "MEDIUM",
-  "statement": "Partition string `s` into the maximum number of parts so each letter appears in at most one part. Then greedily **merge consecutive parts** whose combined length \u2264 k (left to right). Return final partition sizes.\n\n**Input:** First line: string s. Second line: integer k.\n**Output:** Space-separated partition sizes.",
-  "constraints": "- 1 \u2264 s.length \u2264 500\n- 1 \u2264 k \u2264 s.length",
+  "statement": "Partition string `s` into the maximum number of parts so each letter appears in at most one part. Then greedily **merge consecutive parts** whose combined length ≤ k (left to right). Return final partition sizes.\n\n**Input:** First line: string s. Second line: integer k.\n**Output:** Space-separated partition sizes.",
+  "constraints": "- 1 ≤ s.length ≤ 500\n- 1 ≤ k ≤ s.length",
   "examples": [
     {
       "input": "ababcbacadefegdehijhklij\n10",
       "output": "9 7 8",
-      "explanation": "Base partitions: 9,7,8. No consecutive pair sums \u226410. No merges."
+      "explanation": "Base partitions: 9,7,8. No consecutive pair sums ≤10. No merges."
     },
     {
       "input": "abcabc\n10",
@@ -18,7 +18,7 @@
     {
       "input": "abcd\n3",
       "output": "3 1",
-      "explanation": "Base: 1,1,1,1. Merge: 1+1=2\u22643\u21922; 2+1=3\u22643\u21923; 3+1=4>3 stop. Result: 3,1."
+      "explanation": "Base: 1,1,1,1. Merge: 1+1=2≤3→2; 2+1=3≤3→3; 3+1=4>3 stop. Result: 3,1."
     }
   ],
   "testCases": [
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Greedy",
+    "Intervals"
   ]
 }

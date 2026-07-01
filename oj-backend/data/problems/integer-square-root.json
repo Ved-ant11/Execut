@@ -3,22 +3,22 @@
   "title": "Integer Square Root",
   "difficulty": "EASY",
   "statement": "Given a non-negative integer `x`, return the floor of its square root without using any built-in power or square root functions. Use binary search for `O(log x)` complexity.\n\n**Input:** A single non-negative integer `x`.\n**Output:** Print the floor square root.",
-  "constraints": "- 0 \u2264 x \u2264 2\u00b3\u00b9 - 1",
+  "constraints": "- 0 ≤ x ≤ 2³¹ - 1",
   "examples": [
     {
       "input": "x = 4",
       "output": "2",
-      "explanation": "\u221a4 = 2."
+      "explanation": "√4 = 2."
     },
     {
       "input": "x = 8",
       "output": "2",
-      "explanation": "\u221a8 = 2.82..., floor = 2."
+      "explanation": "√8 = 2.82..., floor = 2."
     },
     {
       "input": "x = 26",
       "output": "5",
-      "explanation": "\u221a26 = 5.09..., floor = 5."
+      "explanation": "√26 = 5.09..., floor = 5."
     }
   ],
   "testCases": [
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Binary Search",
+    "Math"
   ]
 }

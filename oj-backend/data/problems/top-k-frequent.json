@@ -5,15 +5,57 @@
   "statement": "Given an integer array `nums` and an integer `k`, return the `k` most frequent elements. Output them in descending order of frequency. If two elements have the same frequency, output the larger element first.\n\n**Input:**\n- Line 1: space-separated integers representing the array.\n- Line 2: integer `k`.\n\n**Output:** Print the `k` most frequent elements space-separated.",
   "constraints": "- 1 ≤ nums.length ≤ 10⁵\n- -10⁴ ≤ nums[i] ≤ 10⁴\n- 1 ≤ k ≤ number of unique elements",
   "examples": [
-    { "input": "nums=[1,1,1,2,2,3], k=2", "output": "1 2", "explanation": "1 appears 3 times, 2 appears 2 times." },
-    { "input": "nums=[1], k=1",            "output": "1",   "explanation": "Only element." }
+    {
+      "input": "nums=[1,1,1,2,2,3], k=2",
+      "output": "1 2",
+      "explanation": "1 appears 3 times, 2 appears 2 times."
+    },
+    {
+      "input": "nums=[1], k=1",
+      "output": "1",
+      "explanation": "Only element."
+    }
   ],
   "testCases": [
-    { "input": "1 1 1 2 2 3\n2", "expectedOutput": "1 2", "order": 1, "isHidden": false },
-    { "input": "1\n1",           "expectedOutput": "1",   "order": 2, "isHidden": false },
-    { "input": "4 4 4 3 3 2\n2","expectedOutput": "4 3", "order": 3, "isHidden": true },
-    { "input": "5 5 4 4 3\n3",  "expectedOutput": "5 4 3","order": 4,"isHidden": true },
-    { "input": "1 2 3 4 5\n3",  "expectedOutput": "5 4 3","order": 5,"isHidden": true },
-    { "input": "1 1 2 2 3 3\n2","expectedOutput": "3 2", "order": 6, "isHidden": true }
+    {
+      "input": "1 1 1 2 2 3\n2",
+      "expectedOutput": "1 2",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "1\n1",
+      "expectedOutput": "1",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "4 4 4 3 3 2\n2",
+      "expectedOutput": "4 3",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "5 5 4 4 3\n3",
+      "expectedOutput": "5 4 3",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3 4 5\n3",
+      "expectedOutput": "5 4 3",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1 1 2 2 3 3\n2",
+      "expectedOutput": "3 2",
+      "order": 6,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Hash Map",
+    "Heap"
   ]
 }

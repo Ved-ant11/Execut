@@ -5,17 +5,68 @@
   "statement": "Given an integer `n`, return `true` if it is a power of two, otherwise return `false`.\n\nAn integer is a power of two if there exists an integer `k` such that `n == 2^k`.\n\n**Input:** A single integer `n`.\n**Output:** Print `true` or `false`.",
   "constraints": "- -2³¹ ≤ n ≤ 2³¹ - 1",
   "examples": [
-    { "input": "n = 1",  "output": "true",  "explanation": "2⁰ = 1." },
-    { "input": "n = 16", "output": "true",  "explanation": "2⁴ = 16." },
-    { "input": "n = 3",  "output": "false", "explanation": "3 is not a power of two." }
+    {
+      "input": "n = 1",
+      "output": "true",
+      "explanation": "2⁰ = 1."
+    },
+    {
+      "input": "n = 16",
+      "output": "true",
+      "explanation": "2⁴ = 16."
+    },
+    {
+      "input": "n = 3",
+      "output": "false",
+      "explanation": "3 is not a power of two."
+    }
   ],
   "testCases": [
-    { "input": "1",    "expectedOutput": "true",  "order": 1, "isHidden": false },
-    { "input": "16",   "expectedOutput": "true",  "order": 2, "isHidden": false },
-    { "input": "3",    "expectedOutput": "false", "order": 3, "isHidden": false },
-    { "input": "0",    "expectedOutput": "false", "order": 4, "isHidden": true },
-    { "input": "-1",   "expectedOutput": "false", "order": 5, "isHidden": true },
-    { "input": "1024", "expectedOutput": "true",  "order": 6, "isHidden": true },
-    { "input": "1000", "expectedOutput": "false", "order": 7, "isHidden": true }
+    {
+      "input": "1",
+      "expectedOutput": "true",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "16",
+      "expectedOutput": "true",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "3",
+      "expectedOutput": "false",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "0",
+      "expectedOutput": "false",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "-1",
+      "expectedOutput": "false",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1024",
+      "expectedOutput": "true",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1000",
+      "expectedOutput": "false",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Math",
+    "Bit Manipulation"
   ]
 }

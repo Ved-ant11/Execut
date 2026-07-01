@@ -3,12 +3,12 @@
   "title": "Stock Trading with Mandatory Rest",
   "difficulty": "MEDIUM",
   "statement": "You are given daily stock prices. You may buy and sell repeatedly, but after **selling**, you must rest for exactly one day before buying again. You may hold at most one share at a time. Find the **maximum profit**.\n\n**Input:** First line: n. Second line: n space-separated prices.\n**Output:** Maximum profit.",
-  "constraints": "- 1 \u2264 n \u2264 5000\n- 1 \u2264 prices[i] \u2264 10\u2075",
+  "constraints": "- 1 ≤ n ≤ 5000\n- 1 ≤ prices[i] ≤ 10⁵",
   "examples": [
     {
       "input": "6\n1 2 3 0 2 4",
       "output": "6",
-      "explanation": "Buy day0(1), sell day2(3), rest day3, buy day4(2), sell day5(4). Profit=2+2=4. Or buy day0, sell day1, rest, buy day3, sell day5: 1+4=5. Or buy0 sell1=1, rest, buy3 sell5=4: total 5. Or buy0 sell2=2, rest day3, buy4 sell5=2: total=4. Best: buy day3(0), sell day5(4)=4 + buy day0 sell day1=1 \u2192 but rest after sell day1 means can't buy day2. Buy day3 earliest. So buy0 sell1=1, rest day2, buy day3(0) sell day5(4)=4. Total=5. Hmm: 1 2 3 0 2 4. buy0(1) sell2(3)=2, rest day3, buy4(2) sell5(4)=2. Total=4. Or buy0(1) sell1(2)=1, rest day2, buy3(0) sell5(4)=4. Total=5. Max=5? Let me check buy0(1) sell1(2)=1, rest2, buy3(0) sell5(4)=4: profit=5. Or no buy/sell day0: buy1(2) sell2(3)=1, rest3, buy4(2) sell5(4)=2. Total=3. Or buy3(0) sell5(4)=4. Or buy0(1) sell5(4)=3. Max seems 5."
+      "explanation": "Buy day0(1), sell day2(3), rest day3, buy day4(2), sell day5(4). Profit=2+2=4. Or buy day0, sell day1, rest, buy day3, sell day5: 1+4=5. Or buy0 sell1=1, rest, buy3 sell5=4: total 5. Or buy0 sell2=2, rest day3, buy4 sell5=2: total=4. Best: buy day3(0), sell day5(4)=4 + buy day0 sell day1=1 → but rest after sell day1 means can't buy day2. Buy day3 earliest. So buy0 sell1=1, rest day2, buy day3(0) sell day5(4)=4. Total=5. Hmm: 1 2 3 0 2 4. buy0(1) sell2(3)=2, rest day3, buy4(2) sell5(4)=2. Total=4. Or buy0(1) sell1(2)=1, rest day2, buy3(0) sell5(4)=4. Total=5. Max=5? Let me check buy0(1) sell1(2)=1, rest2, buy3(0) sell5(4)=4: profit=5. Or no buy/sell day0: buy1(2) sell2(3)=1, rest3, buy4(2) sell5(4)=2. Total=3. Or buy3(0) sell5(4)=4. Or buy0(1) sell5(4)=3. Max seems 5."
     },
     {
       "input": "3\n1 2 3",
@@ -70,5 +70,8 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

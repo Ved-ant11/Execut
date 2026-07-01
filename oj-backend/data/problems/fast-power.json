@@ -1,9 +1,9 @@
 {
   "id": "fast-power",
-  "title": "Fast Power \u2014 Recursive Exponentiation",
+  "title": "Fast Power — Recursive Exponentiation",
   "difficulty": "EASY",
   "statement": "Given a base `b` and exponent `e`, compute `b^e` using recursive fast exponentiation (divide and conquer). Do not use built-in power functions.\n\n**Input:**\n- Line 1: integer `b`.\n- Line 2: integer `e`.\n\n**Output:** Print `b^e`.",
-  "constraints": "- 1 \u2264 b \u2264 10\n- 0 \u2264 e \u2264 30\n- Result fits in a 64-bit integer.",
+  "constraints": "- 1 ≤ b ≤ 10\n- 0 ≤ e ≤ 30\n- Result fits in a 64-bit integer.",
   "examples": [
     {
       "input": "b=2, e=10",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Math",
+    "Recursion"
   ]
 }

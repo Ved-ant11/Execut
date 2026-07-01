@@ -12,8 +12,27 @@
     }
   ],
   "testCases": [
-    { "input": "2 7 11 15\n9", "expectedOutput": "0 1", "order": 1, "isHidden": false },
-    { "input": "3 2 4\n6",     "expectedOutput": "1 2", "order": 2, "isHidden": true },
-    { "input": "3 3\n6",       "expectedOutput": "0 1", "order": 3, "isHidden": true }
+    {
+      "input": "2 7 11 15\n9",
+      "expectedOutput": "0 1",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "3 2 4\n6",
+      "expectedOutput": "1 2",
+      "order": 2,
+      "isHidden": true
+    },
+    {
+      "input": "3 3\n6",
+      "expectedOutput": "0 1",
+      "order": 3,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Arrays",
+    "Hash Map"
   ]
 }

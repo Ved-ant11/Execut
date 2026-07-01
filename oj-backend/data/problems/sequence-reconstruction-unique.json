@@ -3,7 +3,7 @@
   "title": "Unique Sequence Reconstruction",
   "difficulty": "HARD",
   "statement": "Given sequence `org` and list of subsequences `seqs`, determine if `org` is the **only** sequence that can be reconstructed. True iff: every value in seqs appears in org, every consecutive pair in each seq preserves org's order, AND every consecutive pair in org is constrained by at least one seq.\n\n**Input:** First line: org (space-separated). Second line: s. Next s lines: one seq each.\n**Output:** true or false.",
-  "constraints": "- 1 \u2264 |org| \u2264 10\u2074\n- 1 \u2264 s \u2264 10\u2074",
+  "constraints": "- 1 ≤ |org| ≤ 10⁴\n- 1 ≤ s ≤ 10⁴",
   "examples": [
     {
       "input": "1 2 3\n3\n1 2\n1 3\n2 3",
@@ -13,7 +13,7 @@
     {
       "input": "1 2 3\n2\n1 2\n1 3",
       "output": "false",
-      "explanation": "Pair (2,3) not constrained \u2014 [1,3,2] also valid."
+      "explanation": "Pair (2,3) not constrained — [1,3,2] also valid."
     },
     {
       "input": "1\n1\n1",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Graphs",
+    "Topological Sort"
   ]
 }

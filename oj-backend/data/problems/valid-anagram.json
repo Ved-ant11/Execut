@@ -17,11 +17,45 @@
     }
   ],
   "testCases": [
-    { "input": "anagram\nnagaram", "expectedOutput": "true",  "order": 1, "isHidden": false },
-    { "input": "rat\ncar",         "expectedOutput": "false", "order": 2, "isHidden": false },
-    { "input": "listen\nsilent",   "expectedOutput": "true",  "order": 3, "isHidden": true },
-    { "input": "hello\nworld",     "expectedOutput": "false", "order": 4, "isHidden": true },
-    { "input": "a\na",             "expectedOutput": "true",  "order": 5, "isHidden": true },
-    { "input": "ab\na",            "expectedOutput": "false", "order": 6, "isHidden": true }
+    {
+      "input": "anagram\nnagaram",
+      "expectedOutput": "true",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "rat\ncar",
+      "expectedOutput": "false",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "listen\nsilent",
+      "expectedOutput": "true",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "hello\nworld",
+      "expectedOutput": "false",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "a\na",
+      "expectedOutput": "true",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "ab\na",
+      "expectedOutput": "false",
+      "order": 6,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Strings",
+    "Hash Map"
   ]
 }

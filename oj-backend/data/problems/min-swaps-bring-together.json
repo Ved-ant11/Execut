@@ -1,19 +1,19 @@
 {
   "id": "min-swaps-bring-together",
-  "title": "Minimum Swaps to Bring Elements \u2264 K Together",
+  "title": "Minimum Swaps to Bring Elements ≤ K Together",
   "difficulty": "MEDIUM",
-  "statement": "Given an array `arr` and integer `k`, find the minimum number of swaps needed to bring all elements \u2264 k together (in any contiguous window).\n\n**Input:**\n- Line 1: space-separated integers.\n- Line 2: integer `k`.\n\n**Output:** Print the minimum swaps.",
-  "constraints": "- 1 \u2264 arr.length \u2264 10\u2075\n- 1 \u2264 arr[i] \u2264 10\u2077\n- 1 \u2264 k \u2264 max(arr)",
+  "statement": "Given an array `arr` and integer `k`, find the minimum number of swaps needed to bring all elements ≤ k together (in any contiguous window).\n\n**Input:**\n- Line 1: space-separated integers.\n- Line 2: integer `k`.\n\n**Output:** Print the minimum swaps.",
+  "constraints": "- 1 ≤ arr.length ≤ 10⁵\n- 1 ≤ arr[i] ≤ 10⁷\n- 1 ≤ k ≤ max(arr)",
   "examples": [
     {
       "input": "arr=[2,1,5,6,3], k=3",
       "output": "1",
-      "explanation": "Elements \u22643: positions 0,1,4. Need 1 swap to bring together."
+      "explanation": "Elements ≤3: positions 0,1,4. Need 1 swap to bring together."
     },
     {
       "input": "arr=[2,7,9,5,8,7,4], k=6",
       "output": "2",
-      "explanation": "Elements \u22646: 2,5,4 at positions 0,3,6. Need 2 swaps."
+      "explanation": "Elements ≤6: 2,5,4 at positions 0,3,6. Need 2 swaps."
     }
   ],
   "testCases": [
@@ -59,5 +59,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Sliding Window",
+    "Arrays"
   ]
 }

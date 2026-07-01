@@ -22,6 +22,7 @@ export type Problem = {
   constraints: string;
   examples: Example[];
   testCases: TestCase[];
+  tags?: string[];
 };
 
 const dir = path.join(__dirname);

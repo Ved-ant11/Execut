@@ -3,7 +3,7 @@
   "title": "0/1 Knapsack Problem",
   "difficulty": "MEDIUM",
   "statement": "Given `n` items with weights and values, and a knapsack capacity `W`, find the maximum value you can carry. Each item can be picked at most once.\n\n**Input:**\n- Line 1: two integers `n` and `W`.\n- Line 2: space-separated weights.\n- Line 3: space-separated values.\n\n**Output:** Print the maximum value.",
-  "constraints": "- 1 \u2264 n \u2264 100\n- 1 \u2264 W \u2264 1000\n- 1 \u2264 weights[i] \u2264 W\n- 1 \u2264 values[i] \u2264 1000",
+  "constraints": "- 1 ≤ n ≤ 100\n- 1 ≤ W ≤ 1000\n- 1 ≤ weights[i] ≤ W\n- 1 ≤ values[i] ≤ 1000",
   "examples": [
     {
       "input": "n=4, W=5, w=[2,3,4,5], v=[3,4,5,6]",
@@ -18,7 +18,7 @@
     {
       "input": "n=3, W=5, w=[1,2,3], v=[6,10,12]",
       "output": "22",
-      "explanation": "Pick items 0+2 (weight=4, value=18)? No: 2+3=5, 10+12=22 \u2713."
+      "explanation": "Pick items 0+2 (weight=4, value=18)? No: 2+3=5, 10+12=22 ✓."
     }
   ],
   "testCases": [
@@ -64,5 +64,8 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

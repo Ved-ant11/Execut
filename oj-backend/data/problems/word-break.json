@@ -5,17 +5,68 @@
   "statement": "Given a string `s` and a dictionary of strings `wordDict`, return `true` if `s` can be segmented into a space-separated sequence of one or more dictionary words.\n\nNote that the same word in the dictionary may be reused multiple times.\n\n**Input:**\n- Line 1: the string `s`.\n- Line 2: space-separated words in the dictionary.\n\n**Output:** Print `true` or `false`.",
   "constraints": "- 1 ≤ s.length ≤ 300\n- 1 ≤ wordDict.length ≤ 1000\n- 1 ≤ each word length ≤ 20\n- s and dictionary words consist of lowercase English letters only.",
   "examples": [
-    { "input": "s = \"leetcode\", wordDict = [\"leet\",\"code\"]",          "output": "true",  "explanation": "\"leetcode\" = \"leet\" + \"code\"." },
-    { "input": "s = \"applepenapple\", wordDict = [\"apple\",\"pen\"]",    "output": "true",  "explanation": "\"apple\" + \"pen\" + \"apple\"." },
-    { "input": "s = \"catsandog\", wordDict = [\"cats\",\"dog\",\"sand\",\"and\",\"cat\"]", "output": "false", "explanation": "Cannot segment fully." }
+    {
+      "input": "s = \"leetcode\", wordDict = [\"leet\",\"code\"]",
+      "output": "true",
+      "explanation": "\"leetcode\" = \"leet\" + \"code\"."
+    },
+    {
+      "input": "s = \"applepenapple\", wordDict = [\"apple\",\"pen\"]",
+      "output": "true",
+      "explanation": "\"apple\" + \"pen\" + \"apple\"."
+    },
+    {
+      "input": "s = \"catsandog\", wordDict = [\"cats\",\"dog\",\"sand\",\"and\",\"cat\"]",
+      "output": "false",
+      "explanation": "Cannot segment fully."
+    }
   ],
   "testCases": [
-    { "input": "leetcode\nleet code",                          "expectedOutput": "true",  "order": 1, "isHidden": false },
-    { "input": "applepenapple\napple pen",                    "expectedOutput": "true",  "order": 2, "isHidden": false },
-    { "input": "catsandog\ncats dog sand and cat",            "expectedOutput": "false", "order": 3, "isHidden": false },
-    { "input": "a\na",                                        "expectedOutput": "true",  "order": 4, "isHidden": true },
-    { "input": "goalspecial\ngo goal special",                "expectedOutput": "true",  "order": 5, "isHidden": true },
-    { "input": "aaaaaaaaaaaaaaaaaaaaaaaab\na aa aaa aaaa",   "expectedOutput": "false", "order": 6, "isHidden": true },
-    { "input": "abcd\nab bc cd abc bcd abcd",                 "expectedOutput": "true",  "order": 7, "isHidden": true }
+    {
+      "input": "leetcode\nleet code",
+      "expectedOutput": "true",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "applepenapple\napple pen",
+      "expectedOutput": "true",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "catsandog\ncats dog sand and cat",
+      "expectedOutput": "false",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "a\na",
+      "expectedOutput": "true",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "goalspecial\ngo goal special",
+      "expectedOutput": "true",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "aaaaaaaaaaaaaaaaaaaaaaaab\na aa aaa aaaa",
+      "expectedOutput": "false",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "abcd\nab bc cd abc bcd abcd",
+      "expectedOutput": "true",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Strings"
   ]
 }

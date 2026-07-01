@@ -2,13 +2,13 @@
   "id": "matrix-chain-multiplication",
   "title": "Matrix Chain Multiplication",
   "difficulty": "HARD",
-  "statement": "Given dimensions of a sequence of matrices, find the minimum number of scalar multiplications needed to multiply them all.\n\nMatrix `i` has dimensions `dims[i] \u00d7 dims[i+1]`.\n\n**Input:** Space-separated integers representing the dimension array.\n**Output:** Print the minimum number of multiplications.",
-  "constraints": "- 2 \u2264 dims.length \u2264 15\n- 1 \u2264 dims[i] \u2264 100",
+  "statement": "Given dimensions of a sequence of matrices, find the minimum number of scalar multiplications needed to multiply them all.\n\nMatrix `i` has dimensions `dims[i] × dims[i+1]`.\n\n**Input:** Space-separated integers representing the dimension array.\n**Output:** Print the minimum number of multiplications.",
+  "constraints": "- 2 ≤ dims.length ≤ 15\n- 1 ≤ dims[i] ≤ 100",
   "examples": [
     {
       "input": "dims=[10,30,5,60]",
       "output": "4500",
-      "explanation": "(A\u00d7B)\u00d7C costs 10\u00d730\u00d75 + 10\u00d75\u00d760 = 4500."
+      "explanation": "(A×B)×C costs 10×30×5 + 10×5×60 = 4500."
     },
     {
       "input": "dims=[1,2,3,4]",
@@ -64,5 +64,8 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

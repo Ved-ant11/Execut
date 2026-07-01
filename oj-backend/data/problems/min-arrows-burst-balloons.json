@@ -2,8 +2,8 @@
   "id": "min-arrows-burst-balloons",
   "title": "Minimum Arrows to Burst Balloons",
   "difficulty": "MEDIUM",
-  "statement": "Balloons are represented as intervals `[start, end]`. An arrow shot at position `x` bursts all balloons where `start \u2264 x \u2264 end`. Find the minimum number of arrows needed to burst all balloons.\n\n**Input:**\n- Line 1: integer `n`.\n- Next `n` lines: two integers `start end` per balloon.\n\n**Output:** Print the minimum number of arrows.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- -2\u00b3\u00b9 \u2264 start < end \u2264 2\u00b3\u00b9 - 1",
+  "statement": "Balloons are represented as intervals `[start, end]`. An arrow shot at position `x` bursts all balloons where `start ≤ x ≤ end`. Find the minimum number of arrows needed to burst all balloons.\n\n**Input:**\n- Line 1: integer `n`.\n- Next `n` lines: two integers `start end` per balloon.\n\n**Output:** Print the minimum number of arrows.",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- -2³¹ ≤ start < end ≤ 2³¹ - 1",
   "examples": [
     {
       "input": "n=4, balloons=[[10,16],[2,8],[1,6],[7,12]]",
@@ -64,5 +64,10 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Greedy",
+    "Intervals",
+    "Sorting"
   ]
 }

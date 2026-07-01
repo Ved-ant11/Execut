@@ -3,7 +3,7 @@
   "title": "First Non-Repeating Character",
   "difficulty": "EASY",
   "statement": "Given a string `s`, find the first character that does not repeat anywhere in the string. Print the character and its 0-based index separated by a space. If all characters repeat, print `-1`.\n\n**Input:** A single string `s`.\n**Output:** Print `char index` or `-1`.",
-  "constraints": "- 1 \u2264 s.length \u2264 10\u2075\n- s consists of lowercase English letters only.",
+  "constraints": "- 1 ≤ s.length ≤ 10⁵\n- s consists of lowercase English letters only.",
   "examples": [
     {
       "input": "s = \"leetcode\"",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Strings",
+    "Hash Map"
   ]
 }

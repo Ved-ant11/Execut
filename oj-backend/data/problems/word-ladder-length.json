@@ -5,16 +5,63 @@
   "statement": "Given two words `beginWord` and `endWord` and a dictionary of words `wordList`, return the number of words in the shortest transformation sequence from `beginWord` to `endWord`, such that:\n- Only one letter can be changed at a time.\n- Each transformed word must exist in `wordList`.\n\nReturn `0` if no such sequence exists. The `beginWord` is not necessarily in `wordList`.\n\n**Input:**\n- Line 1: `beginWord`.\n- Line 2: `endWord`.\n- Line 3: space-separated words in `wordList`.\n\n**Output:** Print the length of the shortest sequence, or `0` if impossible.",
   "constraints": "- 1 ≤ beginWord.length ≤ 10\n- beginWord.length == endWord.length\n- 1 ≤ wordList.length ≤ 5000\n- All words have the same length and consist of lowercase letters.\n- beginWord ≠ endWord.",
   "examples": [
-    { "input": "beginWord=hit, endWord=cog, wordList=[hot,dot,dog,lot,log,cog]", "output": "5", "explanation": "hit→hot→dot→dog→cog = 5 words." },
-    { "input": "beginWord=hit, endWord=cog, wordList=[hot,dot,dog,lot,log]",     "output": "0", "explanation": "cog not in wordList, impossible." }
+    {
+      "input": "beginWord=hit, endWord=cog, wordList=[hot,dot,dog,lot,log,cog]",
+      "output": "5",
+      "explanation": "hit→hot→dot→dog→cog = 5 words."
+    },
+    {
+      "input": "beginWord=hit, endWord=cog, wordList=[hot,dot,dog,lot,log]",
+      "output": "0",
+      "explanation": "cog not in wordList, impossible."
+    }
   ],
   "testCases": [
-    { "input": "hit\ncog\nhot dot dog lot log cog", "expectedOutput": "5", "order": 1, "isHidden": false },
-    { "input": "hit\ncog\nhot dot dog lot log",     "expectedOutput": "0", "order": 2, "isHidden": false },
-    { "input": "a\nc\na b c",                      "expectedOutput": "2", "order": 3, "isHidden": true },
-    { "input": "hot\ndot\nhot dot",                "expectedOutput": "2", "order": 4, "isHidden": true },
-    { "input": "ab\ncd\nab cb cd",                 "expectedOutput": "3", "order": 5, "isHidden": true },
-    { "input": "hit\nhot\nhot",                    "expectedOutput": "2", "order": 6, "isHidden": true },
-    { "input": "abc\ndef\nabc aec aef def",         "expectedOutput": "4", "order": 7, "isHidden": true }
+    {
+      "input": "hit\ncog\nhot dot dog lot log cog",
+      "expectedOutput": "5",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "hit\ncog\nhot dot dog lot log",
+      "expectedOutput": "0",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "a\nc\na b c",
+      "expectedOutput": "2",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "hot\ndot\nhot dot",
+      "expectedOutput": "2",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "ab\ncd\nab cb cd",
+      "expectedOutput": "3",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "hit\nhot\nhot",
+      "expectedOutput": "2",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "abc\ndef\nabc aec aef def",
+      "expectedOutput": "4",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Graphs",
+    "BFS"
   ]
 }

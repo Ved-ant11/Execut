@@ -3,7 +3,7 @@
   "title": "Maximum Nesting Depth of Parentheses",
   "difficulty": "EASY",
   "statement": "Given a string containing digits, operators, and parentheses representing a valid arithmetic expression, return the maximum nesting depth of the parentheses.\n\n**Input:** A single string expression.\n**Output:** Print the maximum depth.",
-  "constraints": "- 1 \u2264 s.length \u2264 100\n- s is a valid arithmetic expression with balanced parentheses.",
+  "constraints": "- 1 ≤ s.length ≤ 100\n- s is a valid arithmetic expression with balanced parentheses.",
   "examples": [
     {
       "input": "s=(1+(2*3)+((8)/4))+1",
@@ -64,5 +64,8 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Stack"
   ]
 }

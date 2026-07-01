@@ -2,8 +2,8 @@
   "id": "weighted-stock-span",
   "title": "Weighted Stock Span",
   "difficulty": "MEDIUM",
-  "statement": "The **span** of a stock on day `i` is the number of consecutive days ending at day `i` where the price \u2264 prices[i]. The **weighted span** is the sum of `span[i] \u00d7 prices[i]` for all days. Compute it.\n\n**Input:** Space-separated stock prices.\n**Output:** Single integer \u2014 the weighted span.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- 1 \u2264 prices[i] \u2264 10\u2075",
+  "statement": "The **span** of a stock on day `i` is the number of consecutive days ending at day `i` where the price ≤ prices[i]. The **weighted span** is the sum of `span[i] × prices[i]` for all days. Compute it.\n\n**Input:** Space-separated stock prices.\n**Output:** Single integer — the weighted span.",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- 1 ≤ prices[i] ≤ 10⁵",
   "examples": [
     {
       "input": "100 80 60 70 60 75 85",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Stack",
+    "Arrays"
   ]
 }

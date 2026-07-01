@@ -3,7 +3,7 @@
   "title": "Kth Smallest Element in Sorted Matrix",
   "difficulty": "HARD",
   "statement": "Given an `n x n` matrix where each row and column is sorted in ascending order, find the kth smallest element.\n\n**Input:**\n- Line 1: two integers `n` and `k`.\n- Next `n` lines: `n` space-separated integers per row.\n\n**Output:** Print the kth smallest element.",
-  "constraints": "- 1 \u2264 n \u2264 300\n- -10\u2079 \u2264 matrix[i][j] \u2264 10\u2079\n- 1 \u2264 k \u2264 n\u00b2",
+  "constraints": "- 1 ≤ n ≤ 300\n- -10⁹ ≤ matrix[i][j] ≤ 10⁹\n- 1 ≤ k ≤ n²",
   "examples": [
     {
       "input": "n=3, k=8, matrix=[[1,5,9],[10,11,13],[12,13,15]]",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Binary Search",
+    "Heap"
   ]
 }

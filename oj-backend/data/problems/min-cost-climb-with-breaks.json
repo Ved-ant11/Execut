@@ -3,7 +3,7 @@
   "title": "Minimum Cost Climb with Breaks",
   "difficulty": "HARD",
   "statement": "You have a staircase of `n` steps. Step `i` has a cost `cost[i]` to step on. After stepping on any step, you may jump 1 or 2 steps forward. You must reach the top (beyond the last step).\n\nAdditionally, you have `k` **break tokens**: each break token lets you skip one step for free (zero cost). Find the **minimum cost** to reach the top using at most `k` tokens.\n\n**Input:** First line: space-separated costs. Second line: k.\n**Output:** Minimum cost.",
-  "constraints": "- 1 \u2264 n \u2264 1000\n- 0 \u2264 cost[i] \u2264 999\n- 0 \u2264 k \u2264 n",
+  "constraints": "- 1 ≤ n ≤ 1000\n- 0 ≤ cost[i] ≤ 999\n- 0 ≤ k ≤ n",
   "examples": [
     {
       "input": "10 15 20\n0",
@@ -70,5 +70,8 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

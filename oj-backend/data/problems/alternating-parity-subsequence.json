@@ -3,12 +3,12 @@
   "title": "Alternating Parity Subsequence",
   "difficulty": "EASY",
   "statement": "Given an array of positive integers, find the length of the **longest subsequence** where values alternate strictly between odd and even (can start with either).\n\n**Input:** Space-separated positive integers.\n**Output:** Length of the longest alternating parity subsequence.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- 1 \u2264 nums[i] \u2264 10\u2076",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- 1 ≤ nums[i] ≤ 10⁶",
   "examples": [
     {
       "input": "1 2 3 4 5",
       "output": "5",
-      "explanation": "o,e,o,e,o \u2014 already alternating. Length=5."
+      "explanation": "o,e,o,e,o — already alternating. Length=5."
     },
     {
       "input": "1 3 5 7",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Arrays"
   ]
 }

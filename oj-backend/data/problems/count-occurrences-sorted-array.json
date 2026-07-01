@@ -3,7 +3,7 @@
   "title": "Count Occurrences in Sorted Array",
   "difficulty": "EASY",
   "statement": "Given a sorted array and a target integer, count how many times the target appears. Use binary search for `O(log n)` complexity.\n\n**Input:**\n- Line 1: space-separated sorted integers.\n- Line 2: integer `target`.\n\n**Output:** Print the count.",
-  "constraints": "- 0 \u2264 arr.length \u2264 10\u2075\n- -10\u2079 \u2264 arr[i] \u2264 10\u2079\n- Array is sorted in non-decreasing order.",
+  "constraints": "- 0 ≤ arr.length ≤ 10⁵\n- -10⁹ ≤ arr[i] ≤ 10⁹\n- Array is sorted in non-decreasing order.",
   "examples": [
     {
       "input": "arr=[1,1,2,2,2,3,3], target=2",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Binary Search",
+    "Arrays"
   ]
 }

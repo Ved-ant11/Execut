@@ -5,17 +5,67 @@
   "statement": "Given an array of integers `nums`, determine if it is sorted in **non-decreasing** order.\n\n**Input:** Space-separated integers representing the array.\n**Output:** Print `true` if sorted in non-decreasing order, otherwise `false`.",
   "constraints": "- 1 ≤ nums.length ≤ 10⁵\n- -10⁹ ≤ nums[i] ≤ 10⁹",
   "examples": [
-    { "input": "nums = [1, 2, 2, 3]", "output": "true",  "explanation": "Each element is ≥ previous." },
-    { "input": "nums = [3, 1, 2]",    "output": "false", "explanation": "3 > 1 breaks the order." },
-    { "input": "nums = [5]",           "output": "true",  "explanation": "Single element is trivially sorted." }
+    {
+      "input": "nums = [1, 2, 2, 3]",
+      "output": "true",
+      "explanation": "Each element is ≥ previous."
+    },
+    {
+      "input": "nums = [3, 1, 2]",
+      "output": "false",
+      "explanation": "3 > 1 breaks the order."
+    },
+    {
+      "input": "nums = [5]",
+      "output": "true",
+      "explanation": "Single element is trivially sorted."
+    }
   ],
   "testCases": [
-    { "input": "1 2 2 3",       "expectedOutput": "true",  "order": 1, "isHidden": false },
-    { "input": "3 1 2",         "expectedOutput": "false", "order": 2, "isHidden": false },
-    { "input": "5",             "expectedOutput": "true",  "order": 3, "isHidden": false },
-    { "input": "1 1 1 1",       "expectedOutput": "true",  "order": 4, "isHidden": true },
-    { "input": "-3 -2 -1 0 1",  "expectedOutput": "true",  "order": 5, "isHidden": true },
-    { "input": "10 9 8 7",      "expectedOutput": "false", "order": 6, "isHidden": true },
-    { "input": "1 2 3 2 4",     "expectedOutput": "false", "order": 7, "isHidden": true }
+    {
+      "input": "1 2 2 3",
+      "expectedOutput": "true",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "3 1 2",
+      "expectedOutput": "false",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "5",
+      "expectedOutput": "true",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1 1 1 1",
+      "expectedOutput": "true",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "-3 -2 -1 0 1",
+      "expectedOutput": "true",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "10 9 8 7",
+      "expectedOutput": "false",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3 2 4",
+      "expectedOutput": "false",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Arrays"
   ]
 }

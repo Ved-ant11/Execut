@@ -2,8 +2,8 @@
   "id": "largest-rectangle-histogram-query",
   "title": "Histogram Largest Rectangle After Updates",
   "difficulty": "HARD",
-  "statement": "Given a histogram, process queries:\n- `U i h` \u2014 set bar at index i to height h\n- `Q l r` \u2014 find the largest rectangle area in bars l to r (inclusive)\n\n**Input:** First line: n q. Second line: n heights. Next q lines: queries.\n**Output:** One integer per Q query.",
-  "constraints": "- 1 \u2264 n \u2264 5000\n- 1 \u2264 q \u2264 10\u2074\n- 0 \u2264 heights[i] \u2264 10\u2074",
+  "statement": "Given a histogram, process queries:\n- `U i h` — set bar at index i to height h\n- `Q l r` — find the largest rectangle area in bars l to r (inclusive)\n\n**Input:** First line: n q. Second line: n heights. Next q lines: queries.\n**Output:** One integer per Q query.",
+  "constraints": "- 1 ≤ n ≤ 5000\n- 1 ≤ q ≤ 10⁴\n- 0 ≤ heights[i] ≤ 10⁴",
   "examples": [
     {
       "input": "3 1\n3 3 3\nQ 0 2",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Stack",
+    "Arrays"
   ]
 }

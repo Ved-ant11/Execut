@@ -3,7 +3,7 @@
   "title": "Count Pairs with Given Sum in BST",
   "difficulty": "MEDIUM",
   "statement": "Given the inorder traversal of a BST (a sorted array) and a target sum `k`, count the number of pairs `(i, j)` where `i < j` and `arr[i] + arr[j] == k`.\n\n**Input:**\n- Line 1: space-separated integers (sorted BST inorder).\n- Line 2: integer `k`.\n\n**Output:** Print the count of pairs.",
-  "constraints": "- 1 \u2264 arr.length \u2264 10\u2075\n- -10\u2074 \u2264 arr[i] \u2264 10\u2074\n- All elements are distinct.",
+  "constraints": "- 1 ≤ arr.length ≤ 10⁵\n- -10⁴ ≤ arr[i] ≤ 10⁴\n- All elements are distinct.",
   "examples": [
     {
       "input": "arr=[1,2,3,4,5,6,7], k=9",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Trees",
+    "Two Pointers"
   ]
 }

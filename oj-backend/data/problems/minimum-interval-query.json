@@ -5,16 +5,64 @@
   "statement": "You are given a 2D array `intervals` where `intervals[i] = [left, right]` represents the interval `[left, right]`, and an array `queries` where each query is a point.\n\nFor each query, find the **size** (right - left + 1) of the **smallest** interval that contains that query point. If no interval contains the query, return `-1` for that query.\n\n**Input:**\n- Line 1: integer `m` (number of intervals).\n- Next `m` lines: two integers `left right` per interval.\n- Next line: integer `q` (number of queries).\n- Last line: `q` space-separated query points.\n\n**Output:** Print the answer for each query, space-separated.",
   "constraints": "- 1 ≤ m ≤ 10⁵\n- 1 ≤ left ≤ right ≤ 10⁷\n- 1 ≤ q ≤ 10⁵\n- 1 ≤ queries[i] ≤ 10⁷",
   "examples": [
-    { "input": "m=3, intervals=[[1,4],[2,4],[3,6]], queries=[2,3,4,5]", "output": "3 3 3 4", "explanation": "Query 2: intervals [1,4](size 4) and [2,4](size 3) contain it; min = 3. Query 5: only [3,6](size 4); answer = 4." },
-    { "input": "m=2, intervals=[[2,3],[2,5]], queries=[1,2,3]",         "output": "-1 2 2",  "explanation": "Query 1 not in any interval." }
+    {
+      "input": "m=3, intervals=[[1,4],[2,4],[3,6]], queries=[2,3,4,5]",
+      "output": "3 3 3 4",
+      "explanation": "Query 2: intervals [1,4](size 4) and [2,4](size 3) contain it; min = 3. Query 5: only [3,6](size 4); answer = 4."
+    },
+    {
+      "input": "m=2, intervals=[[2,3],[2,5]], queries=[1,2,3]",
+      "output": "-1 2 2",
+      "explanation": "Query 1 not in any interval."
+    }
   ],
   "testCases": [
-    { "input": "3\n1 4\n2 4\n3 6\n4\n2 3 4 5", "expectedOutput": "3 3 3 4", "order": 1, "isHidden": false },
-    { "input": "2\n2 3\n2 5\n3\n1 2 3",         "expectedOutput": "-1 2 2",  "order": 2, "isHidden": false },
-    { "input": "1\n1 10\n3\n1 5 10",             "expectedOutput": "10 10 10","order": 3, "isHidden": true },
-    { "input": "2\n1 2\n3 4\n2\n2 3",            "expectedOutput": "2 2",     "order": 4, "isHidden": true },
-    { "input": "1\n5 5\n2\n5 6",                 "expectedOutput": "1 -1",    "order": 5, "isHidden": true },
-    { "input": "3\n1 3\n2 5\n4 7\n4\n1 3 5 7",  "expectedOutput": "3 3 4 4", "order": 6, "isHidden": true },
-    { "input": "1\n1 1000000\n3\n1 500000 1000000","expectedOutput": "1000000 1000000 1000000","order": 7,"isHidden": true }
+    {
+      "input": "3\n1 4\n2 4\n3 6\n4\n2 3 4 5",
+      "expectedOutput": "3 3 3 4",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "2\n2 3\n2 5\n3\n1 2 3",
+      "expectedOutput": "-1 2 2",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1\n1 10\n3\n1 5 10",
+      "expectedOutput": "10 10 10",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "2\n1 2\n3 4\n2\n2 3",
+      "expectedOutput": "2 2",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "1\n5 5\n2\n5 6",
+      "expectedOutput": "1 -1",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "3\n1 3\n2 5\n4 7\n4\n1 3 5 7",
+      "expectedOutput": "3 3 4 4",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1\n1 1000000\n3\n1 500000 1000000",
+      "expectedOutput": "1000000 1000000 1000000",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Heap",
+    "Sorting",
+    "Intervals"
   ]
 }

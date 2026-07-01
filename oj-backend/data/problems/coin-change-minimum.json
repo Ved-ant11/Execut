@@ -1,9 +1,9 @@
 {
   "id": "coin-change-minimum",
-  "title": "Coin Change \u2014 Minimum Coins",
+  "title": "Coin Change — Minimum Coins",
   "difficulty": "MEDIUM",
   "statement": "Given coin denominations and an amount, find the minimum number of coins needed to make the amount. Return `-1` if impossible.\n\n**Input:**\n- Line 1: space-separated coin denominations.\n- Line 2: integer `amount`.\n\n**Output:** Print the minimum coins or `-1`.",
-  "constraints": "- 1 \u2264 coins.length \u2264 12\n- 1 \u2264 coins[i] \u2264 2\u00b3\u00b9 - 1\n- 0 \u2264 amount \u2264 10\u2074",
+  "constraints": "- 1 ≤ coins.length ≤ 12\n- 1 ≤ coins[i] ≤ 2³¹ - 1\n- 0 ≤ amount ≤ 10⁴",
   "examples": [
     {
       "input": "coins=[1,5,6,9], amount=11",
@@ -64,5 +64,8 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

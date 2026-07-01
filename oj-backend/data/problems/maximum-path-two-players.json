@@ -2,13 +2,13 @@
   "id": "maximum-path-two-players",
   "title": "Maximum Points Two Player Grid Paths",
   "difficulty": "HARD",
-  "statement": "Two players simultaneously travel from (0,0) to (n-1,m-1) in an n\u00d7m grid, each moving only right or down. Points on a cell are collected only **once** even if both visit it. Maximize total points collected.\n\n**Input:** First line: n m. Next n lines: m space-separated non-negative integers.\n**Output:** Maximum total points.",
-  "constraints": "- 1 \u2264 n, m \u2264 50\n- 0 \u2264 grid[i][j] \u2264 100",
+  "statement": "Two players simultaneously travel from (0,0) to (n-1,m-1) in an n×m grid, each moving only right or down. Points on a cell are collected only **once** even if both visit it. Maximize total points collected.\n\n**Input:** First line: n m. Next n lines: m space-separated non-negative integers.\n**Output:** Maximum total points.",
+  "constraints": "- 1 ≤ n, m ≤ 50\n- 0 ≤ grid[i][j] ≤ 100",
   "examples": [
     {
       "input": "3 3\n0 3 1\n1 0 0\n0 2 0",
       "output": "7",
-      "explanation": "Path1: right\u00d72 then down\u00d72 collects 0+3+1+0+0=4. Path2: down\u00d72 then right\u00d72 collects 0+1+0+2+0=3. Total=7."
+      "explanation": "Path1: right×2 then down×2 collects 0+3+1+0+0=4. Path2: down×2 then right×2 collects 0+1+0+2+0=3. Total=7."
     },
     {
       "input": "1 1\n5",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Matrix"
   ]
 }

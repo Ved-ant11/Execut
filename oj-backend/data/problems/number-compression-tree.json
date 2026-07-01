@@ -2,13 +2,13 @@
   "id": "number-compression-tree",
   "title": "Huffman Code Length",
   "difficulty": "HARD",
-  "statement": "Given character frequencies, compute the **total encoded length** (sum of frequency \u00d7 code length) using an optimal prefix-free code (Huffman coding).\n\n**Input:** First line: n. Second line: n space-separated frequencies.\n**Output:** Minimum total encoded length.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- 1 \u2264 freq[i] \u2264 10\u2076",
+  "statement": "Given character frequencies, compute the **total encoded length** (sum of frequency × code length) using an optimal prefix-free code (Huffman coding).\n\n**Input:** First line: n. Second line: n space-separated frequencies.\n**Output:** Minimum total encoded length.",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- 1 ≤ freq[i] ≤ 10⁶",
   "examples": [
     {
       "input": "4\n5 9 12 13",
       "output": "93",
-      "explanation": "Build Huffman tree: merge 5+9=14, 12+13=25, 14+25=39. Total cost = 14+25+39=78? Wait total encoded = sum of all leaf weights \u00d7 depth = standard formula. Let me compute: merge 5,9\u219214(cost 14), merge 12,13\u219225(cost 25), merge 14,25\u219239(cost 39). Total cost=14+25+39=78."
+      "explanation": "Build Huffman tree: merge 5+9=14, 12+13=25, 14+25=39. Total cost = 14+25+39=78? Wait total encoded = sum of all leaf weights × depth = standard formula. Let me compute: merge 5,9→14(cost 14), merge 12,13→25(cost 25), merge 14,25→39(cost 39). Total cost=14+25+39=78."
     },
     {
       "input": "2\n1 1",
@@ -18,7 +18,7 @@
     {
       "input": "1\n10",
       "output": "0",
-      "explanation": "Single character needs 0 bits (edge case \u2014 it encodes as empty string or 1 bit depending on convention). Convention: single character has code length 1. Total=10."
+      "explanation": "Single character needs 0 bits (edge case — it encodes as empty string or 1 bit depending on convention). Convention: single character has code length 1. Total=10."
     }
   ],
   "testCases": [
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Trees",
+    "Recursion"
   ]
 }

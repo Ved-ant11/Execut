@@ -3,12 +3,12 @@
   "title": "Candy Redistribution",
   "difficulty": "EASY",
   "statement": "You have `n` kids sitting in a row. Kid `i` has `candies[i]` candies. In one operation you can move one candy from kid `i` to adjacent kid `i+1` or vice versa. Find the **minimum number of operations** to make all kids have equal candies, or `-1` if impossible.\n\n**Input:** Space-separated integers representing candies per kid.\n**Output:** Minimum operations or `-1`.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- 0 \u2264 candies[i] \u2264 10\u2074\n- Sum fits in a 64-bit integer",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- 0 ≤ candies[i] ≤ 10⁴\n- Sum fits in a 64-bit integer",
   "examples": [
     {
       "input": "1 0 5",
       "output": "4",
-      "explanation": "Total=6, n=3, target=2 each. Move 3 from idx2\u2192idx1 (3 ops), move 1 from idx1\u2192idx0 (1 op). Final: [2,2,2]. Total ops=4."
+      "explanation": "Total=6, n=3, target=2 each. Move 3 from idx2→idx1 (3 ops), move 1 from idx1→idx0 (1 op). Final: [2,2,2]. Total ops=4."
     },
     {
       "input": "3 3 3",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Greedy",
+    "Arrays"
   ]
 }

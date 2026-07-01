@@ -5,17 +5,67 @@
   "statement": "Given an array of integers `nums`, find the second largest distinct element. If no such element exists, print `-1`.\n\n**Input:** Space-separated integers representing the array.\n**Output:** Print the second largest distinct element, or `-1` if it does not exist.",
   "constraints": "- 1 ≤ nums.length ≤ 10⁵\n- -10⁹ ≤ nums[i] ≤ 10⁹",
   "examples": [
-    { "input": "nums = [3, 1, 4, 1, 5, 9]", "output": "5", "explanation": "Distinct sorted: [1,3,4,5,9]. Second largest is 5." },
-    { "input": "nums = [7, 7, 7]",           "output": "-1","explanation": "All elements are the same, no second distinct." },
-    { "input": "nums = [1, 2]",              "output": "1", "explanation": "Two distinct elements; second largest is 1." }
+    {
+      "input": "nums = [3, 1, 4, 1, 5, 9]",
+      "output": "5",
+      "explanation": "Distinct sorted: [1,3,4,5,9]. Second largest is 5."
+    },
+    {
+      "input": "nums = [7, 7, 7]",
+      "output": "-1",
+      "explanation": "All elements are the same, no second distinct."
+    },
+    {
+      "input": "nums = [1, 2]",
+      "output": "1",
+      "explanation": "Two distinct elements; second largest is 1."
+    }
   ],
   "testCases": [
-    { "input": "3 1 4 1 5 9",   "expectedOutput": "5",  "order": 1, "isHidden": false },
-    { "input": "7 7 7",         "expectedOutput": "-1", "order": 2, "isHidden": false },
-    { "input": "1 2",           "expectedOutput": "1",  "order": 3, "isHidden": false },
-    { "input": "5",             "expectedOutput": "-1", "order": 4, "isHidden": true },
-    { "input": "-1 -2 -3",     "expectedOutput": "-2", "order": 5, "isHidden": true },
-    { "input": "10 10 9 8",    "expectedOutput": "9",  "order": 6, "isHidden": true },
-    { "input": "0 0 1",        "expectedOutput": "0",  "order": 7, "isHidden": true }
+    {
+      "input": "3 1 4 1 5 9",
+      "expectedOutput": "5",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "7 7 7",
+      "expectedOutput": "-1",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1 2",
+      "expectedOutput": "1",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "5",
+      "expectedOutput": "-1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "-1 -2 -3",
+      "expectedOutput": "-2",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "10 10 9 8",
+      "expectedOutput": "9",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "0 0 1",
+      "expectedOutput": "0",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Arrays"
   ]
 }

@@ -3,7 +3,7 @@
   "title": "Count Subsets with Given Sum",
   "difficulty": "MEDIUM",
   "statement": "Given an array of non-negative integers and a target sum, count the number of subsets whose elements sum to the target.\n\n**Input:**\n- Line 1: space-separated non-negative integers.\n- Line 2: integer `target`.\n\n**Output:** Print the count of subsets.",
-  "constraints": "- 1 \u2264 arr.length \u2264 30\n- 0 \u2264 arr[i] \u2264 100\n- 0 \u2264 target \u2264 1000",
+  "constraints": "- 1 ≤ arr.length ≤ 30\n- 0 ≤ arr[i] ≤ 100\n- 0 ≤ target ≤ 1000",
   "examples": [
     {
       "input": "arr=[2,3,5,6,8,10], target=10",
@@ -64,5 +64,8 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

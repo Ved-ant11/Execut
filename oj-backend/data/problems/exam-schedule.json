@@ -3,12 +3,12 @@
   "title": "Exam Schedule Optimizer",
   "difficulty": "HARD",
   "statement": "You have `n` exams. Exam `i` has a deadline `d[i]` (must be completed by day d[i]) and a penalty `p[i]` if missed. You can complete exactly one exam per day. Find the **minimum total penalty** from missed exams.\n\n**Input:** First line: n. Next n lines: deadline penalty.\n**Output:** Minimum total penalty.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- 1 \u2264 deadline \u2264 n\n- 1 \u2264 penalty \u2264 10\u2076",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- 1 ≤ deadline ≤ n\n- 1 ≤ penalty ≤ 10⁶",
   "examples": [
     {
       "input": "4\n4 20\n2 60\n4 50\n3 30",
       "output": "20",
-      "explanation": "Schedule: day1=exam2(d\u22642), day2=exam4(d\u22643), day3=exam3(d\u22644), day4=exam2... Miss exam1 with penalty 20. Min=20."
+      "explanation": "Schedule: day1=exam2(d≤2), day2=exam4(d≤3), day3=exam3(d≤4), day4=exam2... Miss exam1 with penalty 20. Min=20."
     },
     {
       "input": "3\n1 30\n1 60\n1 10",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Graphs",
+    "BFS"
   ]
 }

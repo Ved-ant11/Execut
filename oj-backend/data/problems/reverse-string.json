@@ -17,10 +17,38 @@
     }
   ],
   "testCases": [
-    { "input": "hello",          "expectedOutput": "olleh",        "order": 1, "isHidden": false },
-    { "input": "Hannah",         "expectedOutput": "hannaH",       "order": 2, "isHidden": false },
-    { "input": "a",              "expectedOutput": "a",            "order": 3, "isHidden": true },
-    { "input": "racecar",        "expectedOutput": "racecar",      "order": 4, "isHidden": true },
-    { "input": "OpenAI is cool", "expectedOutput": "looc si IAnepO", "order": 5, "isHidden": true }
+    {
+      "input": "hello",
+      "expectedOutput": "olleh",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "Hannah",
+      "expectedOutput": "hannaH",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "a",
+      "expectedOutput": "a",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "racecar",
+      "expectedOutput": "racecar",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "OpenAI is cool",
+      "expectedOutput": "looc si IAnepO",
+      "order": 5,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Strings"
   ]
 }

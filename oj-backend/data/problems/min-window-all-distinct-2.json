@@ -3,7 +3,7 @@
   "title": "Minimum Swaps to Group All Ones",
   "difficulty": "MEDIUM",
   "statement": "Given a binary array `data` (circular), find the minimum number of swaps needed to group all `1`s together (anywhere in the circular array).\n\n**Input:** Space-separated integers (0s and 1s).\n**Output:** Print the minimum swaps.",
-  "constraints": "- 1 \u2264 data.length \u2264 10\u2075\n- data[i] is 0 or 1.",
+  "constraints": "- 1 ≤ data.length ≤ 10⁵\n- data[i] is 0 or 1.",
   "examples": [
     {
       "input": "data=[1,0,1,0,1]",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Sliding Window",
+    "Hash Map"
   ]
 }

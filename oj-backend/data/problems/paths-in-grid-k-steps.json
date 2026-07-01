@@ -2,8 +2,8 @@
   "id": "paths-in-grid-k-steps",
   "title": "Count Paths in Grid with Exactly K Steps",
   "difficulty": "MEDIUM",
-  "statement": "Given a grid of size `m \u00d7 n`, count the number of unique paths from top-left to bottom-right moving only right or down in exactly `k` steps. Since you can only move right or down, `k` must equal `m+n-2` for any path to exist.\n\n**Input:**\n- Line 1: three integers `m`, `n`, and `k`.\n\n**Output:** Print the count of paths, or `0` if impossible.",
-  "constraints": "- 1 \u2264 m, n \u2264 15\n- 0 \u2264 k \u2264 30",
+  "statement": "Given a grid of size `m × n`, count the number of unique paths from top-left to bottom-right moving only right or down in exactly `k` steps. Since you can only move right or down, `k` must equal `m+n-2` for any path to exist.\n\n**Input:**\n- Line 1: three integers `m`, `n`, and `k`.\n\n**Output:** Print the count of paths, or `0` if impossible.",
+  "constraints": "- 1 ≤ m, n ≤ 15\n- 0 ≤ k ≤ 30",
   "examples": [
     {
       "input": "m=3, n=3, k=4",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Matrix"
   ]
 }

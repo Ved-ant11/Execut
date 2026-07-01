@@ -2,8 +2,8 @@
   "id": "matrix-chain-order",
   "title": "Matrix Chain Multiplication",
   "difficulty": "MEDIUM",
-  "statement": "You need to multiply a chain of matrices. Matrix `i` has dimensions `dims[i-1] \u00d7 dims[i]`. The cost of multiplying an `a\u00d7b` matrix by a `b\u00d7c` matrix is `a\u00d7b\u00d7c`. Find the **minimum total cost** to multiply all matrices in the chain.\n\n**Input:** Space-separated dimensions array (length = number of matrices + 1).\n**Output:** Minimum multiplication cost.",
-  "constraints": "- 2 \u2264 dims.length \u2264 500\n- 1 \u2264 dims[i] \u2264 500",
+  "statement": "You need to multiply a chain of matrices. Matrix `i` has dimensions `dims[i-1] × dims[i]`. The cost of multiplying an `a×b` matrix by a `b×c` matrix is `a×b×c`. Find the **minimum total cost** to multiply all matrices in the chain.\n\n**Input:** Space-separated dimensions array (length = number of matrices + 1).\n**Output:** Minimum multiplication cost.",
+  "constraints": "- 2 ≤ dims.length ≤ 500\n- 1 ≤ dims[i] ≤ 500",
   "examples": [
     {
       "input": "40 20 30 10 30",
@@ -13,12 +13,12 @@
     {
       "input": "10 30 5 60",
       "output": "4500",
-      "explanation": "Multiply (A\u00d7B)\u00d7C: (10\u00d730\u00d75)+(10\u00d75\u00d760)=1500+3000=4500."
+      "explanation": "Multiply (A×B)×C: (10×30×5)+(10×5×60)=1500+3000=4500."
     },
     {
       "input": "1 2 3 4",
       "output": "18",
-      "explanation": "Multiply (A\u00d7B)\u00d7C first: (1\u00d72\u00d73)+(1\u00d73\u00d74)=6+12=18."
+      "explanation": "Multiply (A×B)×C first: (1×2×3)+(1×3×4)=6+12=18."
     }
   ],
   "testCases": [
@@ -70,5 +70,8 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

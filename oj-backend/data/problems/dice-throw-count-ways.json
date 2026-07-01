@@ -1,9 +1,9 @@
 {
   "id": "dice-throw-count-ways",
-  "title": "Dice Throw \u2014 Count Ways to Reach Sum",
+  "title": "Dice Throw — Count Ways to Reach Sum",
   "difficulty": "MEDIUM",
   "statement": "Given `N` dice each with `F` faces (numbered 1 to F), count the number of ways to get a sum equal to `S`.\n\n**Input:**\n- Line 1: three integers `N`, `F`, and `S`.\n\n**Output:** Print the count of ways.",
-  "constraints": "- 1 \u2264 N \u2264 50\n- 1 \u2264 F \u2264 20\n- N \u2264 S \u2264 N\u00d7F",
+  "constraints": "- 1 ≤ N ≤ 50\n- 1 ≤ F ≤ 20\n- N ≤ S ≤ N×F",
   "examples": [
     {
       "input": "N=2, F=6, S=7",
@@ -64,5 +64,8 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

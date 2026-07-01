@@ -22,12 +22,50 @@
     }
   ],
   "testCases": [
-    { "input": "()",           "expectedOutput": "true",  "order": 1, "isHidden": false },
-    { "input": "()[]{}",       "expectedOutput": "true",  "order": 2, "isHidden": false },
-    { "input": "(]",           "expectedOutput": "false", "order": 3, "isHidden": false },
-    { "input": "([)]",         "expectedOutput": "false", "order": 4, "isHidden": true },
-    { "input": "{[]}",         "expectedOutput": "true",  "order": 5, "isHidden": true },
-    { "input": "(",            "expectedOutput": "false", "order": 6, "isHidden": true },
-    { "input": "(((())))[]{}","expectedOutput": "true",  "order": 7, "isHidden": true }
+    {
+      "input": "()",
+      "expectedOutput": "true",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "()[]{}",
+      "expectedOutput": "true",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "(]",
+      "expectedOutput": "false",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "([)]",
+      "expectedOutput": "false",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "{[]}",
+      "expectedOutput": "true",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "(",
+      "expectedOutput": "false",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "(((())))[]{}",
+      "expectedOutput": "true",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Stack"
   ]
 }

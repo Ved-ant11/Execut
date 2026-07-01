@@ -3,7 +3,7 @@
   "title": "Token Balance Game",
   "difficulty": "EASY",
   "statement": "Two players A and B take turns picking tokens from a row. A always picks from the **left end**, B always picks from the **right end**, A goes first. Return A's total score minus B's total score after all tokens are taken.\n\n**Input:** Space-separated integers (token values, can be negative).\n**Output:** A's score minus B's score.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- -10\u2074 \u2264 tokens[i] \u2264 10\u2074",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- -10⁴ ≤ tokens[i] ≤ 10⁴",
   "examples": [
     {
       "input": "5 3 1 4 2",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Greedy",
+    "Sorting"
   ]
 }

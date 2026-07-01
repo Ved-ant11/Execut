@@ -3,7 +3,7 @@
   "title": "Find All Triplets Summing to Target",
   "difficulty": "MEDIUM",
   "statement": "Given an array of integers and a target, find all unique triplets that sum to the target. Each triplet must be in non-decreasing order. Print one triplet per line. If none, print `-1`.\n\n**Input:**\n- Line 1: space-separated integers.\n- Line 2: integer `target`.\n\n**Output:** Each triplet on a new line, sorted ascending. Triplets in lexicographic order.",
-  "constraints": "- 3 \u2264 arr.length \u2264 3000\n- -10\u2075 \u2264 arr[i] \u2264 10\u2075\n- -10\u2075 \u2264 target \u2264 10\u2075",
+  "constraints": "- 3 ≤ arr.length ≤ 3000\n- -10⁵ ≤ arr[i] ≤ 10⁵\n- -10⁵ ≤ target ≤ 10⁵",
   "examples": [
     {
       "input": "arr=[-1,0,1,2,-1,-4], target=0",
@@ -64,5 +64,10 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Arrays",
+    "Two Pointers",
+    "Sorting"
   ]
 }

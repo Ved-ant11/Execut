@@ -3,7 +3,7 @@
   "title": "Allocate Minimum Pages",
   "difficulty": "HARD",
   "statement": "Given `n` books with page counts and `m` students, allocate books (contiguous ranges only) such that the maximum pages any student reads is minimized. Each student gets at least one book.\n\n**Input:**\n- Line 1: two integers `n` and `m`.\n- Line 2: space-separated page counts.\n\n**Output:** Print the minimized maximum pages, or `-1` if impossible.",
-  "constraints": "- 1 \u2264 m \u2264 n \u2264 10\u2075\n- 1 \u2264 pages[i] \u2264 10\u2076",
+  "constraints": "- 1 ≤ m ≤ n ≤ 10⁵\n- 1 ≤ pages[i] ≤ 10⁶",
   "examples": [
     {
       "input": "n=4, m=2, pages=[12,34,67,90]",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Binary Search",
+    "Greedy"
   ]
 }

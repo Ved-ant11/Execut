@@ -1,14 +1,14 @@
 {
   "id": "letter-combinations-count",
-  "title": "Letter Combinations of Phone Number \u2014 Count",
+  "title": "Letter Combinations of Phone Number — Count",
   "difficulty": "EASY",
-  "statement": "A phone keypad maps digits 2-9 to letters. Given a digit string, find the total number of letter combinations possible.\n\nMapping: 2\u2192ABC, 3\u2192DEF, 4\u2192GHI, 5\u2192JKL, 6\u2192MNO, 7\u2192PQRS, 8\u2192TUV, 9\u2192WXYZ.\n\n**Input:** A digit string (digits 2-9 only).\n**Output:** Print the count. If empty, print `0`.",
-  "constraints": "- 0 \u2264 digits.length \u2264 10\n- digits[i] is between '2' and '9'.",
+  "statement": "A phone keypad maps digits 2-9 to letters. Given a digit string, find the total number of letter combinations possible.\n\nMapping: 2→ABC, 3→DEF, 4→GHI, 5→JKL, 6→MNO, 7→PQRS, 8→TUV, 9→WXYZ.\n\n**Input:** A digit string (digits 2-9 only).\n**Output:** Print the count. If empty, print `0`.",
+  "constraints": "- 0 ≤ digits.length ≤ 10\n- digits[i] is between '2' and '9'.",
   "examples": [
     {
       "input": "23",
       "output": "9",
-      "explanation": "2\u21923 letters, 3\u21923 letters. 3\u00d73=9."
+      "explanation": "2→3 letters, 3→3 letters. 3×3=9."
     },
     {
       "input": "2",
@@ -18,7 +18,7 @@
     {
       "input": "79",
       "output": "16",
-      "explanation": "7\u21924 letters, 9\u21924 letters. 4\u00d74=16."
+      "explanation": "7→4 letters, 9→4 letters. 4×4=16."
     }
   ],
   "testCases": [
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Math",
+    "Recursion"
   ]
 }

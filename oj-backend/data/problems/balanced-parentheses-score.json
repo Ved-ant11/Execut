@@ -5,19 +5,77 @@
   "statement": "Given a balanced parentheses string `s`, compute its score using these rules:\n- `()` scores 1 point\n- `AB` scores `A + B` (concatenation)\n- `(A)` scores `2 * A`\n\n**Input:** A single balanced parentheses string.\n**Output:** Print the score.",
   "constraints": "- 2 ≤ s.length ≤ 50\n- s is a balanced string of `(` and `)` only.",
   "examples": [
-    { "input": "s = \"()\"",       "output": "1",  "explanation": "Base case." },
-    { "input": "s = \"(())\"",     "output": "2",  "explanation": "2 * () = 2." },
-    { "input": "s = \"((()))\"",   "output": "4",  "explanation": "2*(2*(1)) = 4." },
-    { "input": "s = \"()()\"",     "output": "2",  "explanation": "1 + 1 = 2." },
-    { "input": "s = \"(()())\"",   "output": "4",  "explanation": "2*(1+1) = 4." }
+    {
+      "input": "s = \"()\"",
+      "output": "1",
+      "explanation": "Base case."
+    },
+    {
+      "input": "s = \"(())\"",
+      "output": "2",
+      "explanation": "2 * () = 2."
+    },
+    {
+      "input": "s = \"((()))\"",
+      "output": "4",
+      "explanation": "2*(2*(1)) = 4."
+    },
+    {
+      "input": "s = \"()()\"",
+      "output": "2",
+      "explanation": "1 + 1 = 2."
+    },
+    {
+      "input": "s = \"(()())\"",
+      "output": "4",
+      "explanation": "2*(1+1) = 4."
+    }
   ],
   "testCases": [
-    { "input": "()",       "expectedOutput": "1",  "order": 1, "isHidden": false },
-    { "input": "(())",     "expectedOutput": "2",  "order": 2, "isHidden": false },
-    { "input": "((()))",   "expectedOutput": "4",  "order": 3, "isHidden": false },
-    { "input": "()()",     "expectedOutput": "2",  "order": 4, "isHidden": false },
-    { "input": "(()())",   "expectedOutput": "4",  "order": 5, "isHidden": true },
-    { "input": "(()(()))", "expectedOutput": "6",  "order": 6, "isHidden": true },
-    { "input": "(())(())", "expectedOutput": "4",  "order": 7, "isHidden": true }
+    {
+      "input": "()",
+      "expectedOutput": "1",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "(())",
+      "expectedOutput": "2",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "((()))",
+      "expectedOutput": "4",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "()()",
+      "expectedOutput": "2",
+      "order": 4,
+      "isHidden": false
+    },
+    {
+      "input": "(()())",
+      "expectedOutput": "4",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "(()(()))",
+      "expectedOutput": "6",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "(())(())",
+      "expectedOutput": "4",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Stack"
   ]
 }

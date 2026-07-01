@@ -3,7 +3,7 @@
   "title": "Minimum Operations to Make Array Equal",
   "difficulty": "EASY",
   "statement": "Given an array of integers where all elements have the same sum divisible by n (so a valid integer target exists), find the minimum number of operations to make all elements equal. In one operation you pick two elements, increment one and decrement the other.\n\n**Input:** Space-separated integers.\n**Output:** Print the minimum number of operations.",
-  "constraints": "- 1 \u2264 arr.length \u2264 10\u2075\n- 0 \u2264 arr[i] \u2264 10\u2074\n- Sum of array is divisible by array length.",
+  "constraints": "- 1 ≤ arr.length ≤ 10⁵\n- 0 ≤ arr[i] ≤ 10⁴\n- Sum of array is divisible by array length.",
   "examples": [
     {
       "input": "arr=[1,2,3]",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Greedy",
+    "Math"
   ]
 }

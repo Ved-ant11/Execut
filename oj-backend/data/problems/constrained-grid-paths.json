@@ -2,23 +2,23 @@
   "id": "constrained-grid-paths",
   "title": "Grid Paths with Turn Limit",
   "difficulty": "HARD",
-  "statement": "Count the number of paths from the top-left to the bottom-right of an `n \u00d7 m` grid, moving only right or down, with **at most `t` turns** (a turn is switching from moving right to moving down or vice versa). Return the answer mod 10\u2079+7.\n\n**Input:** Single line: n m t.\n**Output:** Number of valid paths mod 10\u2079+7.",
-  "constraints": "- 1 \u2264 n, m \u2264 100\n- 0 \u2264 t \u2264 n+m",
+  "statement": "Count the number of paths from the top-left to the bottom-right of an `n × m` grid, moving only right or down, with **at most `t` turns** (a turn is switching from moving right to moving down or vice versa). Return the answer mod 10⁹+7.\n\n**Input:** Single line: n m t.\n**Output:** Number of valid paths mod 10⁹+7.",
+  "constraints": "- 1 ≤ n, m ≤ 100\n- 0 ≤ t ≤ n+m",
   "examples": [
     {
       "input": "2 2 1",
       "output": "2",
-      "explanation": "Paths with \u22641 turn: RD (1 turn) and DR (1 turn). Total=2."
+      "explanation": "Paths with ≤1 turn: RD (1 turn) and DR (1 turn). Total=2."
     },
     {
       "input": "2 2 2",
       "output": "2",
-      "explanation": "Only 2 paths exist in a 2\u00d72 grid regardless of turn limit."
+      "explanation": "Only 2 paths exist in a 2×2 grid regardless of turn limit."
     },
     {
       "input": "3 3 2",
       "output": "4",
-      "explanation": "Paths needing \u22642 turns. RRD D, R DD R, etc. 4 valid paths."
+      "explanation": "Paths needing ≤2 turns. RRD D, R DD R, etc. 4 valid paths."
     }
   ],
   "testCases": [
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Matrix"
   ]
 }

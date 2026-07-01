@@ -5,17 +5,67 @@
   "statement": "Given an array `nums` and an integer `k`, split the array into chunks of size `k`. The last chunk may be smaller if the array doesn't divide evenly.\n\nPrint each chunk on a separate line, elements space-separated.\n\n**Input:**\n- Line 1: space-separated integers.\n- Line 2: integer `k`.\n\n**Output:** Each chunk on a new line.",
   "constraints": "- 1 ≤ nums.length ≤ 10⁴\n- 1 ≤ k ≤ nums.length\n- -10⁴ ≤ nums[i] ≤ 10⁴",
   "examples": [
-    { "input": "nums=[1,2,3,4,5], k=2", "output": "1 2\n3 4\n5",     "explanation": "Chunks of 2, last has 1 element." },
-    { "input": "nums=[1,2,3], k=3",     "output": "1 2 3",             "explanation": "One chunk of exactly 3." },
-    { "input": "nums=[1,2,3,4], k=1",   "output": "1\n2\n3\n4",        "explanation": "Each element is its own chunk." }
+    {
+      "input": "nums=[1,2,3,4,5], k=2",
+      "output": "1 2\n3 4\n5",
+      "explanation": "Chunks of 2, last has 1 element."
+    },
+    {
+      "input": "nums=[1,2,3], k=3",
+      "output": "1 2 3",
+      "explanation": "One chunk of exactly 3."
+    },
+    {
+      "input": "nums=[1,2,3,4], k=1",
+      "output": "1\n2\n3\n4",
+      "explanation": "Each element is its own chunk."
+    }
   ],
   "testCases": [
-    { "input": "1 2 3 4 5\n2", "expectedOutput": "1 2\n3 4\n5",  "order": 1, "isHidden": false },
-    { "input": "1 2 3\n3",     "expectedOutput": "1 2 3",          "order": 2, "isHidden": false },
-    { "input": "1 2 3 4\n1",   "expectedOutput": "1\n2\n3\n4",     "order": 3, "isHidden": false },
-    { "input": "10\n1",        "expectedOutput": "10",             "order": 4, "isHidden": true },
-    { "input": "1 2 3 4 5 6\n3","expectedOutput": "1 2 3\n4 5 6", "order": 5, "isHidden": true },
-    { "input": "1 2 3 4 5\n5", "expectedOutput": "1 2 3 4 5",     "order": 6, "isHidden": true },
-    { "input": "1 2 3 4 5 6 7\n4","expectedOutput": "1 2 3 4\n5 6 7","order": 7,"isHidden": true }
+    {
+      "input": "1 2 3 4 5\n2",
+      "expectedOutput": "1 2\n3 4\n5",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "1 2 3\n3",
+      "expectedOutput": "1 2 3",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1 2 3 4\n1",
+      "expectedOutput": "1\n2\n3\n4",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "10\n1",
+      "expectedOutput": "10",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3 4 5 6\n3",
+      "expectedOutput": "1 2 3\n4 5 6",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3 4 5\n5",
+      "expectedOutput": "1 2 3 4 5",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3 4 5 6 7\n4",
+      "expectedOutput": "1 2 3 4\n5 6 7",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Arrays"
   ]
 }

@@ -5,18 +5,73 @@
   "statement": "Given an input string `s` and a pattern `p`, implement regular expression matching with support for:\n- `.` — matches any single character.\n- `*` — matches zero or more of the preceding element.\n\nThe matching must cover the **entire** input string, not just a prefix.\n\n**Input:**\n- Line 1: string `s`.\n- Line 2: pattern `p`.\n\n**Output:** Print `true` or `false`.",
   "constraints": "- 1 ≤ s.length ≤ 20\n- 1 ≤ p.length ≤ 30\n- s contains only lowercase letters.\n- p contains only lowercase letters, `.` and `*`.\n- It is guaranteed that for each `*` there is a previous valid character.",
   "examples": [
-    { "input": "s=aa, p=a",     "output": "false", "explanation": "'a' doesn't match the entire string 'aa'." },
-    { "input": "s=aa, p=a*",    "output": "true",  "explanation": "'a*' means zero or more 'a's." },
-    { "input": "s=ab, p=.*",    "output": "true",  "explanation": "'.*' matches any sequence." },
-    { "input": "s=aab, p=c*a*b","output": "true",  "explanation": "c* matches 0 c's, a* matches 2 a's, b matches b." }
+    {
+      "input": "s=aa, p=a",
+      "output": "false",
+      "explanation": "'a' doesn't match the entire string 'aa'."
+    },
+    {
+      "input": "s=aa, p=a*",
+      "output": "true",
+      "explanation": "'a*' means zero or more 'a's."
+    },
+    {
+      "input": "s=ab, p=.*",
+      "output": "true",
+      "explanation": "'.*' matches any sequence."
+    },
+    {
+      "input": "s=aab, p=c*a*b",
+      "output": "true",
+      "explanation": "c* matches 0 c's, a* matches 2 a's, b matches b."
+    }
   ],
   "testCases": [
-    { "input": "aa\na",      "expectedOutput": "false", "order": 1, "isHidden": false },
-    { "input": "aa\na*",     "expectedOutput": "true",  "order": 2, "isHidden": false },
-    { "input": "ab\n.*",     "expectedOutput": "true",  "order": 3, "isHidden": false },
-    { "input": "aab\nc*a*b", "expectedOutput": "true",  "order": 4, "isHidden": false },
-    { "input": "mississippi\nmis*is*p*.",  "expectedOutput": "false", "order": 5, "isHidden": true },
-    { "input": "a\n.*",      "expectedOutput": "true",  "order": 6, "isHidden": true },
-    { "input": "abc\na.c",   "expectedOutput": "true",  "order": 7, "isHidden": true }
+    {
+      "input": "aa\na",
+      "expectedOutput": "false",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "aa\na*",
+      "expectedOutput": "true",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "ab\n.*",
+      "expectedOutput": "true",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "aab\nc*a*b",
+      "expectedOutput": "true",
+      "order": 4,
+      "isHidden": false
+    },
+    {
+      "input": "mississippi\nmis*is*p*.",
+      "expectedOutput": "false",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "a\n.*",
+      "expectedOutput": "true",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "abc\na.c",
+      "expectedOutput": "true",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Strings"
   ]
 }

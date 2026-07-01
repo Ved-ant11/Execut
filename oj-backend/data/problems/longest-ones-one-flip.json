@@ -3,12 +3,12 @@
   "title": "Longest Consecutive Ones with One Flip",
   "difficulty": "EASY",
   "statement": "Given a binary array `nums` (containing only 0s and 1s), find the maximum number of consecutive 1s you can get if you are allowed to flip **at most one** 0 to 1.\n\n**Input:** Space-separated integers (0s and 1s).\n**Output:** Print the maximum consecutive 1s achievable.",
-  "constraints": "- 1 \u2264 nums.length \u2264 10\u2075\n- nums[i] is either 0 or 1.",
+  "constraints": "- 1 ≤ nums.length ≤ 10⁵\n- nums[i] is either 0 or 1.",
   "examples": [
     {
       "input": "nums = [1,0,1,1,0,1]",
       "output": "4",
-      "explanation": "Flip index 1 \u2192 [1,1,1,1,0,1]. Max window = 4."
+      "explanation": "Flip index 1 → [1,1,1,1,0,1]. Max window = 4."
     },
     {
       "input": "nums = [1,1,1,1,1]",
@@ -64,5 +64,8 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Sliding Window"
   ]
 }

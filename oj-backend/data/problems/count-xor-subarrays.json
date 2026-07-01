@@ -3,7 +3,7 @@
   "title": "Count Subarrays with XOR Equal to K",
   "difficulty": "MEDIUM",
   "statement": "Given an array `arr` and an integer `k`, count the number of subarrays whose XOR is equal to `k`.\n\n**Input:**\n- Line 1: space-separated integers.\n- Line 2: integer `k`.\n\n**Output:** Print the count of subarrays.",
-  "constraints": "- 1 \u2264 arr.length \u2264 10\u2075\n- 0 \u2264 arr[i] \u2264 10\u2079\n- 0 \u2264 k \u2264 10\u2079",
+  "constraints": "- 1 ≤ arr.length ≤ 10⁵\n- 0 ≤ arr[i] ≤ 10⁹\n- 0 ≤ k ≤ 10⁹",
   "examples": [
     {
       "input": "arr=[4,2,2,6,4], k=6",
@@ -64,5 +64,10 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Hash Map",
+    "Prefix Sum",
+    "Bit Manipulation"
   ]
 }

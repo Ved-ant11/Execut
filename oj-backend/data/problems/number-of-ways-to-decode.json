@@ -2,8 +2,8 @@
   "id": "number-of-ways-to-decode",
   "title": "Decode Ways with Wildcards",
   "difficulty": "MEDIUM",
-  "statement": "A message was encoded: A\u21921, B\u21922, ..., Z\u219226. The string may also contain `'*'` which represents any digit 1\u20139. Count the number of ways to decode the string. Return the answer mod 10\u2079+7.\n\n**Input:** A single string of digits and `*` characters.\n**Output:** Number of valid decodings mod 10\u2079+7.",
-  "constraints": "- 1 \u2264 s.length \u2264 10\u2075\n- s contains only digits 0\u20139 and '*'",
+  "statement": "A message was encoded: A→1, B→2, ..., Z→26. The string may also contain `'*'` which represents any digit 1–9. Count the number of ways to decode the string. Return the answer mod 10⁹+7.\n\n**Input:** A single string of digits and `*` characters.\n**Output:** Number of valid decodings mod 10⁹+7.",
+  "constraints": "- 1 ≤ s.length ≤ 10⁵\n- s contains only digits 0–9 and '*'",
   "examples": [
     {
       "input": "*",
@@ -18,7 +18,7 @@
     {
       "input": "**",
       "output": "96",
-      "explanation": "Two single chars: 9*9=81. One two-digit: 11-19(9)+21-26(6)=15 (but * can be 1-9 for tens digit, 1-9 for units, valid \u226426: 11-19(9 combos)+21-26(first*=2,second*=1-6=6). Total two-digit=9+6=15. Total=81+15=96."
+      "explanation": "Two single chars: 9*9=81. One two-digit: 11-19(9)+21-26(6)=15 (but * can be 1-9 for tens digit, 1-9 for units, valid ≤26: 11-19(9 combos)+21-26(first*=2,second*=1-6=6). Total two-digit=9+6=15. Total=81+15=96."
     }
   ],
   "testCases": [
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Strings"
   ]
 }

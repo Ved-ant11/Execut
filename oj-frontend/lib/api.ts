@@ -347,3 +347,70 @@ export const submitFeedback = async ({
   }
   return response.json();
 };
+
+// ==================== PRACTICE / FSRS ====================
+
+export const fetchReviewQueue = async () => {
+  const response = await fetch(`${API_BASE_URL}/practice/review-queue`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+    cache: "no-store",
+  });
+  if (!response.ok) throw new Error("Failed to fetch review queue");
+  return response.json();
+};
+
+export const fetchRetryQueue = async () => {
+  const response = await fetch(`${API_BASE_URL}/practice/retry-queue`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+    cache: "no-store",
+  });
+  if (!response.ok) throw new Error("Failed to fetch retry queue");
+  return response.json();
+};
+
+export const submitReview = async (questionId: string, rating: string) => {
+  const response = await fetch(`${API_BASE_URL}/practice/review`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+    body: JSON.stringify({ questionId, rating }),
+  });
+  if (!response.ok) throw new Error("Failed to submit review");
+  return response.json();
+};
+
+export const fetchPracticeStats = async () => {
+  const response = await fetch(`${API_BASE_URL}/practice/stats`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+    cache: "no-store",
+  });
+  if (!response.ok) throw new Error("Failed to fetch practice stats");
+  return response.json();
+};
+
+export const fetchTopicMastery = async () => {
+  const response = await fetch(`${API_BASE_URL}/practice/topics`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+    cache: "no-store",
+  });
+  if (!response.ok) throw new Error("Failed to fetch topic mastery");
+  return response.json();
+};
+
+export const dismissRetry = async (questionId: string) => {
+  const response = await fetch(`${API_BASE_URL}/practice/retry/${questionId}`, {
+    method: "DELETE",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+  });
+  if (!response.ok) throw new Error("Failed to dismiss retry");
+  return response.json();
+};

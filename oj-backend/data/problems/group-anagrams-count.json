@@ -5,15 +5,57 @@
   "statement": "Given `n` strings, group them into anagram groups and print the number of groups, followed by the size of each group in descending order.\n\n**Input:**\n- Line 1: integer `n`.\n- Line 2: `n` space-separated strings.\n\n**Output:**\n- Line 1: number of anagram groups.\n- Line 2: sizes of each group in descending order, space-separated.",
   "constraints": "- 1 ≤ n ≤ 10⁴\n- 1 ≤ each string length ≤ 100\n- Strings consist of lowercase English letters.",
   "examples": [
-    { "input": "n=6, words=[\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]", "output": "3\n3 2 1", "explanation": "Groups: {eat,tea,ate}, {tan,nat}, {bat}. Sizes descending: 3 2 1." },
-    { "input": "n=1, words=[\"a\"]", "output": "1\n1", "explanation": "One group of size 1." }
+    {
+      "input": "n=6, words=[\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]",
+      "output": "3\n3 2 1",
+      "explanation": "Groups: {eat,tea,ate}, {tan,nat}, {bat}. Sizes descending: 3 2 1."
+    },
+    {
+      "input": "n=1, words=[\"a\"]",
+      "output": "1\n1",
+      "explanation": "One group of size 1."
+    }
   ],
   "testCases": [
-    { "input": "6\neat tea tan ate nat bat", "expectedOutput": "3\n3 2 1", "order": 1, "isHidden": false },
-    { "input": "1\na",                       "expectedOutput": "1\n1",     "order": 2, "isHidden": false },
-    { "input": "4\nabc bca cab xyz",          "expectedOutput": "2\n3 1",   "order": 3, "isHidden": true },
-    { "input": "3\nare ear era",              "expectedOutput": "1\n3",     "order": 4, "isHidden": true },
-    { "input": "5\na b c d e",               "expectedOutput": "5\n1 1 1 1 1","order": 5,"isHidden": true },
-    { "input": "2\nab ba",                    "expectedOutput": "1\n2",     "order": 6, "isHidden": true }
+    {
+      "input": "6\neat tea tan ate nat bat",
+      "expectedOutput": "3\n3 2 1",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "1\na",
+      "expectedOutput": "1\n1",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "4\nabc bca cab xyz",
+      "expectedOutput": "2\n3 1",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "3\nare ear era",
+      "expectedOutput": "1\n3",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "5\na b c d e",
+      "expectedOutput": "5\n1 1 1 1 1",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "2\nab ba",
+      "expectedOutput": "1\n2",
+      "order": 6,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Strings",
+    "Hash Map"
   ]
 }

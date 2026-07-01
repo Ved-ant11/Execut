@@ -3,7 +3,7 @@
   "title": "Maximum Frequency Element After K Operations",
   "difficulty": "MEDIUM",
   "statement": "Given an integer array `nums` and integer `k`, you can increment any element by 1 in each operation. Return the maximum frequency of any element after performing at most `k` operations.\n\n**Input:**\n- Line 1: space-separated integers.\n- Line 2: integer `k`.\n\n**Output:** Print the maximum achievable frequency.",
-  "constraints": "- 1 \u2264 nums.length \u2264 10\u2075\n- 1 \u2264 nums[i] \u2264 10\u2075\n- 0 \u2264 k \u2264 10\u2075",
+  "constraints": "- 1 ≤ nums.length ≤ 10⁵\n- 1 ≤ nums[i] ≤ 10⁵\n- 0 ≤ k ≤ 10⁵",
   "examples": [
     {
       "input": "nums=[1,2,4], k=5",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Sliding Window",
+    "Sorting"
   ]
 }

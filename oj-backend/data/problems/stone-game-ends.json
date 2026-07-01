@@ -3,7 +3,7 @@
   "title": "Stone Game",
   "difficulty": "EASY",
   "statement": "Two players take turns removing stones from a pile. On each turn, a player may remove **1, 2, or 3** stones from **either end** of the row. The player who takes the **last stone wins**. Both play optimally. Given n stones, who wins?\n\n**Input:** Single integer n.\n**Output:** FIRST or SECOND.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2079",
+  "constraints": "- 1 ≤ n ≤ 10⁹",
   "examples": [
     {
       "input": "4",
@@ -13,7 +13,7 @@
     {
       "input": "5",
       "output": "FIRST",
-      "explanation": "First player takes 1, leaving 4 for second \u2014 second then loses."
+      "explanation": "First player takes 1, leaving 4 for second — second then loses."
     },
     {
       "input": "1",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Math"
   ]
 }

@@ -5,17 +5,69 @@
   "statement": "Given `n` meetings with start and end times, find the minimum number of conference rooms required to hold all meetings without conflict.\n\nA meeting `[s1, e1]` conflicts with `[s2, e2]` if they overlap (i.e. `s2 < e1`).\n\n**Input:**\n- Line 1: integer `n`.\n- Next `n` lines: two integers `start end` per meeting.\n\n**Output:** Print the minimum number of rooms needed.",
   "constraints": "- 1 ≤ n ≤ 10⁴\n- 0 ≤ start < end ≤ 10⁶",
   "examples": [
-    { "input": "n=3, meetings=[[0,30],[5,10],[15,20]]", "output": "2", "explanation": "Meeting 1 overlaps with 2 and 3, but 2 and 3 don't overlap. Max 2 simultaneous." },
-    { "input": "n=2, meetings=[[7,10],[2,4]]",           "output": "1", "explanation": "No overlap, 1 room suffices." },
-    { "input": "n=3, meetings=[[1,5],[2,6],[3,7]]",      "output": "3", "explanation": "All three overlap at time 3-5." }
+    {
+      "input": "n=3, meetings=[[0,30],[5,10],[15,20]]",
+      "output": "2",
+      "explanation": "Meeting 1 overlaps with 2 and 3, but 2 and 3 don't overlap. Max 2 simultaneous."
+    },
+    {
+      "input": "n=2, meetings=[[7,10],[2,4]]",
+      "output": "1",
+      "explanation": "No overlap, 1 room suffices."
+    },
+    {
+      "input": "n=3, meetings=[[1,5],[2,6],[3,7]]",
+      "output": "3",
+      "explanation": "All three overlap at time 3-5."
+    }
   ],
   "testCases": [
-    { "input": "3\n0 30\n5 10\n15 20", "expectedOutput": "2", "order": 1, "isHidden": false },
-    { "input": "2\n7 10\n2 4",         "expectedOutput": "1", "order": 2, "isHidden": false },
-    { "input": "3\n1 5\n2 6\n3 7",    "expectedOutput": "3", "order": 3, "isHidden": false },
-    { "input": "1\n0 100",             "expectedOutput": "1", "order": 4, "isHidden": true },
-    { "input": "4\n1 4\n2 5\n7 9\n6 10","expectedOutput": "2","order": 5,"isHidden": true },
-    { "input": "5\n1 2\n2 3\n3 4\n4 5\n5 6","expectedOutput": "1","order": 6,"isHidden": true },
-    { "input": "4\n1 10\n2 7\n3 5\n4 6","expectedOutput": "4","order": 7,"isHidden": true }
+    {
+      "input": "3\n0 30\n5 10\n15 20",
+      "expectedOutput": "2",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "2\n7 10\n2 4",
+      "expectedOutput": "1",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "3\n1 5\n2 6\n3 7",
+      "expectedOutput": "3",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1\n0 100",
+      "expectedOutput": "1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "4\n1 4\n2 5\n7 9\n6 10",
+      "expectedOutput": "2",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "5\n1 2\n2 3\n3 4\n4 5\n5 6",
+      "expectedOutput": "1",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "4\n1 10\n2 7\n3 5\n4 6",
+      "expectedOutput": "4",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Greedy",
+    "Intervals",
+    "Sorting"
   ]
 }

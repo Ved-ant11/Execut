@@ -3,7 +3,7 @@
   "title": "Minimum Bus Route Hops",
   "difficulty": "MEDIUM",
   "statement": "You are at stop `source` and want to reach `target`. Each bus route loops through its stops. Each new bus boarded counts as one hop. Find minimum hops, or `-1` if impossible.\n\n**Input:** First line: source target. Second line: r (number of routes). Next r lines: stops on each route.\n**Output:** Minimum hops or -1.",
-  "constraints": "- 0 \u2264 stop values \u2264 10\u2076\n- 1 \u2264 r \u2264 500\n- 1 \u2264 route length \u2264 10\u2075",
+  "constraints": "- 0 ≤ stop values ≤ 10⁶\n- 1 ≤ r ≤ 500\n- 1 ≤ route length ≤ 10⁵",
   "examples": [
     {
       "input": "1 6\n3\n1 2 7\n3 6 7\n1 3 5",
@@ -58,5 +58,9 @@
       "order": 6,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Graphs",
+    "BFS"
   ]
 }

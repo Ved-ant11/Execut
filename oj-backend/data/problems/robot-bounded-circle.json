@@ -2,13 +2,13 @@
   "id": "robot-bounded-circle",
   "title": "Robot Bounded in Circle",
   "difficulty": "HARD",
-  "statement": "A robot starts at (0,0) facing North. Instructions: `G`=move 1 step forward, `L`=turn left 90\u00b0, `R`=turn right 90\u00b0. The robot loops the instruction string infinitely. Output `YES` if bounded (never goes to infinity), `NO` otherwise.\n\n**Bounded** iff after one full loop: robot is back at origin OR not facing North.\n\n**Input:** Instruction string.\n**Output:** YES or NO.",
-  "constraints": "- 1 \u2264 instructions.length \u2264 100\n- Instructions contain only G, L, R",
+  "statement": "A robot starts at (0,0) facing North. Instructions: `G`=move 1 step forward, `L`=turn left 90°, `R`=turn right 90°. The robot loops the instruction string infinitely. Output `YES` if bounded (never goes to infinity), `NO` otherwise.\n\n**Bounded** iff after one full loop: robot is back at origin OR not facing North.\n\n**Input:** Instruction string.\n**Output:** YES or NO.",
+  "constraints": "- 1 ≤ instructions.length ≤ 100\n- Instructions contain only G, L, R",
   "examples": [
     {
       "input": "GGLLGG",
       "output": "YES",
-      "explanation": "After one loop: moved north 2, turned 180\u00b0, moved south 2. Back at origin."
+      "explanation": "After one loop: moved north 2, turned 180°, moved south 2. Back at origin."
     },
     {
       "input": "GG",
@@ -18,7 +18,7 @@
     {
       "input": "GL",
       "output": "YES",
-      "explanation": "Not facing north after loop \u2192 will cycle back. Bounded."
+      "explanation": "Not facing north after loop → will cycle back. Bounded."
     }
   ],
   "testCases": [
@@ -70,5 +70,8 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Math"
   ]
 }

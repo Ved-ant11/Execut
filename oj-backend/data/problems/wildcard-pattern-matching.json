@@ -3,7 +3,7 @@
   "title": "Wildcard Pattern Matching",
   "difficulty": "HARD",
   "statement": "Given a string `s` and a pattern `p` containing `?` (matches any single character) and `*` (matches any sequence including empty), return `true` if the pattern matches the entire string.\n\n**Input:**\n- Line 1: string `s`.\n- Line 2: pattern `p`.\n\n**Output:** Print `true` or `false`.",
-  "constraints": "- 0 \u2264 s.length \u2264 2000\n- 0 \u2264 p.length \u2264 2000\n- s contains only lowercase letters.\n- p contains lowercase letters, `?`, and `*`.",
+  "constraints": "- 0 ≤ s.length ≤ 2000\n- 0 ≤ p.length ≤ 2000\n- s contains only lowercase letters.\n- p contains lowercase letters, `?`, and `*`.",
   "examples": [
     {
       "input": "s=aa, p=a",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Strings"
   ]
 }

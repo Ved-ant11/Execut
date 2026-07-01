@@ -5,17 +5,68 @@
   "statement": "Given an integer array `nums` and an integer `k`, return the total number of **contiguous subarrays** whose sum equals `k`.\n\n**Input:**\n- Line 1: space-separated integers representing the array.\n- Line 2: integer `k`.\n\n**Output:** Print the count of subarrays with sum equal to `k`.",
   "constraints": "- 1 ≤ nums.length ≤ 2 × 10⁴\n- -10³ ≤ nums[i] ≤ 10³\n- -10⁷ ≤ k ≤ 10⁷",
   "examples": [
-    { "input": "nums=[1,1,1], k=2",     "output": "2", "explanation": "[1,1] at index 0-1 and 1-2." },
-    { "input": "nums=[1,2,3], k=3",     "output": "2", "explanation": "[1,2] and [3]." },
-    { "input": "nums=[1,-1,1], k=1",    "output": "3", "explanation": "[1], [1,-1,1], [1] (last)." }
+    {
+      "input": "nums=[1,1,1], k=2",
+      "output": "2",
+      "explanation": "[1,1] at index 0-1 and 1-2."
+    },
+    {
+      "input": "nums=[1,2,3], k=3",
+      "output": "2",
+      "explanation": "[1,2] and [3]."
+    },
+    {
+      "input": "nums=[1,-1,1], k=1",
+      "output": "3",
+      "explanation": "[1], [1,-1,1], [1] (last)."
+    }
   ],
   "testCases": [
-    { "input": "1 1 1\n2",     "expectedOutput": "2", "order": 1, "isHidden": false },
-    { "input": "1 2 3\n3",     "expectedOutput": "2", "order": 2, "isHidden": false },
-    { "input": "1 -1 1\n1",    "expectedOutput": "3", "order": 3, "isHidden": false },
-    { "input": "3\n3",         "expectedOutput": "1", "order": 4, "isHidden": true },
-    { "input": "1 2 3 4 5\n5", "expectedOutput": "2", "order": 5, "isHidden": true },
-    { "input": "0 0 0\n0",     "expectedOutput": "6", "order": 6, "isHidden": true },
-    { "input": "-1 -1 1\n0",   "expectedOutput": "1", "order": 7, "isHidden": true }
+    {
+      "input": "1 1 1\n2",
+      "expectedOutput": "2",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "1 2 3\n3",
+      "expectedOutput": "2",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1 -1 1\n1",
+      "expectedOutput": "3",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "3\n3",
+      "expectedOutput": "1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3 4 5\n5",
+      "expectedOutput": "2",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "0 0 0\n0",
+      "expectedOutput": "6",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "-1 -1 1\n0",
+      "expectedOutput": "1",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Hash Map",
+    "Prefix Sum"
   ]
 }

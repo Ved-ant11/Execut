@@ -3,7 +3,7 @@
   "title": "Count Palindrome Partitions into K Parts",
   "difficulty": "HARD",
   "statement": "Given string `s`, count the number of ways to split it into **exactly k non-empty palindromic substrings**. Return the answer mod 10^9+7.\n\n**Input:** First line: string s. Second line: k.\n**Output:** Number of valid partitions mod 10^9+7.",
-  "constraints": "- 1 \u2264 s.length \u2264 1000\n- 1 \u2264 k \u2264 s.length",
+  "constraints": "- 1 ≤ s.length ≤ 1000\n- 1 ≤ k ≤ s.length",
   "examples": [
     {
       "input": "aab\n1",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Strings"
   ]
 }

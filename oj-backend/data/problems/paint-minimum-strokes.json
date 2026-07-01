@@ -3,7 +3,7 @@
   "title": "Minimum Painting Strokes",
   "difficulty": "HARD",
   "statement": "You have a row of `n` cells to paint. Each stroke paints a contiguous subarray one color. You want to paint the entire row to match a given color sequence. Strokes can be applied in any order and a later stroke overwrites earlier ones. Find the **minimum number of strokes**.\n\n**Input:** First line: n. Second line: n space-separated color values.\n**Output:** Minimum number of strokes.",
-  "constraints": "- 1 \u2264 n \u2264 500\n- 1 \u2264 colors[i] \u2264 n",
+  "constraints": "- 1 ≤ n ≤ 500\n- 1 ≤ colors[i] ≤ n",
   "examples": [
     {
       "input": "5\n1 2 1 2 1",
@@ -70,5 +70,10 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Graphs",
+    "BFS",
+    "Matrix"
   ]
 }

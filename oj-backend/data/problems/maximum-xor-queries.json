@@ -2,23 +2,23 @@
   "id": "maximum-xor-queries",
   "title": "Maximum XOR with Range Queries",
   "difficulty": "HARD",
-  "statement": "Given array `nums` and q queries `[xi, mi]`, for each query find the maximum XOR of `xi` with any element in `nums` that is \u2264 `mi`. Output -1 if no such element exists.\n\n**Input:** First line: space-separated nums. Second line: q. Next q lines: xi mi.\n**Output:** q lines of answers.",
-  "constraints": "- 1 \u2264 nums.length \u2264 10\u2075\n- 1 \u2264 q \u2264 10\u2075\n- 0 \u2264 nums[i], xi, mi \u2264 10\u2079",
+  "statement": "Given array `nums` and q queries `[xi, mi]`, for each query find the maximum XOR of `xi` with any element in `nums` that is ≤ `mi`. Output -1 if no such element exists.\n\n**Input:** First line: space-separated nums. Second line: q. Next q lines: xi mi.\n**Output:** q lines of answers.",
+  "constraints": "- 1 ≤ nums.length ≤ 10⁵\n- 1 ≤ q ≤ 10⁵\n- 0 ≤ nums[i], xi, mi ≤ 10⁹",
   "examples": [
     {
       "input": "0 1 2 3 4\n3\n3 1\n1 3\n5 6",
       "output": "3\n3\n7",
-      "explanation": "Q(3,1): {0,1}\u22641 \u2192 3^0=3. Q(1,3): {0..3} \u2192 1^2=3. Q(5,6): {0..4} \u2192 5^2=7."
+      "explanation": "Q(3,1): {0,1}≤1 → 3^0=3. Q(1,3): {0..3} → 1^2=3. Q(5,6): {0..4} → 5^2=7."
     },
     {
       "input": "5 2 4 6\n2\n0 5\n8 7",
       "output": "5\n14",
-      "explanation": "Q(0,5): {5,2,4} \u2192 0^5=5. Q(8,7): {5,2,4,6} \u2192 8^6=14."
+      "explanation": "Q(0,5): {5,2,4} → 0^5=5. Q(8,7): {5,2,4,6} → 8^6=14."
     },
     {
       "input": "1\n1\n2 0",
       "output": "-1",
-      "explanation": "No element \u2264 0."
+      "explanation": "No element ≤ 0."
     }
   ],
   "testCases": [
@@ -58,5 +58,9 @@
       "order": 6,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Bit Manipulation",
+    "Trie"
   ]
 }

@@ -4,6 +4,7 @@ import prisma from "../db/client";
 import { SubmissionStatus, Verdict } from "../generated/prisma/client";
 import { judgeSubmission } from "./judge";
 import { updateStreak } from "../utils/streak";
+import { createEmptyCard, cardToDb } from "../utils/fsrs";
 
 const QUEUE_KEY = "oj:submissions";
 
@@ -194,6 +195,65 @@ const processSubmission = async (id: string) => {
         await updateStreak(submission.userId);
       } catch (err) {
         logError(`Failed to update streak for user ${submission.userId}`, err);
+      }
+
+      // Create/update ReviewCard for FSRS scheduling
+      try {
+        const existing = await prisma.reviewCard.findUnique({
+          where: {
+            userId_questionId: {
+              userId: submission.userId,
+              questionId: submission.questionId,
+            },
+          },
+        });
+
+        if (!existing) {
+          const emptyCard = createEmptyCard();
+          await prisma.reviewCard.create({
+            data: {
+              userId: submission.userId,
+              questionId: submission.questionId,
+              ...cardToDb(emptyCard),
+            },
+          });
+          log(`Created ReviewCard for user ${submission.userId}, question ${submission.questionId}`);
+        }
+
+        // Remove from RetryQueue if it was there
+        await prisma.retryQueue.deleteMany({
+          where: {
+            userId: submission.userId,
+            questionId: submission.questionId,
+          },
+        });
+      } catch (err) {
+        logError(`Failed to manage practice cards for submission ${id}`, err);
+      }
+    } else {
+      // Non-AC verdict: add to RetryQueue
+      try {
+        await prisma.retryQueue.upsert({
+          where: {
+            userId_questionId: {
+              userId: submission.userId,
+              questionId: submission.questionId,
+            },
+          },
+          create: {
+            userId: submission.userId,
+            questionId: submission.questionId,
+            lastVerdict: result.verdict,
+            attempts: 1,
+          },
+          update: {
+            lastVerdict: result.verdict,
+            attempts: { increment: 1 },
+            lastAttemptAt: new Date(),
+          },
+        });
+      } catch (err) {
+        logError(`Failed to update retry queue for submission ${id}`, err);
       }
     }
 

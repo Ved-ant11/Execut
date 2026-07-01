@@ -5,17 +5,67 @@
   "statement": "Given a string `s`, perform basic run-length compression. For each group of consecutive identical characters, write the character followed by its count. If the compressed string is not shorter than the original, return the original string.\n\n**Input:** A single string `s`.\n**Output:** Print the compressed string, or the original if compression doesn't help.",
   "constraints": "- 1 ≤ s.length ≤ 10⁴\n- s consists of lowercase English letters only.",
   "examples": [
-    { "input": "s = \"aabcccdddd\"", "output": "a2b1c3d4",   "explanation": "Compressed is shorter." },
-    { "input": "s = \"abcd\"",       "output": "abcd",        "explanation": "a1b1c1d1 is longer, return original." },
-    { "input": "s = \"aaaa\"",       "output": "a4",          "explanation": "a4 is shorter than aaaa." }
+    {
+      "input": "s = \"aabcccdddd\"",
+      "output": "a2b1c3d4",
+      "explanation": "Compressed is shorter."
+    },
+    {
+      "input": "s = \"abcd\"",
+      "output": "abcd",
+      "explanation": "a1b1c1d1 is longer, return original."
+    },
+    {
+      "input": "s = \"aaaa\"",
+      "output": "a4",
+      "explanation": "a4 is shorter than aaaa."
+    }
   ],
   "testCases": [
-    { "input": "aabcccdddd", "expectedOutput": "a2b1c3d4", "order": 1, "isHidden": false },
-    { "input": "abcd",       "expectedOutput": "abcd",     "order": 2, "isHidden": false },
-    { "input": "aaaa",       "expectedOutput": "a4",       "order": 3, "isHidden": false },
-    { "input": "a",          "expectedOutput": "a",        "order": 4, "isHidden": true },
-    { "input": "aabb",       "expectedOutput": "aabb",     "order": 5, "isHidden": true },
-    { "input": "aaabbbccc",  "expectedOutput": "a3b3c3",   "order": 6, "isHidden": true },
-    { "input": "aaaaabbbbb", "expectedOutput": "a5b5",     "order": 7, "isHidden": true }
+    {
+      "input": "aabcccdddd",
+      "expectedOutput": "a2b1c3d4",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "abcd",
+      "expectedOutput": "abcd",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "aaaa",
+      "expectedOutput": "a4",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "a",
+      "expectedOutput": "a",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "aabb",
+      "expectedOutput": "aabb",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "aaabbbccc",
+      "expectedOutput": "a3b3c3",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "aaaaabbbbb",
+      "expectedOutput": "a5b5",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Strings"
   ]
 }

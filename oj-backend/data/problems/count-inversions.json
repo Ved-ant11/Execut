@@ -5,17 +5,68 @@
   "statement": "Given an array of integers `nums`, count the number of **inversions**. An inversion is a pair `(i, j)` such that `i < j` and `nums[i] > nums[j]`.\n\nThis requires an efficient solution — brute force O(n²) will time out.\n\n**Input:** Space-separated integers representing the array.\n**Output:** Print the number of inversions.",
   "constraints": "- 1 ≤ nums.length ≤ 10⁵\n- -10⁹ ≤ nums[i] ≤ 10⁹",
   "examples": [
-    { "input": "nums = [3, 1, 2]",        "output": "2", "explanation": "(3,1) and (3,2) are inversions." },
-    { "input": "nums = [1, 2, 3, 4, 5]",  "output": "0", "explanation": "Sorted array has no inversions." },
-    { "input": "nums = [5, 4, 3, 2, 1]",  "output": "10","explanation": "Reverse sorted: n*(n-1)/2 = 10 inversions." }
+    {
+      "input": "nums = [3, 1, 2]",
+      "output": "2",
+      "explanation": "(3,1) and (3,2) are inversions."
+    },
+    {
+      "input": "nums = [1, 2, 3, 4, 5]",
+      "output": "0",
+      "explanation": "Sorted array has no inversions."
+    },
+    {
+      "input": "nums = [5, 4, 3, 2, 1]",
+      "output": "10",
+      "explanation": "Reverse sorted: n*(n-1)/2 = 10 inversions."
+    }
   ],
   "testCases": [
-    { "input": "3 1 2",     "expectedOutput": "2",  "order": 1, "isHidden": false },
-    { "input": "1 2 3 4 5", "expectedOutput": "0",  "order": 2, "isHidden": false },
-    { "input": "5 4 3 2 1", "expectedOutput": "10", "order": 3, "isHidden": false },
-    { "input": "1",         "expectedOutput": "0",  "order": 4, "isHidden": true },
-    { "input": "2 1",       "expectedOutput": "1",  "order": 5, "isHidden": true },
-    { "input": "6 5 4 3 2 1","expectedOutput": "15","order": 6, "isHidden": true },
-    { "input": "1 3 2 4 5", "expectedOutput": "1",  "order": 7, "isHidden": true }
+    {
+      "input": "3 1 2",
+      "expectedOutput": "2",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "1 2 3 4 5",
+      "expectedOutput": "0",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "5 4 3 2 1",
+      "expectedOutput": "10",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1",
+      "expectedOutput": "0",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "2 1",
+      "expectedOutput": "1",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "6 5 4 3 2 1",
+      "expectedOutput": "15",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1 3 2 4 5",
+      "expectedOutput": "1",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Sorting",
+    "Divide and Conquer"
   ]
 }

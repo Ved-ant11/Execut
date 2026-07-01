@@ -2,8 +2,8 @@
   "id": "subsequence-width",
   "title": "Sum of Subsequence Widths",
   "difficulty": "HARD",
-  "statement": "The **width** of a subsequence is the difference between its maximum and minimum element. Find the sum of widths of all non-empty subsequences of the array. Return the answer mod 10\u2079+7.\n\n**Input:** First line: n. Second line: n space-separated integers.\n**Output:** Sum of widths mod 10\u2079+7.",
-  "constraints": "- 1 \u2264 n \u2264 2\u00d710\u2075\n- 1 \u2264 arr[i] \u2264 10\u2075",
+  "statement": "The **width** of a subsequence is the difference between its maximum and minimum element. Find the sum of widths of all non-empty subsequences of the array. Return the answer mod 10⁹+7.\n\n**Input:** First line: n. Second line: n space-separated integers.\n**Output:** Sum of widths mod 10⁹+7.",
+  "constraints": "- 1 ≤ n ≤ 2×10⁵\n- 1 ≤ arr[i] ≤ 10⁵",
   "examples": [
     {
       "input": "2\n2 1",
@@ -64,5 +64,10 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Math",
+    "Sorting"
   ]
 }

@@ -3,7 +3,7 @@
   "title": "Josephus Problem",
   "difficulty": "MEDIUM",
   "statement": "`n` people stand in a circle. Starting from position 0, every `k`th person is eliminated. Find the 0-indexed position of the last survivor.\n\nUse the recursive formula: `J(1,k)=0`, `J(n,k)=(J(n-1,k)+k) % n`.\n\n**Input:**\n- Line 1: integer `n` (people).\n- Line 2: integer `k` (every kth eliminated).\n\n**Output:** Print the 0-indexed position of the survivor.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2074\n- 1 \u2264 k \u2264 10\u2074",
+  "constraints": "- 1 ≤ n ≤ 10⁴\n- 1 ≤ k ≤ 10⁴",
   "examples": [
     {
       "input": "n=7, k=3",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Math",
+    "Recursion"
   ]
 }

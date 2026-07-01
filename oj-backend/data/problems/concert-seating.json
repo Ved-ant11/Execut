@@ -3,7 +3,7 @@
   "title": "Concert Seating",
   "difficulty": "EASY",
   "statement": "There are `n` seats in a row, each with a comfort score. You need to seat exactly `k` people such that **no two people sit in adjacent seats**. Maximize the total comfort.\n\n**Input:** First line: space-separated comfort scores. Second line: k.\n**Output:** Maximum total comfort.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- 1 \u2264 k \u2264 \u2308n/2\u2309\n- 1 \u2264 comfort[i] \u2264 10\u2076",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- 1 ≤ k ≤ ⌈n/2⌉\n- 1 ≤ comfort[i] ≤ 10⁶",
   "examples": [
     {
       "input": "1 2 3\n2",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Greedy",
+    "Sorting"
   ]
 }

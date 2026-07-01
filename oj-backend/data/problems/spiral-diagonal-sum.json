@@ -2,8 +2,8 @@
   "id": "spiral-diagonal-sum",
   "title": "Spiral Diagonal Union Sum",
   "difficulty": "EASY",
-  "statement": "Given an n\u00d7n matrix, compute the sum of all elements that lie on **either diagonal OR the outermost ring**, without double-counting.\n\n**Input:** First line: n. Next n lines: n space-separated integers.\n**Output:** Sum of all qualifying elements.",
-  "constraints": "- 1 \u2264 n \u2264 100\n- -10\u00b3 \u2264 matrix[i][j] \u2264 10\u00b3",
+  "statement": "Given an n×n matrix, compute the sum of all elements that lie on **either diagonal OR the outermost ring**, without double-counting.\n\n**Input:** First line: n. Next n lines: n space-separated integers.\n**Output:** Sum of all qualifying elements.",
+  "constraints": "- 1 ≤ n ≤ 100\n- -10³ ≤ matrix[i][j] ≤ 10³",
   "examples": [
     {
       "input": "3\n1 2 3\n4 5 6\n7 8 9",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Matrix",
+    "Math"
   ]
 }

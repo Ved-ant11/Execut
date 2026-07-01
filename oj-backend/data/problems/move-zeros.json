@@ -5,17 +5,68 @@
   "statement": "Given an integer array `nums`, move all `0`s to the end while maintaining the relative order of non-zero elements.\n\n**Input:** Space-separated integers representing the array.\n**Output:** Print the space-separated array after moving zeros.",
   "constraints": "- 1 ≤ nums.length ≤ 10⁴\n- -10⁹ ≤ nums[i] ≤ 10⁹",
   "examples": [
-    { "input": "nums = [0, 1, 0, 3, 12]", "output": "1 3 12 0 0", "explanation": "Non-zeros maintain order; zeros moved to end." },
-    { "input": "nums = [0]",               "output": "0",           "explanation": "Single zero stays." },
-    { "input": "nums = [1, 2, 3]",         "output": "1 2 3",       "explanation": "No zeros to move." }
+    {
+      "input": "nums = [0, 1, 0, 3, 12]",
+      "output": "1 3 12 0 0",
+      "explanation": "Non-zeros maintain order; zeros moved to end."
+    },
+    {
+      "input": "nums = [0]",
+      "output": "0",
+      "explanation": "Single zero stays."
+    },
+    {
+      "input": "nums = [1, 2, 3]",
+      "output": "1 2 3",
+      "explanation": "No zeros to move."
+    }
   ],
   "testCases": [
-    { "input": "0 1 0 3 12",  "expectedOutput": "1 3 12 0 0", "order": 1, "isHidden": false },
-    { "input": "0",           "expectedOutput": "0",           "order": 2, "isHidden": false },
-    { "input": "1 2 3",       "expectedOutput": "1 2 3",       "order": 3, "isHidden": false },
-    { "input": "0 0 0 1",     "expectedOutput": "1 0 0 0",     "order": 4, "isHidden": true },
-    { "input": "4 0 5 0 0 6", "expectedOutput": "4 5 6 0 0 0", "order": 5, "isHidden": true },
-    { "input": "-1 0 -2 0 3", "expectedOutput": "-1 -2 3 0 0", "order": 6, "isHidden": true },
-    { "input": "0 0",         "expectedOutput": "0 0",          "order": 7, "isHidden": true }
+    {
+      "input": "0 1 0 3 12",
+      "expectedOutput": "1 3 12 0 0",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "0",
+      "expectedOutput": "0",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1 2 3",
+      "expectedOutput": "1 2 3",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "0 0 0 1",
+      "expectedOutput": "1 0 0 0",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "4 0 5 0 0 6",
+      "expectedOutput": "4 5 6 0 0 0",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "-1 0 -2 0 3",
+      "expectedOutput": "-1 -2 3 0 0",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "0 0",
+      "expectedOutput": "0 0",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Arrays",
+    "Two Pointers"
   ]
 }

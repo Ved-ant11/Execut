@@ -2,13 +2,13 @@
   "id": "grid-infection-spread",
   "title": "Grid Infection Spread",
   "difficulty": "MEDIUM",
-  "statement": "You have an n\u00d7m binary grid. `1` = infected, `0` = healthy. Every minute, a healthy cell becomes infected if it has **at least 2 infected neighbors** (4-directional). Return the minutes elapsed until no more spread occurs, and the total infected cells at the end.\n\n**Input:** First line: n m. Next n lines: m space-separated 0s and 1s.\n**Output:** Two integers \u2014 minutes and total infected cells.",
-  "constraints": "- 1 \u2264 n, m \u2264 200\n- Grid contains only 0 and 1",
+  "statement": "You have an n×m binary grid. `1` = infected, `0` = healthy. Every minute, a healthy cell becomes infected if it has **at least 2 infected neighbors** (4-directional). Return the minutes elapsed until no more spread occurs, and the total infected cells at the end.\n\n**Input:** First line: n m. Next n lines: m space-separated 0s and 1s.\n**Output:** Two integers — minutes and total infected cells.",
+  "constraints": "- 1 ≤ n, m ≤ 200\n- Grid contains only 0 and 1",
   "examples": [
     {
       "input": "3 3\n1 1 1\n1 0 1\n1 1 1",
       "output": "1 9",
-      "explanation": "Center cell has 4 infected neighbors \u2014 gets infected in minute 1. All 9 cells infected."
+      "explanation": "Center cell has 4 infected neighbors — gets infected in minute 1. All 9 cells infected."
     },
     {
       "input": "3 3\n1 0 0\n0 0 0\n0 0 1",
@@ -18,7 +18,7 @@
     {
       "input": "2 2\n0 1\n1 0",
       "output": "1 4",
-      "explanation": "(0,0) and (1,1) each have 2 infected neighbors \u2014 both infected in minute 1. Total=4."
+      "explanation": "(0,0) and (1,1) each have 2 infected neighbors — both infected in minute 1. Total=4."
     }
   ],
   "testCases": [
@@ -64,5 +64,10 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Graphs",
+    "BFS",
+    "Matrix"
   ]
 }

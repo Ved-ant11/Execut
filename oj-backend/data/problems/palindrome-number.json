@@ -22,11 +22,44 @@
     }
   ],
   "testCases": [
-    { "input": "121",     "expectedOutput": "true",  "order": 1, "isHidden": false },
-    { "input": "-121",    "expectedOutput": "false", "order": 2, "isHidden": false },
-    { "input": "10",      "expectedOutput": "false", "order": 3, "isHidden": false },
-    { "input": "0",       "expectedOutput": "true",  "order": 4, "isHidden": true },
-    { "input": "12321",   "expectedOutput": "true",  "order": 5, "isHidden": true },
-    { "input": "1000021", "expectedOutput": "false", "order": 6, "isHidden": true }
+    {
+      "input": "121",
+      "expectedOutput": "true",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "-121",
+      "expectedOutput": "false",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "10",
+      "expectedOutput": "false",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "0",
+      "expectedOutput": "true",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "12321",
+      "expectedOutput": "true",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1000021",
+      "expectedOutput": "false",
+      "order": 6,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Math"
   ]
 }

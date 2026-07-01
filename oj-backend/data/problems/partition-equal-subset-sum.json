@@ -5,17 +5,67 @@
   "statement": "Given an integer array `nums`, return `true` if you can partition the array into two subsets such that the sum of elements in both subsets is equal, and `false` otherwise.\n\nThis is a classic 0/1 knapsack DP problem. Brute force will time out.\n\n**Input:** Space-separated integers.\n**Output:** Print `true` or `false`.",
   "constraints": "- 1 ≤ nums.length ≤ 200\n- 1 ≤ nums[i] ≤ 100",
   "examples": [
-    { "input": "nums = [1,5,11,5]",  "output": "true",  "explanation": "[1,5,5] and [11] both sum to 11." },
-    { "input": "nums = [1,2,3,5]",   "output": "false", "explanation": "No equal partition exists." },
-    { "input": "nums = [2,2,1,1]",   "output": "true",  "explanation": "[2,1] and [2,1] both sum to 3." }
+    {
+      "input": "nums = [1,5,11,5]",
+      "output": "true",
+      "explanation": "[1,5,5] and [11] both sum to 11."
+    },
+    {
+      "input": "nums = [1,2,3,5]",
+      "output": "false",
+      "explanation": "No equal partition exists."
+    },
+    {
+      "input": "nums = [2,2,1,1]",
+      "output": "true",
+      "explanation": "[2,1] and [2,1] both sum to 3."
+    }
   ],
   "testCases": [
-    { "input": "1 5 11 5",     "expectedOutput": "true",  "order": 1, "isHidden": false },
-    { "input": "1 2 3 5",      "expectedOutput": "false", "order": 2, "isHidden": false },
-    { "input": "2 2 1 1",      "expectedOutput": "true",  "order": 3, "isHidden": false },
-    { "input": "1",            "expectedOutput": "false", "order": 4, "isHidden": true },
-    { "input": "1 1",          "expectedOutput": "true",  "order": 5, "isHidden": true },
-    { "input": "3 1 1 2 2 1",  "expectedOutput": "true",  "order": 6, "isHidden": true },
-    { "input": "1 2 5",        "expectedOutput": "false", "order": 7, "isHidden": true }
+    {
+      "input": "1 5 11 5",
+      "expectedOutput": "true",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "1 2 3 5",
+      "expectedOutput": "false",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "2 2 1 1",
+      "expectedOutput": "true",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1",
+      "expectedOutput": "false",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "1 1",
+      "expectedOutput": "true",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "3 1 1 2 2 1",
+      "expectedOutput": "true",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 5",
+      "expectedOutput": "false",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

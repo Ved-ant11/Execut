@@ -2,23 +2,23 @@
   "id": "bracket-depth-sum",
   "title": "Bracket Depth Sum",
   "difficulty": "EASY",
-  "statement": "Given a valid string of brackets `(`, `)` and digits `0\u20139`, compute the **depth-weighted sum**: each digit's contribution is `digit \u00d7 nesting depth` at the point it appears. Depth starts at 0 and increases by 1 on `(`, decreases by 1 on `)`.\n\n**Input:** A valid string of brackets and digits.\n**Output:** Single integer \u2014 the depth-weighted sum.",
-  "constraints": "- 1 \u2264 s.length \u2264 10\u2074\n- s is a valid bracket sequence with digits only inside brackets",
+  "statement": "Given a valid string of brackets `(`, `)` and digits `0–9`, compute the **depth-weighted sum**: each digit's contribution is `digit × nesting depth` at the point it appears. Depth starts at 0 and increases by 1 on `(`, decreases by 1 on `)`.\n\n**Input:** A valid string of brackets and digits.\n**Output:** Single integer — the depth-weighted sum.",
+  "constraints": "- 1 ≤ s.length ≤ 10⁴\n- s is a valid bracket sequence with digits only inside brackets",
   "examples": [
     {
       "input": "(1(2)3)",
       "output": "8",
-      "explanation": "'(' \u2192 d=1; '1' \u2192 1\u00d71=1; '(' \u2192 d=2; '2' \u2192 2\u00d72=4; ')' \u2192 d=1; '3' \u2192 3\u00d71=3; ')' \u2192 d=0. Total=8."
+      "explanation": "'(' → d=1; '1' → 1×1=1; '(' → d=2; '2' → 2×2=4; ')' → d=1; '3' → 3×1=3; ')' → d=0. Total=8."
     },
     {
       "input": "((2)(3))",
       "output": "10",
-      "explanation": "'2' at depth 2 \u2192 +4. '3' at depth 2 \u2192 +6. Total=10."
+      "explanation": "'2' at depth 2 → +4. '3' at depth 2 → +6. Total=10."
     },
     {
       "input": "(9)",
       "output": "9",
-      "explanation": "'9' at depth 1 \u2192 9\u00d71=9."
+      "explanation": "'9' at depth 1 → 9×1=9."
     }
   ],
   "testCases": [
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Stack",
+    "Math"
   ]
 }

@@ -5,17 +5,68 @@
   "statement": "Given an integer array `nums` of length `n` where all integers are in range `[1, n]` and each integer appears **once or twice**, find all integers that appear **twice**. Your solution must run in `O(n)` time and use `O(1)` extra space.\n\nPrint the duplicates in ascending order.\n\n**Input:** Space-separated integers.\n**Output:** Print duplicates in ascending order, space-separated. If none, print `-1`.",
   "constraints": "- 1 ≤ n ≤ 10⁵\n- 1 ≤ nums[i] ≤ n\n- Each element appears once or twice.",
   "examples": [
-    { "input": "nums = [4,3,2,7,8,2,3,1]", "output": "2 3", "explanation": "2 and 3 appear twice." },
-    { "input": "nums = [1,1,2]",            "output": "1",   "explanation": "1 appears twice." },
-    { "input": "nums = [1,2,3]",            "output": "-1",  "explanation": "No duplicates." }
+    {
+      "input": "nums = [4,3,2,7,8,2,3,1]",
+      "output": "2 3",
+      "explanation": "2 and 3 appear twice."
+    },
+    {
+      "input": "nums = [1,1,2]",
+      "output": "1",
+      "explanation": "1 appears twice."
+    },
+    {
+      "input": "nums = [1,2,3]",
+      "output": "-1",
+      "explanation": "No duplicates."
+    }
   ],
   "testCases": [
-    { "input": "4 3 2 7 8 2 3 1", "expectedOutput": "2 3", "order": 1, "isHidden": false },
-    { "input": "1 1 2",           "expectedOutput": "1",   "order": 2, "isHidden": false },
-    { "input": "1 2 3",           "expectedOutput": "-1",  "order": 3, "isHidden": false },
-    { "input": "1",               "expectedOutput": "-1",  "order": 4, "isHidden": true },
-    { "input": "2 2",             "expectedOutput": "2",   "order": 5, "isHidden": true },
-    { "input": "1 2 2 3 3 4",     "expectedOutput": "2 3", "order": 6, "isHidden": true },
-    { "input": "5 4 3 2 1 5 4 3", "expectedOutput": "3 4 5","order": 7,"isHidden": true }
+    {
+      "input": "4 3 2 7 8 2 3 1",
+      "expectedOutput": "2 3",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "1 1 2",
+      "expectedOutput": "1",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1 2 3",
+      "expectedOutput": "-1",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1",
+      "expectedOutput": "-1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "2 2",
+      "expectedOutput": "2",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 2 3 3 4",
+      "expectedOutput": "2 3",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "5 4 3 2 1 5 4 3",
+      "expectedOutput": "3 4 5",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Arrays",
+    "Hash Map"
   ]
 }

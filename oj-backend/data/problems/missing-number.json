@@ -5,17 +5,68 @@
   "statement": "Given an array `nums` containing `n` distinct numbers in the range `[0, n]`, return the only number in the range that is missing.\n\n**Input:** Space-separated integers representing the array.\n**Output:** Print the missing number.",
   "constraints": "- 1 ≤ n ≤ 10⁴\n- All numbers in nums are distinct and in range [0, n].",
   "examples": [
-    { "input": "nums = [3, 0, 1]",       "output": "2", "explanation": "Range is [0,3]. 2 is missing." },
-    { "input": "nums = [0, 1]",           "output": "2", "explanation": "Range is [0,2]. 2 is missing." },
-    { "input": "nums = [9,6,4,2,3,5,7,0,1]", "output": "8", "explanation": "8 is missing from [0,9]." }
+    {
+      "input": "nums = [3, 0, 1]",
+      "output": "2",
+      "explanation": "Range is [0,3]. 2 is missing."
+    },
+    {
+      "input": "nums = [0, 1]",
+      "output": "2",
+      "explanation": "Range is [0,2]. 2 is missing."
+    },
+    {
+      "input": "nums = [9,6,4,2,3,5,7,0,1]",
+      "output": "8",
+      "explanation": "8 is missing from [0,9]."
+    }
   ],
   "testCases": [
-    { "input": "3 0 1",             "expectedOutput": "2", "order": 1, "isHidden": false },
-    { "input": "0 1",               "expectedOutput": "2", "order": 2, "isHidden": false },
-    { "input": "9 6 4 2 3 5 7 0 1","expectedOutput": "8", "order": 3, "isHidden": false },
-    { "input": "0",                 "expectedOutput": "1", "order": 4, "isHidden": true },
-    { "input": "1",                 "expectedOutput": "0", "order": 5, "isHidden": true },
-    { "input": "0 1 2 3 5",         "expectedOutput": "4", "order": 6, "isHidden": true },
-    { "input": "1 2 3 4 5",         "expectedOutput": "0", "order": 7, "isHidden": true }
+    {
+      "input": "3 0 1",
+      "expectedOutput": "2",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "0 1",
+      "expectedOutput": "2",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "9 6 4 2 3 5 7 0 1",
+      "expectedOutput": "8",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "0",
+      "expectedOutput": "1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "1",
+      "expectedOutput": "0",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "0 1 2 3 5",
+      "expectedOutput": "4",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3 4 5",
+      "expectedOutput": "0",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Arrays",
+    "Math"
   ]
 }

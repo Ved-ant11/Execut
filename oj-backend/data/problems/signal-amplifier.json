@@ -3,7 +3,7 @@
   "title": "Signal Amplifier",
   "difficulty": "EASY",
   "statement": "You have an array of signal readings. You may choose one contiguous subarray and **double every value** in it. Maximize the total sum of the array after at most one doubling.\n\n**Input:** First line: n. Second line: n space-separated integers.\n**Output:** Maximum total sum.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- -10\u2074 \u2264 arr[i] \u2264 10\u2074",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- -10⁴ ≤ arr[i] ≤ 10⁴",
   "examples": [
     {
       "input": "5\n1 -2 3 4 -1",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Graphs",
+    "BFS"
   ]
 }

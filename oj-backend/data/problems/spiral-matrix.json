@@ -5,15 +5,56 @@
   "statement": "Given an `m x n` matrix, return all elements in spiral order (clockwise from top-left).\n\n**Input:**\n- Line 1: two integers `m` and `n`.\n- Next `m` lines: `n` space-separated integers per row.\n\n**Output:** Print all elements in spiral order, space-separated.",
   "constraints": "- 1 ≤ m, n ≤ 10\n- -100 ≤ matrix[i][j] ≤ 100",
   "examples": [
-    { "input": "m=3, n=3, matrix=[[1,2,3],[4,5,6],[7,8,9]]", "output": "1 2 3 6 9 8 7 4 5", "explanation": "Clockwise spiral from top-left." },
-    { "input": "m=1, n=4, matrix=[[1,2,3,4]]",                "output": "1 2 3 4",           "explanation": "Single row." }
+    {
+      "input": "m=3, n=3, matrix=[[1,2,3],[4,5,6],[7,8,9]]",
+      "output": "1 2 3 6 9 8 7 4 5",
+      "explanation": "Clockwise spiral from top-left."
+    },
+    {
+      "input": "m=1, n=4, matrix=[[1,2,3,4]]",
+      "output": "1 2 3 4",
+      "explanation": "Single row."
+    }
   ],
   "testCases": [
-    { "input": "3 3\n1 2 3\n4 5 6\n7 8 9", "expectedOutput": "1 2 3 6 9 8 7 4 5", "order": 1, "isHidden": false },
-    { "input": "1 4\n1 2 3 4",             "expectedOutput": "1 2 3 4",           "order": 2, "isHidden": false },
-    { "input": "4 1\n1\n2\n3\n4",         "expectedOutput": "1 2 3 4",           "order": 3, "isHidden": true },
-    { "input": "2 2\n1 2\n3 4",           "expectedOutput": "1 2 4 3",           "order": 4, "isHidden": true },
-    { "input": "3 4\n1 2 3 4\n5 6 7 8\n9 10 11 12","expectedOutput": "1 2 3 4 8 12 11 10 9 5 6 7","order": 5,"isHidden": true },
-    { "input": "1 1\n42",                 "expectedOutput": "42",                "order": 6, "isHidden": true }
+    {
+      "input": "3 3\n1 2 3\n4 5 6\n7 8 9",
+      "expectedOutput": "1 2 3 6 9 8 7 4 5",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "1 4\n1 2 3 4",
+      "expectedOutput": "1 2 3 4",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "4 1\n1\n2\n3\n4",
+      "expectedOutput": "1 2 3 4",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "2 2\n1 2\n3 4",
+      "expectedOutput": "1 2 4 3",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "3 4\n1 2 3 4\n5 6 7 8\n9 10 11 12",
+      "expectedOutput": "1 2 3 4 8 12 11 10 9 5 6 7",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1 1\n42",
+      "expectedOutput": "42",
+      "order": 6,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Matrix"
   ]
 }

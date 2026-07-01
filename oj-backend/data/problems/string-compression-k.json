@@ -2,18 +2,18 @@
   "id": "string-compression-k",
   "title": "String Compression with K Removals",
   "difficulty": "MEDIUM",
-  "statement": "Run-length encoding length: 1 char\u21921, 2-9\u21922, 10-99\u21923, 100-999\u21924. Given string `s` and integer `k`, delete at most `k` characters to **minimize the RLE length**.\n\n**Input:** First line: string s. Second line: k.\n**Output:** Minimum encoded length.",
-  "constraints": "- 1 \u2264 s.length \u2264 100\n- 0 \u2264 k \u2264 s.length",
+  "statement": "Run-length encoding length: 1 char→1, 2-9→2, 10-99→3, 100-999→4. Given string `s` and integer `k`, delete at most `k` characters to **minimize the RLE length**.\n\n**Input:** First line: string s. Second line: k.\n**Output:** Minimum encoded length.",
+  "constraints": "- 1 ≤ s.length ≤ 100\n- 0 ≤ k ≤ s.length",
   "examples": [
     {
       "input": "aaabcccd\n2",
       "output": "4",
-      "explanation": "Delete 'b' and 'd' \u2192 'aaaccc' \u2192 a3c3 = 4 chars."
+      "explanation": "Delete 'b' and 'd' → 'aaaccc' → a3c3 = 4 chars."
     },
     {
       "input": "aabbaa\n2",
       "output": "2",
-      "explanation": "Delete both 'b's \u2192 'aaaa' \u2192 a4 = 2 chars."
+      "explanation": "Delete both 'b's → 'aaaa' → a4 = 2 chars."
     },
     {
       "input": "a\n1",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Strings",
+    "Dynamic Programming"
   ]
 }

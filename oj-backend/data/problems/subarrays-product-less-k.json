@@ -3,7 +3,7 @@
   "title": "Number of Subarrays with Product Less Than K",
   "difficulty": "MEDIUM",
   "statement": "Given an array of positive integers `nums` and integer `k`, return the number of contiguous subarrays where the product of all elements is strictly less than `k`.\n\n**Input:**\n- Line 1: space-separated positive integers.\n- Line 2: integer `k`.\n\n**Output:** Print the count.",
-  "constraints": "- 1 \u2264 nums.length \u2264 3 \u00d7 10\u2074\n- 1 \u2264 nums[i] \u2264 1000\n- 0 \u2264 k \u2264 10\u2076",
+  "constraints": "- 1 ≤ nums.length ≤ 3 × 10⁴\n- 1 ≤ nums[i] ≤ 1000\n- 0 ≤ k ≤ 10⁶",
   "examples": [
     {
       "input": "nums=[10,5,2,6], k=100",
@@ -64,5 +64,8 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Sliding Window"
   ]
 }

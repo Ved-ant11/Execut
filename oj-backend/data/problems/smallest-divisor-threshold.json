@@ -3,22 +3,22 @@
   "title": "Find Smallest Divisor Given Threshold",
   "difficulty": "MEDIUM",
   "statement": "Given an array of integers and a threshold, find the smallest positive integer divisor such that the sum of `ceil(nums[i] / divisor)` for all `i` is less than or equal to the threshold.\n\n**Input:**\n- Line 1: space-separated integers.\n- Line 2: integer `threshold`.\n\n**Output:** Print the smallest valid divisor.",
-  "constraints": "- 1 \u2264 nums.length \u2264 5 \u00d7 10\u2074\n- 1 \u2264 nums[i] \u2264 10\u2076\n- nums.length \u2264 threshold \u2264 10\u2076",
+  "constraints": "- 1 ≤ nums.length ≤ 5 × 10⁴\n- 1 ≤ nums[i] ≤ 10⁶\n- nums.length ≤ threshold ≤ 10⁶",
   "examples": [
     {
       "input": "nums=[1,2,5,9], threshold=6",
       "output": "5",
-      "explanation": "divisor=5: ceil sums = 1+1+1+2=5 \u2264 6."
+      "explanation": "divisor=5: ceil sums = 1+1+1+2=5 ≤ 6."
     },
     {
       "input": "nums=[44,22,33,11,1], threshold=5",
       "output": "44",
-      "explanation": "divisor=44: sum=1+1+1+1+1=5 \u2264 5."
+      "explanation": "divisor=44: sum=1+1+1+1+1=5 ≤ 5."
     },
     {
       "input": "nums=[1,2,3], threshold=6",
       "output": "1",
-      "explanation": "divisor=1 gives sum=6 \u2264 6."
+      "explanation": "divisor=1 gives sum=6 ≤ 6."
     }
   ],
   "testCases": [
@@ -64,5 +64,8 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Binary Search"
   ]
 }

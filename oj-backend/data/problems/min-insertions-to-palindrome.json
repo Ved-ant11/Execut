@@ -3,7 +3,7 @@
   "title": "Minimum Insertions to Make String Palindrome",
   "difficulty": "MEDIUM",
   "statement": "Given a string `s`, find the minimum number of characters to insert to make it a palindrome.\n\nThis equals `length(s) - LPS(s)` where LPS is the longest palindromic subsequence.\n\n**Input:** A single string `s`.\n**Output:** Print the minimum insertions.",
-  "constraints": "- 1 \u2264 s.length \u2264 500\n- s consists of lowercase English letters.",
+  "constraints": "- 1 ≤ s.length ≤ 500\n- s consists of lowercase English letters.",
   "examples": [
     {
       "input": "s = \"ab\"",
@@ -18,7 +18,7 @@
     {
       "input": "s = \"mbadm\"",
       "output": "2",
-      "explanation": "\"mbadbm\" or \"mbdadm\" \u2014 2 insertions."
+      "explanation": "\"mbadbm\" or \"mbdadm\" — 2 insertions."
     }
   ],
   "testCases": [
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Strings"
   ]
 }

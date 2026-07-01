@@ -5,17 +5,68 @@
   "statement": "A subarray is **turbulent** if the comparison sign alternates between consecutive elements.\n\nFor example: `[9,4,2,10,7,8,8,1,9]` → `[4,2,10,7,8]` is turbulent because `4>2`, `2<10`, `10>7`, `7<8`.\n\nGiven array `nums`, return the length of the longest turbulent subarray.\n\n**Input:** Space-separated integers.\n**Output:** Print the length of the longest turbulent subarray.",
   "constraints": "- 1 ≤ nums.length ≤ 4 × 10⁴\n- 0 ≤ nums[i] ≤ 10⁹",
   "examples": [
-    { "input": "nums = [9,4,2,10,7,8,8,1,9]", "output": "5", "explanation": "[4,2,10,7,8] is turbulent with length 5." },
-    { "input": "nums = [4,8,12,16]",            "output": "2", "explanation": "Only adjacent pairs qualify." },
-    { "input": "nums = [100]",                   "output": "1", "explanation": "Single element." }
+    {
+      "input": "nums = [9,4,2,10,7,8,8,1,9]",
+      "output": "5",
+      "explanation": "[4,2,10,7,8] is turbulent with length 5."
+    },
+    {
+      "input": "nums = [4,8,12,16]",
+      "output": "2",
+      "explanation": "Only adjacent pairs qualify."
+    },
+    {
+      "input": "nums = [100]",
+      "output": "1",
+      "explanation": "Single element."
+    }
   ],
   "testCases": [
-    { "input": "9 4 2 10 7 8 8 1 9", "expectedOutput": "5", "order": 1, "isHidden": false },
-    { "input": "4 8 12 16",           "expectedOutput": "2", "order": 2, "isHidden": false },
-    { "input": "100",                 "expectedOutput": "1", "order": 3, "isHidden": false },
-    { "input": "1 1 1 1",             "expectedOutput": "1", "order": 4, "isHidden": true },
-    { "input": "1 2 1 2 1",           "expectedOutput": "5", "order": 5, "isHidden": true },
-    { "input": "0 1 0 1 0 1",         "expectedOutput": "6", "order": 6, "isHidden": true },
-    { "input": "2 0 4 3 5",           "expectedOutput": "5", "order": 7, "isHidden": true }
+    {
+      "input": "9 4 2 10 7 8 8 1 9",
+      "expectedOutput": "5",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "4 8 12 16",
+      "expectedOutput": "2",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "100",
+      "expectedOutput": "1",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1 1 1 1",
+      "expectedOutput": "1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 1 2 1",
+      "expectedOutput": "5",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "0 1 0 1 0 1",
+      "expectedOutput": "6",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "2 0 4 3 5",
+      "expectedOutput": "5",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Arrays"
   ]
 }

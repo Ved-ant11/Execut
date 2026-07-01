@@ -3,7 +3,7 @@
   "title": "Count Subarrays with Sum Equal to K",
   "difficulty": "MEDIUM",
   "statement": "Given an array of integers and an integer `k`, return the total number of contiguous subarrays whose sum equals `k`. Use prefix sums with a hashmap for `O(n)` time.\n\n**Input:**\n- Line 1: space-separated integers.\n- Line 2: integer `k`.\n\n**Output:** Print the count.",
-  "constraints": "- 1 \u2264 nums.length \u2264 2 \u00d7 10\u2074\n- -10\u00b3 \u2264 nums[i] \u2264 10\u00b3\n- -10\u2077 \u2264 k \u2264 10\u2077",
+  "constraints": "- 1 ≤ nums.length ≤ 2 × 10⁴\n- -10³ ≤ nums[i] ≤ 10³\n- -10⁷ ≤ k ≤ 10⁷",
   "examples": [
     {
       "input": "[1,1,1], k=2",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Hash Map",
+    "Prefix Sum"
   ]
 }

@@ -5,17 +5,68 @@
   "statement": "Given an integer array `nums`, return the length of the longest **strictly increasing subsequence**.\n\nA subsequence is a sequence derived from the array by deleting some elements without changing the order of the remaining elements.\n\n**Input:** Space-separated integers representing the array.\n**Output:** Print the length of the longest increasing subsequence.",
   "constraints": "- 1 ≤ nums.length ≤ 2500\n- -10⁴ ≤ nums[i] ≤ 10⁴",
   "examples": [
-    { "input": "nums = [10,9,2,5,3,7,101,18]", "output": "4", "explanation": "[2,3,7,101] is the LIS." },
-    { "input": "nums = [0,1,0,3,2,3]",          "output": "4", "explanation": "[0,1,2,3]." },
-    { "input": "nums = [7,7,7,7,7]",             "output": "1", "explanation": "No strictly increasing subsequence longer than 1." }
+    {
+      "input": "nums = [10,9,2,5,3,7,101,18]",
+      "output": "4",
+      "explanation": "[2,3,7,101] is the LIS."
+    },
+    {
+      "input": "nums = [0,1,0,3,2,3]",
+      "output": "4",
+      "explanation": "[0,1,2,3]."
+    },
+    {
+      "input": "nums = [7,7,7,7,7]",
+      "output": "1",
+      "explanation": "No strictly increasing subsequence longer than 1."
+    }
   ],
   "testCases": [
-    { "input": "10 9 2 5 3 7 101 18", "expectedOutput": "4", "order": 1, "isHidden": false },
-    { "input": "0 1 0 3 2 3",         "expectedOutput": "4", "order": 2, "isHidden": false },
-    { "input": "7 7 7 7 7",           "expectedOutput": "1", "order": 3, "isHidden": false },
-    { "input": "1",                   "expectedOutput": "1", "order": 4, "isHidden": true },
-    { "input": "1 2 3 4 5",           "expectedOutput": "5", "order": 5, "isHidden": true },
-    { "input": "5 4 3 2 1",           "expectedOutput": "1", "order": 6, "isHidden": true },
-    { "input": "3 1 4 1 5 9 2 6",     "expectedOutput": "4", "order": 7, "isHidden": true }
+    {
+      "input": "10 9 2 5 3 7 101 18",
+      "expectedOutput": "4",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "0 1 0 3 2 3",
+      "expectedOutput": "4",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "7 7 7 7 7",
+      "expectedOutput": "1",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1",
+      "expectedOutput": "1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3 4 5",
+      "expectedOutput": "5",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "5 4 3 2 1",
+      "expectedOutput": "1",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "3 1 4 1 5 9 2 6",
+      "expectedOutput": "4",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Binary Search"
   ]
 }

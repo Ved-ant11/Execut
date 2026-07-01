@@ -1,9 +1,9 @@
 {
   "id": "can-jump-trampoline",
-  "title": "Trampoline Jump \u2014 Can You Reach the End?",
+  "title": "Trampoline Jump — Can You Reach the End?",
   "difficulty": "EASY",
   "statement": "You are standing at index 0 of an array. `arr[i]` represents the maximum number of positions you can jump forward from index `i`. Determine if you can reach the last index.\n\n**Input:** Space-separated non-negative integers.\n**Output:** Print `true` or `false`.",
-  "constraints": "- 1 \u2264 arr.length \u2264 10\u2074\n- 0 \u2264 arr[i] \u2264 10\u2074",
+  "constraints": "- 1 ≤ arr.length ≤ 10⁴\n- 0 ≤ arr[i] ≤ 10⁴",
   "examples": [
     {
       "input": "arr=[2,3,1,1,4]",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Greedy",
+    "Arrays"
   ]
 }

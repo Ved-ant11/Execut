@@ -3,7 +3,7 @@
   "title": "Number of Distinct Islands",
   "difficulty": "HARD",
   "statement": "Given a binary grid, count the number of **distinct** islands. Two islands are the same if one can be translated (not rotated/reflected) to match the other.\n\n**Input:**\n- Line 1: two integers `m` and `n`.\n- Next `m` lines: a string of `n` characters (`0` or `1`) per row.\n\n**Output:** Print the number of distinct island shapes.",
-  "constraints": "- 1 \u2264 m, n \u2264 50\n- grid[i][j] is 0 or 1.",
+  "constraints": "- 1 ≤ m, n ≤ 50\n- grid[i][j] is 0 or 1.",
   "examples": [
     {
       "input": "m=4,n=5, grid shown",
@@ -59,5 +59,10 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Graphs",
+    "DFS",
+    "Matrix"
   ]
 }

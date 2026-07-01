@@ -5,16 +5,63 @@
   "statement": "Given two arrays `nums1` and `nums2`, return their intersection — a sorted list of unique elements that appear in both arrays.\n\n**Input:**\n- Line 1: space-separated integers for `nums1`.\n- Line 2: space-separated integers for `nums2`.\n\n**Output:** Print the sorted unique intersection, space-separated. If no intersection, print `-1`.",
   "constraints": "- 1 ≤ nums1.length, nums2.length ≤ 10³\n- -10⁴ ≤ nums[i] ≤ 10⁴",
   "examples": [
-    { "input": "nums1 = [1,2,2,1], nums2 = [2,2]", "output": "2",   "explanation": "Only 2 is common and unique." },
-    { "input": "nums1 = [4,9,5], nums2 = [9,4,9,8,4]", "output": "4 9", "explanation": "Common unique elements sorted." }
+    {
+      "input": "nums1 = [1,2,2,1], nums2 = [2,2]",
+      "output": "2",
+      "explanation": "Only 2 is common and unique."
+    },
+    {
+      "input": "nums1 = [4,9,5], nums2 = [9,4,9,8,4]",
+      "output": "4 9",
+      "explanation": "Common unique elements sorted."
+    }
   ],
   "testCases": [
-    { "input": "1 2 2 1\n2 2",         "expectedOutput": "2",   "order": 1, "isHidden": false },
-    { "input": "4 9 5\n9 4 9 8 4",    "expectedOutput": "4 9", "order": 2, "isHidden": false },
-    { "input": "1 2 3\n4 5 6",        "expectedOutput": "-1",  "order": 3, "isHidden": true },
-    { "input": "1 1 1\n1 1 1",        "expectedOutput": "1",   "order": 4, "isHidden": true },
-    { "input": "3 1 2\n2 3",          "expectedOutput": "2 3", "order": 5, "isHidden": true },
-    { "input": "5\n5",                "expectedOutput": "5",   "order": 6, "isHidden": true },
-    { "input": "-1 0 1\n0 2",         "expectedOutput": "0",   "order": 7, "isHidden": true }
+    {
+      "input": "1 2 2 1\n2 2",
+      "expectedOutput": "2",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "4 9 5\n9 4 9 8 4",
+      "expectedOutput": "4 9",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1 2 3\n4 5 6",
+      "expectedOutput": "-1",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "1 1 1\n1 1 1",
+      "expectedOutput": "1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "3 1 2\n2 3",
+      "expectedOutput": "2 3",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "5\n5",
+      "expectedOutput": "5",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "-1 0 1\n0 2",
+      "expectedOutput": "0",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Arrays",
+    "Hash Map"
   ]
 }

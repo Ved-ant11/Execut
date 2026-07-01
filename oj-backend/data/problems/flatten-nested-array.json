@@ -5,17 +5,68 @@
   "statement": "You are given a string representation of a nested array using brackets and comma-separated integers. Flatten it to depth 1 (one level of nesting removed) and print the result.\n\nThe input uses `[` and `]` for nesting. Elements at depth 0 stay, elements at depth 1 are unwrapped, deeper elements have one level removed.\n\n**Input:** A single line containing the nested array representation.\n**Output:** Print the flattened-by-one-depth array, space-separated integers on one line.",
   "constraints": "- Maximum nesting depth: 4\n- 1 ≤ total elements ≤ 100\n- All values are non-negative integers 0–999.",
   "examples": [
-    { "input": "[1,[2,3],[4,[5,6]]]",   "output": "1 2 3 4 5 6",   "explanation": "Fully flatten depth 1: inner arrays unwrapped once." },
-    { "input": "[1,2,3]",               "output": "1 2 3",           "explanation": "Already flat." },
-    { "input": "[[1,2],[3,[4,5]]]",     "output": "1 2 3 4 5",       "explanation": "One level removed." }
+    {
+      "input": "[1,[2,3],[4,[5,6]]]",
+      "output": "1 2 3 4 5 6",
+      "explanation": "Fully flatten depth 1: inner arrays unwrapped once."
+    },
+    {
+      "input": "[1,2,3]",
+      "output": "1 2 3",
+      "explanation": "Already flat."
+    },
+    {
+      "input": "[[1,2],[3,[4,5]]]",
+      "output": "1 2 3 4 5",
+      "explanation": "One level removed."
+    }
   ],
   "testCases": [
-    { "input": "[1,[2,3],[4,[5,6]]]",     "expectedOutput": "1 2 3 4 5 6",       "order": 1, "isHidden": false },
-    { "input": "[1,2,3]",                 "expectedOutput": "1 2 3",             "order": 2, "isHidden": false },
-    { "input": "[[1,2],[3,[4,5]]]",       "expectedOutput": "1 2 3 4 5",         "order": 3, "isHidden": false },
-    { "input": "[[[1,2,3]]]",             "expectedOutput": "1 2 3",             "order": 4, "isHidden": true },
-    { "input": "[1,[2,[3,[4]]]]",         "expectedOutput": "1 2 3 4",           "order": 5, "isHidden": true },
-    { "input": "[[1],[2],[3]]",           "expectedOutput": "1 2 3",             "order": 6, "isHidden": true },
-    { "input": "[10,[20,30],[40,[50,60],[70]]]","expectedOutput": "10 20 30 40 50 60 70","order": 7,"isHidden": true }
+    {
+      "input": "[1,[2,3],[4,[5,6]]]",
+      "expectedOutput": "1 2 3 4 5 6",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "[1,2,3]",
+      "expectedOutput": "1 2 3",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "[[1,2],[3,[4,5]]]",
+      "expectedOutput": "1 2 3 4 5",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "[[[1,2,3]]]",
+      "expectedOutput": "1 2 3",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "[1,[2,[3,[4]]]]",
+      "expectedOutput": "1 2 3 4",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "[[1],[2],[3]]",
+      "expectedOutput": "1 2 3",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "[10,[20,30],[40,[50,60],[70]]]",
+      "expectedOutput": "10 20 30 40 50 60 70",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Arrays",
+    "Recursion"
   ]
 }

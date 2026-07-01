@@ -17,12 +17,50 @@
     }
   ],
   "testCases": [
-    { "input": "1 2 3 4 5 6 7\n3", "expectedOutput": "5 6 7 1 2 3 4", "order": 1, "isHidden": false },
-    { "input": "-1 -100 3 99\n2",  "expectedOutput": "3 99 -1 -100",  "order": 2, "isHidden": false },
-    { "input": "1 2\n3",           "expectedOutput": "2 1",           "order": 3, "isHidden": true },
-    { "input": "1\n0",             "expectedOutput": "1",             "order": 4, "isHidden": true },
-    { "input": "1 2 3\n0",         "expectedOutput": "1 2 3",         "order": 5, "isHidden": true },
-    { "input": "1 2 3 4 5\n5",     "expectedOutput": "1 2 3 4 5",    "order": 6, "isHidden": true },
-    { "input": "1 2 3 4 5 6\n2",   "expectedOutput": "5 6 1 2 3 4",  "order": 7, "isHidden": true }
+    {
+      "input": "1 2 3 4 5 6 7\n3",
+      "expectedOutput": "5 6 7 1 2 3 4",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "-1 -100 3 99\n2",
+      "expectedOutput": "3 99 -1 -100",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1 2\n3",
+      "expectedOutput": "2 1",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "1\n0",
+      "expectedOutput": "1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3\n0",
+      "expectedOutput": "1 2 3",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3 4 5\n5",
+      "expectedOutput": "1 2 3 4 5",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3 4 5 6\n2",
+      "expectedOutput": "5 6 1 2 3 4",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Arrays"
   ]
 }

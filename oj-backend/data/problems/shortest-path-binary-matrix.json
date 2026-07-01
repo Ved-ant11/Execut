@@ -3,17 +3,17 @@
   "title": "Shortest Path in Binary Matrix",
   "difficulty": "HARD",
   "statement": "Given an `n x n` binary matrix `grid`, return the length of the shortest **clear path** from top-left `(0,0)` to bottom-right `(n-1,n-1)`. A clear path only goes through cells with value `0` and can move in 8 directions. The length is the number of visited cells. If no path exists, return `-1`.\n\n**Input:**\n- Line 1: integer `n`.\n- Next `n` lines: `n` space-separated integers (0 or 1) per row.\n\n**Output:** Print the length of the shortest path or `-1`.",
-  "constraints": "- 1 \u2264 n \u2264 100\n- grid[i][j] is 0 or 1.",
+  "constraints": "- 1 ≤ n ≤ 100\n- grid[i][j] is 0 or 1.",
   "examples": [
     {
       "input": "n=3, grid=[[0,1,0],[1,0,1],[0,1,0]]",
       "output": "5",
-      "explanation": "Path: (0,0)\u2192(1,1)\u2192(2,2) via diagonals = 3 cells? With obstacles need: (0,0)(1,1)(2,0)(2,1)(2,2) = 5."
+      "explanation": "Path: (0,0)→(1,1)→(2,2) via diagonals = 3 cells? With obstacles need: (0,0)(1,1)(2,0)(2,1)(2,2) = 5."
     },
     {
       "input": "n=2, grid=[[0,0],[1,0]]",
       "output": "3",
-      "explanation": "(0,0)\u2192(0,1)\u2192(1,1) = 3."
+      "explanation": "(0,0)→(0,1)→(1,1) = 3."
     },
     {
       "input": "n=1, grid=[[0]]",
@@ -64,5 +64,10 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Graphs",
+    "BFS",
+    "Matrix"
   ]
 }

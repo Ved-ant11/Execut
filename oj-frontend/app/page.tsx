@@ -49,7 +49,7 @@ export default function Home() {
             { num: "3",    label: "Difficulties" },
             { num: "3",    label: "Languages"    },
             { num: "1v1", label: "Battle Mode" },
-            { num: "∞", label: "Custom Rooms" },
+            { num: "FSRS", label: "Spaced Rep." },
           ].map((s) => (
             <div key={s.label} className="flex flex-col items-center justify-center px-10 py-5 bg-[#0d0d0d]">
               <span className="font-sans text-[32px] font-bold text-white leading-none tracking-[-0.04em]">
@@ -257,6 +257,106 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+      <div className="relative z-10 max-w-5xl mx-auto px-8 md:px-16">
+        <div className="h-px bg-neutral-800/50" />
+      </div>
+      <section className="relative z-10 max-w-5xl mx-auto px-8 md:px-16 py-24">
+        <div className="flex flex-col md:flex-row items-start gap-16">
+          <div className="md:w-2/5 flex-shrink-0">
+            <span className="font-mono-custom text-[9px] tracking-[0.28em] uppercase text-neutral-700 block mb-5">
+              Feature / 03
+            </span>
+            <h2 className="font-sans text-[clamp(36px,5vw,54px)] font-bold leading-[0.95] tracking-[-0.035em] text-white">
+              Spaced<br />Repetition
+            </h2>
+            <p className="font-mono-custom mt-6 text-[11px] font-light leading-[2] text-neutral-600 max-w-xs">
+              Don&apos;t just solve — retain. FSRS-powered scheduling ensures you review problems at the optimal moment before you forget.
+            </p>
+            <div className="mt-4 space-y-2">
+              {["FSRS v6 memory model", "Interleaved topic mixing", "Dual review & retry queues", "Topic mastery tracking"].map((f) => (
+                <div key={f} className="flex items-center gap-2.5">
+                  <span className="w-1 h-1 rounded-full bg-neutral-600" />
+                  <span className="font-mono-custom text-[10px] text-neutral-700">{f}</span>
+                </div>
+              ))}
+            </div>
+            <Link
+              href="/practice"
+              className="mt-8 inline-flex items-center gap-2 h-9 px-5 border border-neutral-700 rounded-md font-mono-custom text-[10px] tracking-[0.14em] uppercase text-neutral-400 hover:border-neutral-500 hover:text-neutral-200 transition-all duration-200"
+            >
+              Start Practicing →
+            </Link>
+          </div>
+          <div className="md:w-3/5 w-full border border-neutral-800/60 rounded-lg bg-[#0d0d0d] overflow-hidden">
+            <div className="flex items-center justify-between px-5 py-3 border-b border-neutral-800/60 bg-[#0f0f0f]">
+              <div className="flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-neutral-800" />
+                <span className="w-2.5 h-2.5 rounded-full bg-neutral-800" />
+                <span className="w-2.5 h-2.5 rounded-full bg-neutral-800" />
+              </div>
+              <span className="font-mono-custom text-[9px] tracking-[0.2em] uppercase text-neutral-700">
+                practice / review
+              </span>
+              <div className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="font-mono-custom text-[9px] text-neutral-700">3 due</span>
+              </div>
+            </div>
+
+            <div className="p-5 space-y-3">
+              {[
+                { title: "Two Sum", diff: "Easy", interval: "Review in 4 days", state: "Good" },
+                { title: "Longest Increasing Subsequence", diff: "Medium", interval: "Review in 1 day", state: "Hard" },
+                { title: "Trapping Rain Water", diff: "Hard", interval: "Review in 12 days", state: "Easy" },
+              ].map((card) => (
+                <div key={card.title} className="border border-neutral-800/50 rounded-md px-4 py-3 bg-[#111111]">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <span className="font-sans text-[13px] font-semibold text-neutral-300 tracking-tight">
+                        {card.title}
+                      </span>
+                      <div className="flex items-center gap-3 mt-1">
+                        <span className={`font-mono-custom text-[9px] tracking-[0.15em] uppercase ${
+                          card.diff === "Easy" ? "text-emerald-500" : card.diff === "Medium" ? "text-amber-500" : "text-red-500"
+                        }`}>
+                          {card.diff}
+                        </span>
+                        <span className="font-mono-custom text-[9px] text-neutral-700">{card.interval}</span>
+                      </div>
+                    </div>
+                    <span className={`font-mono-custom text-[9px] tracking-[0.15em] uppercase px-2.5 py-1 rounded-full border ${
+                      card.state === "Easy" ? "text-emerald-500 border-emerald-500/30" :
+                      card.state === "Good" ? "text-blue-400 border-blue-400/30" :
+                      "text-amber-500 border-amber-500/30"
+                    }`}>
+                      {card.state}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="px-5 pb-5">
+              <div className="grid grid-cols-3 gap-3">
+                {[
+                  { label: "Mastered", value: "24", color: "text-emerald-500" },
+                  { label: "Learning", value: "18", color: "text-amber-500" },
+                  { label: "Topics", value: "12", color: "text-white" },
+                ].map((stat) => (
+                  <div key={stat.label} className="border border-neutral-800/50 rounded-md px-3 py-2.5 bg-[#111111] text-center">
+                    <span className={`font-sans text-[18px] font-bold ${stat.color} tracking-[-0.04em]`}>
+                      {stat.value}
+                    </span>
+                    <span className="font-mono-custom text-[8px] tracking-[0.15em] uppercase text-neutral-700 block mt-0.5">
+                      {stat.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <div className="relative z-10 max-w-5xl mx-auto px-8 md:px-16">

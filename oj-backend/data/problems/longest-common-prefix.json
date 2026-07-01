@@ -5,16 +5,62 @@
   "statement": "Given `n` strings, find the longest common prefix among all of them. If there is no common prefix, print an empty line.\n\n**Input:**\n- Line 1: integer `n`.\n- Next `n` lines: one string per line.\n\n**Output:** Print the longest common prefix. If none exists, print an empty line.",
   "constraints": "- 1 ≤ n ≤ 200\n- 0 ≤ each string length ≤ 200\n- Strings consist of lowercase English letters only.",
   "examples": [
-    { "input": "n = 3, words = [\"flower\",\"flow\",\"flight\"]", "output": "fl",  "explanation": "\"fl\" is the longest prefix shared by all." },
-    { "input": "n = 3, words = [\"dog\",\"racecar\",\"car\"]",    "output": "",    "explanation": "No common prefix exists." }
+    {
+      "input": "n = 3, words = [\"flower\",\"flow\",\"flight\"]",
+      "output": "fl",
+      "explanation": "\"fl\" is the longest prefix shared by all."
+    },
+    {
+      "input": "n = 3, words = [\"dog\",\"racecar\",\"car\"]",
+      "output": "",
+      "explanation": "No common prefix exists."
+    }
   ],
   "testCases": [
-    { "input": "3\nflower\nflow\nflight", "expectedOutput": "fl", "order": 1, "isHidden": false },
-    { "input": "3\ndog\nracecar\ncar",    "expectedOutput": "",   "order": 2, "isHidden": false },
-    { "input": "1\nalone",               "expectedOutput": "alone","order": 3, "isHidden": true },
-    { "input": "2\nabc\nabc",            "expectedOutput": "abc","order": 4, "isHidden": true },
-    { "input": "3\nabc\nab\na",          "expectedOutput": "a",  "order": 5, "isHidden": true },
-    { "input": "2\ninterviewer\ninteractive","expectedOutput": "inter","order": 6, "isHidden": true },
-    { "input": "3\ncat\ncar\ncab",       "expectedOutput": "ca", "order": 7, "isHidden": true }
+    {
+      "input": "3\nflower\nflow\nflight",
+      "expectedOutput": "fl",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "3\ndog\nracecar\ncar",
+      "expectedOutput": "",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1\nalone",
+      "expectedOutput": "alone",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "2\nabc\nabc",
+      "expectedOutput": "abc",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "3\nabc\nab\na",
+      "expectedOutput": "a",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "2\ninterviewer\ninteractive",
+      "expectedOutput": "inter",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "3\ncat\ncar\ncab",
+      "expectedOutput": "ca",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Strings"
   ]
 }

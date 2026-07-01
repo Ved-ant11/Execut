@@ -3,7 +3,7 @@
   "title": "Minimum Cost to Connect Ropes",
   "difficulty": "MEDIUM",
   "statement": "Given `n` ropes of different lengths, connect all ropes into one. The cost to connect two ropes is the sum of their lengths. Find the minimum total cost.\n\n**Input:** Space-separated integers representing rope lengths.\n**Output:** Print the minimum total cost.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- 1 \u2264 rope[i] \u2264 10\u2074",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- 1 ≤ rope[i] ≤ 10⁴",
   "examples": [
     {
       "input": "ropes=[4,3,2,6]",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Heap",
+    "Greedy"
   ]
 }

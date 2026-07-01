@@ -3,12 +3,12 @@
   "title": "Stone Merge Minimum Cost",
   "difficulty": "HARD",
   "statement": "You have `n` piles of stones. In one operation merge any `k` consecutive piles into one; cost = sum of those k piles. Find the **minimum total cost** to merge all into one, or `-1` if impossible.\n\nNote: possible only if `(n-1) % (k-1) == 0`.\n\n**Input:** First line: space-separated pile sizes. Second line: k.\n**Output:** Minimum cost or -1.",
-  "constraints": "- 2 \u2264 n \u2264 30\n- 2 \u2264 k \u2264 n\n- 1 \u2264 piles[i] \u2264 100",
+  "constraints": "- 2 ≤ n ≤ 30\n- 2 ≤ k ≤ n\n- 1 ≤ piles[i] ≤ 100",
   "examples": [
     {
       "input": "3 2 4 1\n2",
       "output": "20",
-      "explanation": "Merge (3,2)\u21925 cost 5; (4,1)\u21925 cost 5; (5,5)\u219210 cost 10. Total=20."
+      "explanation": "Merge (3,2)→5 cost 5; (4,1)→5 cost 5; (5,5)→10 cost 10. Total=20."
     },
     {
       "input": "1 2 3\n3",
@@ -18,7 +18,7 @@
     {
       "input": "1 2 3 4\n3",
       "output": "-1",
-      "explanation": "(4-1)%(3-1)=1\u22600. Impossible."
+      "explanation": "(4-1)%(3-1)=1≠0. Impossible."
     }
   ],
   "testCases": [
@@ -70,5 +70,8 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

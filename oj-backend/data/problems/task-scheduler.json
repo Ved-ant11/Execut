@@ -5,17 +5,68 @@
   "statement": "Given a list of tasks represented by uppercase letters and a cooldown period `n`, find the minimum number of CPU intervals needed to finish all tasks. The CPU must wait at least `n` intervals between two same tasks. It can idle during the wait.\n\n**Input:**\n- Line 1: space-separated uppercase letters representing tasks.\n- Line 2: integer `n` (cooldown).\n\n**Output:** Print the minimum number of intervals.",
   "constraints": "- 1 ≤ tasks.length ≤ 10⁴\n- 0 ≤ n ≤ 100\n- Tasks are uppercase English letters.",
   "examples": [
-    { "input": "tasks=[A,A,A,B,B,B], n=2", "output": "8",  "explanation": "A→B→idle→A→B→idle→A→B = 8 intervals." },
-    { "input": "tasks=[A,A,A,B,B,B], n=0", "output": "6",  "explanation": "No cooldown, execute sequentially." },
-    { "input": "tasks=[A,A,A,A,A,A,B,C,D,E,F,G], n=2","output": "16","explanation": "A dominates; needs idle slots." }
+    {
+      "input": "tasks=[A,A,A,B,B,B], n=2",
+      "output": "8",
+      "explanation": "A→B→idle→A→B→idle→A→B = 8 intervals."
+    },
+    {
+      "input": "tasks=[A,A,A,B,B,B], n=0",
+      "output": "6",
+      "explanation": "No cooldown, execute sequentially."
+    },
+    {
+      "input": "tasks=[A,A,A,A,A,A,B,C,D,E,F,G], n=2",
+      "output": "16",
+      "explanation": "A dominates; needs idle slots."
+    }
   ],
   "testCases": [
-    { "input": "A A A B B B\n2",              "expectedOutput": "8",  "order": 1, "isHidden": false },
-    { "input": "A A A B B B\n0",              "expectedOutput": "6",  "order": 2, "isHidden": false },
-    { "input": "A A A A A A B C D E F G\n2",  "expectedOutput": "16", "order": 3, "isHidden": false },
-    { "input": "A\n5",                        "expectedOutput": "1",  "order": 4, "isHidden": true },
-    { "input": "A B C D E\n4",               "expectedOutput": "5",  "order": 5, "isHidden": true },
-    { "input": "A A A B B C\n2",             "expectedOutput": "7",  "order": 6, "isHidden": true },
-    { "input": "A A B B C C D D\n2",         "expectedOutput": "8",  "order": 7, "isHidden": true }
+    {
+      "input": "A A A B B B\n2",
+      "expectedOutput": "8",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "A A A B B B\n0",
+      "expectedOutput": "6",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "A A A A A A B C D E F G\n2",
+      "expectedOutput": "16",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "A\n5",
+      "expectedOutput": "1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "A B C D E\n4",
+      "expectedOutput": "5",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "A A A B B C\n2",
+      "expectedOutput": "7",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "A A B B C C D D\n2",
+      "expectedOutput": "8",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Greedy",
+    "Heap"
   ]
 }

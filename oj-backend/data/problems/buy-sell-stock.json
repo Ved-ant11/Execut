@@ -17,11 +17,45 @@
     }
   ],
   "testCases": [
-    { "input": "7 1 5 3 6 4", "expectedOutput": "5", "order": 1, "isHidden": false },
-    { "input": "7 6 4 3 1",   "expectedOutput": "0", "order": 2, "isHidden": false },
-    { "input": "1 2",         "expectedOutput": "1", "order": 3, "isHidden": true },
-    { "input": "2 4 1",       "expectedOutput": "2", "order": 4, "isHidden": true },
-    { "input": "3 3 3",       "expectedOutput": "0", "order": 5, "isHidden": true },
-    { "input": "1 4 2 7",     "expectedOutput": "6", "order": 6, "isHidden": true }
+    {
+      "input": "7 1 5 3 6 4",
+      "expectedOutput": "5",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "7 6 4 3 1",
+      "expectedOutput": "0",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1 2",
+      "expectedOutput": "1",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "2 4 1",
+      "expectedOutput": "2",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "3 3 3",
+      "expectedOutput": "0",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1 4 2 7",
+      "expectedOutput": "6",
+      "order": 6,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Arrays"
   ]
 }

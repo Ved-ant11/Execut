@@ -3,7 +3,7 @@
   "title": "Subarrays with Exactly K Distinct Values",
   "difficulty": "HARD",
   "statement": "Given an integer array `nums` and integer `k`, return the number of subarrays that contain exactly `k` distinct values.\n\n**Input:**\n- Line 1: space-separated integers.\n- Line 2: integer `k`.\n\n**Output:** Print the count.",
-  "constraints": "- 1 \u2264 nums.length \u2264 2 \u00d7 10\u2074\n- 1 \u2264 nums[i] \u2264 nums.length\n- 1 \u2264 k \u2264 nums.length",
+  "constraints": "- 1 ≤ nums.length ≤ 2 × 10⁴\n- 1 ≤ nums[i] ≤ nums.length\n- 1 ≤ k ≤ nums.length",
   "examples": [
     {
       "input": "nums=[1,2,1,2,3], k=2",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Sliding Window",
+    "Hash Map"
   ]
 }

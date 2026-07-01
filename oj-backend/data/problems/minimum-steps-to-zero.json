@@ -3,22 +3,22 @@
   "title": "Minimum Steps to Zero",
   "difficulty": "EASY",
   "statement": "Given a positive integer `n`, find the minimum number of steps to reduce it to 0. At each step you can:\n- Subtract 1\n- If divisible by 2, divide by 2\n- If divisible by 3, divide by 3\n\n**Input:** A single positive integer `n`.\n**Output:** Print the minimum number of steps.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2076",
+  "constraints": "- 1 ≤ n ≤ 10⁶",
   "examples": [
     {
       "input": "n = 10",
       "output": "3",
-      "explanation": "10 \u2192 9 (\u22121) \u2192 3 (\u00f73) \u2192 1 (\u00f73) \u2192 0 (\u22121). Wait: 10\u21925(\u00f72)\u21924(\u22121)\u21922(\u00f72)\u21921(\u22121)\u21920 = 4. Best: 10\u21929(\u22121)\u21923(\u00f73)\u21920... 10\u21929\u21923\u21920 = 3 steps."
+      "explanation": "10 → 9 (−1) → 3 (÷3) → 1 (÷3) → 0 (−1). Wait: 10→5(÷2)→4(−1)→2(÷2)→1(−1)→0 = 4. Best: 10→9(−1)→3(÷3)→0... 10→9→3→0 = 3 steps."
     },
     {
       "input": "n = 6",
       "output": "2",
-      "explanation": "6 \u2192 3 (\u00f72... no) \u2192 6\u00f73=2 \u2192 2\u00f72=1 \u2192 1\u22121=0. Best: 6\u21922(\u00f73)\u21921(\u00f72)\u21920 = 3. Or 6\u00f72=3\u00f73=1\u22121=0 = 3. Min = 3."
+      "explanation": "6 → 3 (÷2... no) → 6÷3=2 → 2÷2=1 → 1−1=0. Best: 6→2(÷3)→1(÷2)→0 = 3. Or 6÷2=3÷3=1−1=0 = 3. Min = 3."
     },
     {
       "input": "n = 1",
       "output": "1",
-      "explanation": "1 \u2212 1 = 0."
+      "explanation": "1 − 1 = 0."
     }
   ],
   "testCases": [
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Graphs",
+    "BFS"
   ]
 }

@@ -3,7 +3,7 @@
   "title": "Valid Card Shuffle",
   "difficulty": "MEDIUM",
   "statement": "Two card piles are being riffle-shuffled. At each step, the top card from either pile is placed next. Given two piles and a resulting sequence, determine if the sequence is a **valid interleaving** of the two piles (maintaining each pile's original order).\n\n**Input:** First line: pile 1 (space-separated). Second line: pile 2. Third line: target sequence.\n**Output:** YES or NO.",
-  "constraints": "- 1 \u2264 total cards \u2264 3000\n- Card values are distinct positive integers",
+  "constraints": "- 1 ≤ total cards ≤ 3000\n- Card values are distinct positive integers",
   "examples": [
     {
       "input": "1 2 3\n4 5 6\n1 4 2 5 3 6",
@@ -13,7 +13,7 @@
     {
       "input": "1 2\n3 4\n3 2 1 4",
       "output": "NO",
-      "explanation": "3 from pile 2, then 2 from pile 1 \u2014 but pile 1's top is 1, not 2. Invalid."
+      "explanation": "3 from pile 2, then 2 from pile 1 — but pile 1's top is 1, not 2. Invalid."
     },
     {
       "input": "1 3\n2 4\n2 1 3 4",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Arrays",
+    "Sorting"
   ]
 }

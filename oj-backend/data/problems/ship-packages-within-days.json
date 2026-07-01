@@ -3,7 +3,7 @@
   "title": "Capacity to Ship Packages Within D Days",
   "difficulty": "MEDIUM",
   "statement": "Packages on a conveyor belt have weights. Ship all packages within `D` days. Packages must be shipped in order. Find the minimum ship capacity needed.\n\n**Input:**\n- Line 1: space-separated package weights.\n- Line 2: integer `D` (days).\n\n**Output:** Print the minimum capacity.",
-  "constraints": "- 1 \u2264 weights.length \u2264 500\n- 1 \u2264 weights[i] \u2264 500\n- 1 \u2264 D \u2264 weights.length",
+  "constraints": "- 1 ≤ weights.length ≤ 500\n- 1 ≤ weights[i] ≤ 500\n- 1 ≤ D ≤ weights.length",
   "examples": [
     {
       "input": "weights=[1,2,3,4,5,6,7,8,9,10], D=5",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Binary Search",
+    "Greedy"
   ]
 }

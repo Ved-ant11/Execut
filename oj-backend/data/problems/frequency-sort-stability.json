@@ -3,17 +3,17 @@
   "title": "Frequency Sort Stability",
   "difficulty": "EASY",
   "statement": "Sort an array of integers by frequency **ascending** (least frequent first). For equal frequencies, sort by **value descending**.\n\n**Input:** Space-separated integers.\n**Output:** Sorted array space-separated.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- -10\u2074 \u2264 nums[i] \u2264 10\u2074",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- -10⁴ ≤ nums[i] ≤ 10⁴",
   "examples": [
     {
       "input": "1 1 2 2 3 3 3",
       "output": "2 2 1 1 3 3 3",
-      "explanation": "freq(1)=2, freq(2)=2, freq(3)=3. Freq=2: sort value desc \u2192 2 before 1. Result: 2 2 1 1 3 3 3."
+      "explanation": "freq(1)=2, freq(2)=2, freq(3)=3. Freq=2: sort value desc → 2 before 1. Result: 2 2 1 1 3 3 3."
     },
     {
       "input": "5 5 4 4 3",
       "output": "3 5 5 4 4",
-      "explanation": "freq(3)=1 first. freq=2: value desc \u2192 5 before 4."
+      "explanation": "freq(3)=1 first. freq=2: value desc → 5 before 4."
     },
     {
       "input": "1",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Sorting",
+    "Hash Map"
   ]
 }

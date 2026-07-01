@@ -2,8 +2,8 @@
   "id": "fence-coloring",
   "title": "Fence Coloring",
   "difficulty": "EASY",
-  "statement": "You are painting a fence of `n` posts using `k` colors. The only rule: **no three consecutive posts** may have the same color. Count the number of valid colorings modulo 10\u2079+7.\n\n**Input:** Single line: n k.\n**Output:** Number of valid colorings mod 10\u2079+7.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- 1 \u2264 k \u2264 10\u2075",
+  "statement": "You are painting a fence of `n` posts using `k` colors. The only rule: **no three consecutive posts** may have the same color. Count the number of valid colorings modulo 10⁹+7.\n\n**Input:** Single line: n k.\n**Output:** Number of valid colorings mod 10⁹+7.",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- 1 ≤ k ≤ 10⁵",
   "examples": [
     {
       "input": "3 2",
@@ -70,5 +70,8 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

@@ -1,9 +1,9 @@
 {
   "id": "tile-2xn-with-dominoes",
-  "title": "Tiling 2\u00d7N Floor with 1\u00d72 Dominoes",
+  "title": "Tiling 2×N Floor with 1×2 Dominoes",
   "difficulty": "EASY",
-  "statement": "Given a floor of size `2 \u00d7 n`, find the number of ways to tile it using `1 \u00d7 2` dominoes (placed horizontally or vertically).\n\nThis follows the Fibonacci sequence: `f(1)=1, f(2)=2, f(n)=f(n-1)+f(n-2)`.\n\n**Input:** A single integer `n`.\n**Output:** Print the number of ways to tile.",
-  "constraints": "- 1 \u2264 n \u2264 50",
+  "statement": "Given a floor of size `2 × n`, find the number of ways to tile it using `1 × 2` dominoes (placed horizontally or vertically).\n\nThis follows the Fibonacci sequence: `f(1)=1, f(2)=2, f(n)=f(n-1)+f(n-2)`.\n\n**Input:** A single integer `n`.\n**Output:** Print the number of ways to tile.",
+  "constraints": "- 1 ≤ n ≤ 50",
   "examples": [
     {
       "input": "n = 1",
@@ -64,5 +64,8 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

@@ -3,17 +3,17 @@
   "title": "Longest Escape Route",
   "difficulty": "EASY",
   "statement": "You are trapped in a grid of altitude values. You can only step to an **adjacent cell** (up, down, left, right) with a **strictly lower** altitude. Starting from the best possible cell, what is the **longest route** you can take?\n\n**Input:** First line: n m. Next n lines: m space-separated integers.\n**Output:** Length of the longest strictly decreasing path (in cells).",
-  "constraints": "- 1 \u2264 n, m \u2264 200\n- 0 \u2264 grid[i][j] \u2264 10\u2079",
+  "constraints": "- 1 ≤ n, m ≤ 200\n- 0 ≤ grid[i][j] ≤ 10⁹",
   "examples": [
     {
       "input": "3 3\n9 9 4\n6 6 8\n2 1 1",
       "output": "4",
-      "explanation": "Best path: 9\u21926\u21922\u21921, length 4."
+      "explanation": "Best path: 9→6→2→1, length 4."
     },
     {
       "input": "3 3\n3 4 5\n3 2 6\n2 2 1",
       "output": "4",
-      "explanation": "Best path: 6\u21925\u21924\u21922 or 6\u21924\u21923\u21922, length 4."
+      "explanation": "Best path: 6→5→4→2 or 6→4→3→2, length 4."
     },
     {
       "input": "1 1\n1",
@@ -70,5 +70,11 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Graphs",
+    "DFS",
+    "Dynamic Programming",
+    "Matrix"
   ]
 }

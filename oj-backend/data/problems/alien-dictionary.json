@@ -5,16 +5,62 @@
   "statement": "You are given a list of words sorted lexicographically in an alien language. Derive the order of characters in the alien alphabet and print them. If no valid ordering exists (due to a cycle), print `INVALID`. If multiple valid orderings exist, print the lexicographically smallest one using standard English ordering as a tiebreaker.\n\n**Input:**\n- Line 1: integer `n`.\n- Next `n` lines: one word per line.\n\n**Output:** Print the character ordering as a single string.",
   "constraints": "- 1 ≤ n ≤ 100\n- 1 ≤ each word length ≤ 100\n- All characters are lowercase English letters.\n- The list has at least one valid ordering unless a cycle exists.",
   "examples": [
-    { "input": "n=4, words=[\"wrt\",\"wrf\",\"er\",\"ett\",\"rftt\"]", "output": "wertf",  "explanation": "Derived order: w < e < r < t < f." },
-    { "input": "n=3, words=[\"z\",\"x\",\"z\"]",                     "output": "INVALID","explanation": "z > x but also z < z implies a cycle." },
-    { "input": "n=2, words=[\"ab\",\"adc\"]",                      "output": "abcd",  "explanation": "b < d derived; a c appear in both." }
+    {
+      "input": "n=4, words=[\"wrt\",\"wrf\",\"er\",\"ett\",\"rftt\"]",
+      "output": "wertf",
+      "explanation": "Derived order: w < e < r < t < f."
+    },
+    {
+      "input": "n=3, words=[\"z\",\"x\",\"z\"]",
+      "output": "INVALID",
+      "explanation": "z > x but also z < z implies a cycle."
+    },
+    {
+      "input": "n=2, words=[\"ab\",\"adc\"]",
+      "output": "abcd",
+      "explanation": "b < d derived; a c appear in both."
+    }
   ],
   "testCases": [
-    { "input": "5\nwrt\nwrf\ner\nett\nrftt",  "expectedOutput": "wertf",   "order": 1, "isHidden": false },
-    { "input": "3\nz\nx\nz",                  "expectedOutput": "INVALID", "order": 2, "isHidden": false },
-    { "input": "1\nabc",                      "expectedOutput": "abc",     "order": 3, "isHidden": true },
-    { "input": "2\nab\nadc",                  "expectedOutput": "abcd",    "order": 4, "isHidden": true },
-    { "input": "2\nabc\nab",                  "expectedOutput": "INVALID", "order": 5, "isHidden": true },
-    { "input": "3\nabc\nbcd\ncde",            "expectedOutput": "abcde",   "order": 6, "isHidden": true }
+    {
+      "input": "5\nwrt\nwrf\ner\nett\nrftt",
+      "expectedOutput": "wertf",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "3\nz\nx\nz",
+      "expectedOutput": "INVALID",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1\nabc",
+      "expectedOutput": "abc",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "2\nab\nadc",
+      "expectedOutput": "abcd",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "2\nabc\nab",
+      "expectedOutput": "INVALID",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "3\nabc\nbcd\ncde",
+      "expectedOutput": "abcde",
+      "order": 6,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Graphs",
+    "Topological Sort"
   ]
 }

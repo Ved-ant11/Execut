@@ -31,6 +31,7 @@ async function seed() {
         difficulty: problem.difficulty as Difficulty,
         examples: problem.examples,
         constraints: problem.constraints,
+        tags: problem.tags || [],
       },
       create: {
         id: problem.id,
@@ -39,6 +40,7 @@ async function seed() {
         difficulty: problem.difficulty as Difficulty,
         examples: problem.examples,
         constraints: problem.constraints,
+        tags: problem.tags || [],
       },
     });
 

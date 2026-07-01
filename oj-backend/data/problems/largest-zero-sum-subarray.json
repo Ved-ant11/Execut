@@ -3,7 +3,7 @@
   "title": "Largest Subarray with Zero Sum",
   "difficulty": "MEDIUM",
   "statement": "Given an array of integers (can include negatives), find the length of the longest subarray whose sum is exactly 0.\n\n**Input:** Space-separated integers.\n**Output:** Print the length of the longest zero-sum subarray. If none, print `0`.",
-  "constraints": "- 1 \u2264 arr.length \u2264 10\u2075\n- -10\u2074 \u2264 arr[i] \u2264 10\u2074",
+  "constraints": "- 1 ≤ arr.length ≤ 10⁵\n- -10⁴ ≤ arr[i] ≤ 10⁴",
   "examples": [
     {
       "input": "arr=[15,-2,2,-8,1,7,10,23]",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Hash Map",
+    "Prefix Sum"
   ]
 }

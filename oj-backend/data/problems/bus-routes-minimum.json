@@ -5,16 +5,63 @@
   "statement": "You are given an array `routes` where `routes[i]` is a bus route that the `i`th bus repeats forever. You start at bus stop `source` and want to reach bus stop `target`. You can board and transfer between buses at shared stops.\n\nReturn the minimum number of **bus rides** to reach `target` from `source`. If not possible, return `-1`.\n\n**Input:**\n- Line 1: integer `n` (number of routes).\n- Next `n` lines: space-separated stop numbers for each route.\n- Last line: two integers `source target`.\n\n**Output:** Print the minimum number of bus rides, or `-1`.",
   "constraints": "- 1 ≤ routes.length ≤ 500\n- 1 ≤ routes[i].length ≤ 10⁵\n- 0 ≤ routes[i][j] ≤ 10⁶\n- 0 ≤ source, target ≤ 10⁶",
   "examples": [
-    { "input": "n=2, routes=[[1,2,7],[3,6,7]], source=1, target=6", "output": "2", "explanation": "Take bus 0 (stop 1→7), transfer to bus 1 (stop 7→6). 2 rides." },
-    { "input": "n=1, routes=[[1,2,3]], source=1, target=3",         "output": "1", "explanation": "Single bus covers 1 to 3." }
+    {
+      "input": "n=2, routes=[[1,2,7],[3,6,7]], source=1, target=6",
+      "output": "2",
+      "explanation": "Take bus 0 (stop 1→7), transfer to bus 1 (stop 7→6). 2 rides."
+    },
+    {
+      "input": "n=1, routes=[[1,2,3]], source=1, target=3",
+      "output": "1",
+      "explanation": "Single bus covers 1 to 3."
+    }
   ],
   "testCases": [
-    { "input": "2\n1 2 7\n3 6 7\n1 6",   "expectedOutput": "2",  "order": 1, "isHidden": false },
-    { "input": "1\n1 2 3\n1 3",           "expectedOutput": "1",  "order": 2, "isHidden": false },
-    { "input": "1\n1 2 3\n1 4",           "expectedOutput": "-1", "order": 3, "isHidden": true },
-    { "input": "1\n5\n5 5",              "expectedOutput": "0",  "order": 4, "isHidden": true },
-    { "input": "3\n1 2\n2 3\n3 4\n1 4", "expectedOutput": "3",  "order": 5, "isHidden": true },
-    { "input": "2\n1 2 3\n3 4 5\n1 5",  "expectedOutput": "2",  "order": 6, "isHidden": true },
-    { "input": "3\n1 5\n5 10\n10 20\n1 20","expectedOutput": "3","order": 7,"isHidden": true }
+    {
+      "input": "2\n1 2 7\n3 6 7\n1 6",
+      "expectedOutput": "2",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "1\n1 2 3\n1 3",
+      "expectedOutput": "1",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "1\n1 2 3\n1 4",
+      "expectedOutput": "-1",
+      "order": 3,
+      "isHidden": true
+    },
+    {
+      "input": "1\n5\n5 5",
+      "expectedOutput": "0",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "3\n1 2\n2 3\n3 4\n1 4",
+      "expectedOutput": "3",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "2\n1 2 3\n3 4 5\n1 5",
+      "expectedOutput": "2",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "3\n1 5\n5 10\n10 20\n1 20",
+      "expectedOutput": "3",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Graphs",
+    "BFS"
   ]
 }

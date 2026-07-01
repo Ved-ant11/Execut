@@ -3,12 +3,12 @@
   "title": "Minimum Jumps Past Forbidden Positions",
   "difficulty": "HARD",
   "statement": "You stand at position 0. Each turn: jump forward `a` OR jump backward `b` (cannot go below 0, cannot make two consecutive backward jumps). Some positions are forbidden. Find minimum jumps to reach `x`, or `-1`.\n\n**Input:** First line: a b x. Second line: space-separated forbidden positions, or `none`.\n**Output:** Minimum jumps or -1.",
-  "constraints": "- 1 \u2264 a, b, x \u2264 2000\n- 0 \u2264 |forbidden| \u2264 200",
+  "constraints": "- 1 ≤ a, b, x ≤ 2000\n- 0 ≤ |forbidden| ≤ 200",
   "examples": [
     {
       "input": "2 3 9\nnone",
       "output": "7",
-      "explanation": "BFS optimal: 0\u21922\u21924\u21926\u21928\u21925\u21927\u21929. 7 jumps."
+      "explanation": "BFS optimal: 0→2→4→6→8→5→7→9. 7 jumps."
     },
     {
       "input": "2 3 9\n1 2 3 4 5 6 7 8",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Graphs",
+    "BFS"
   ]
 }

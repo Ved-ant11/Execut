@@ -3,12 +3,12 @@
   "title": "Weighted Job Scheduling",
   "difficulty": "HARD",
   "statement": "You are given `n` jobs, each with a start time, end time, and value. You can only work on one job at a time. Jobs that share even one time unit **conflict**. Select a non-conflicting subset to **maximize total value**.\n\n**Input:** First line: n. Next n lines: start end value.\n**Output:** Maximum total value.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- 1 \u2264 start < end \u2264 10\u2079\n- 1 \u2264 value \u2264 10\u2076",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- 1 ≤ start < end ≤ 10⁹\n- 1 ≤ value ≤ 10⁶",
   "examples": [
     {
       "input": "4\n1 3 5\n2 5 6\n4 6 5\n6 7 4",
       "output": "15",
-      "explanation": "Take job1(1-3,val5), job3(4-6,val5), job4(6-7,val4)? job3 ends at 6, job4 starts at 6 \u2014 conflict. Take job1+job3+... Optimal: job2(2-5,6)+job4(6-7,4)=10, or job1(1-3,5)+job3(4-6,5)+nothing=10. Or job1+job4=9. Max=10. Wait, let me recheck."
+      "explanation": "Take job1(1-3,val5), job3(4-6,val5), job4(6-7,val4)? job3 ends at 6, job4 starts at 6 — conflict. Take job1+job3+... Optimal: job2(2-5,6)+job4(6-7,4)=10, or job1(1-3,5)+job3(4-6,5)+nothing=10. Or job1+job4=9. Max=10. Wait, let me recheck."
     },
     {
       "input": "3\n1 2 4\n3 4 3\n2 3 2",
@@ -70,5 +70,10 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Binary Search",
+    "Sorting"
   ]
 }

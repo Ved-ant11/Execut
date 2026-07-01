@@ -5,17 +5,68 @@
   "statement": "Given two strings `s` and `t`, return the minimum window substring of `s` such that every character in `t` (including duplicates) is included in the window. If no such window exists, return an empty string.\n\n**Input:**\n- Line 1: string `s`.\n- Line 2: string `t`.\n\n**Output:** Print the minimum window substring, or an empty line if none exists.",
   "constraints": "- 1 ≤ s.length ≤ 10⁵\n- 1 ≤ t.length ≤ 10⁴\n- s and t consist of uppercase and lowercase English letters.",
   "examples": [
-    { "input": "s = \"ADOBECODEBANC\", t = \"ABC\"", "output": "BANC",  "explanation": "\"BANC\" is the smallest window containing A, B, C." },
-    { "input": "s = \"a\", t = \"a\"",               "output": "a",    "explanation": "Exact match." },
-    { "input": "s = \"a\", t = \"aa\"",              "output": "",     "explanation": "Not enough 'a's in s." }
+    {
+      "input": "s = \"ADOBECODEBANC\", t = \"ABC\"",
+      "output": "BANC",
+      "explanation": "\"BANC\" is the smallest window containing A, B, C."
+    },
+    {
+      "input": "s = \"a\", t = \"a\"",
+      "output": "a",
+      "explanation": "Exact match."
+    },
+    {
+      "input": "s = \"a\", t = \"aa\"",
+      "output": "",
+      "explanation": "Not enough 'a's in s."
+    }
   ],
   "testCases": [
-    { "input": "ADOBECODEBANC\nABC", "expectedOutput": "BANC", "order": 1, "isHidden": false },
-    { "input": "a\na",               "expectedOutput": "a",    "order": 2, "isHidden": false },
-    { "input": "a\naa",              "expectedOutput": "",     "order": 3, "isHidden": false },
-    { "input": "ABC\nB",             "expectedOutput": "B",    "order": 4, "isHidden": true },
-    { "input": "cabwefgewcwaefgcf\ncae","expectedOutput": "cwae","order": 5,"isHidden": true },
-    { "input": "AAABBBCCC\nABC",    "expectedOutput": "ABC",  "order": 6, "isHidden": true },
-    { "input": "xyz\nabc",           "expectedOutput": "",     "order": 7, "isHidden": true }
+    {
+      "input": "ADOBECODEBANC\nABC",
+      "expectedOutput": "BANC",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "a\na",
+      "expectedOutput": "a",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "a\naa",
+      "expectedOutput": "",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "ABC\nB",
+      "expectedOutput": "B",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "cabwefgewcwaefgcf\ncae",
+      "expectedOutput": "cwae",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "AAABBBCCC\nABC",
+      "expectedOutput": "ABC",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "xyz\nabc",
+      "expectedOutput": "",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Sliding Window",
+    "Hash Map"
   ]
 }

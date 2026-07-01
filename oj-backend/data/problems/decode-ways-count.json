@@ -2,23 +2,23 @@
   "id": "decode-ways-count",
   "title": "Decode Ways Count",
   "difficulty": "HARD",
-  "statement": "A string of digits can be decoded where:\n- `'1'` \u2192 `A`, `'2'` \u2192 `B`, ..., `'26'` \u2192 `Z`.\n\nGiven a string `s` containing only digits, return the **number of ways** to decode it.\n\nThe answer may be large but fits in a 64-bit integer.\n\n**Input:** A single string of digits.\n**Output:** Print the number of ways to decode it.",
-  "constraints": "- 1 \u2264 s.length \u2264 100\n- s contains only digits.\n- s may contain leading zeros.",
+  "statement": "A string of digits can be decoded where:\n- `'1'` → `A`, `'2'` → `B`, ..., `'26'` → `Z`.\n\nGiven a string `s` containing only digits, return the **number of ways** to decode it.\n\nThe answer may be large but fits in a 64-bit integer.\n\n**Input:** A single string of digits.\n**Output:** Print the number of ways to decode it.",
+  "constraints": "- 1 ≤ s.length ≤ 100\n- s contains only digits.\n- s may contain leading zeros.",
   "examples": [
     {
       "input": "s = \"12\"",
       "output": "2",
-      "explanation": "'12' \u2192 'AB' or 'L'. 2 ways."
+      "explanation": "'12' → 'AB' or 'L'. 2 ways."
     },
     {
       "input": "s = \"226\"",
       "output": "3",
-      "explanation": "'226' \u2192 'BZ', 'VF', 'BBF'. 3 ways."
+      "explanation": "'226' → 'BZ', 'VF', 'BBF'. 3 ways."
     },
     {
       "input": "s = \"06\"",
       "output": "0",
-      "explanation": "Leading zero \u2014 0 can't map to anything."
+      "explanation": "Leading zero — 0 can't map to anything."
     }
   ],
   "testCases": [
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Strings"
   ]
 }

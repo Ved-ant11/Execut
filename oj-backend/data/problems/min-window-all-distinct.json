@@ -3,7 +3,7 @@
   "title": "Smallest Window Containing All Distinct Characters",
   "difficulty": "MEDIUM",
   "statement": "Given a string `s`, find the smallest window (substring) that contains all the distinct characters present in `s`. If multiple windows of same length exist, return the first one.\n\n**Input:** A single string `s`.\n**Output:** Print the smallest window.",
-  "constraints": "- 1 \u2264 s.length \u2264 10\u2075\n- s consists of lowercase English letters.",
+  "constraints": "- 1 ≤ s.length ≤ 10⁵\n- s consists of lowercase English letters.",
   "examples": [
     {
       "input": "s=aabcbcdbca",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Sliding Window",
+    "Hash Map"
   ]
 }

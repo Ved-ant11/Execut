@@ -5,17 +5,67 @@
   "statement": "Given a non-negative integer `n`, print the frequency of each digit (0-9) that appears in it. Print only digits that appear at least once, in ascending order of the digit.\n\n**Input:** A single non-negative integer `n`.\n**Output:** Each line contains `digit:count` for digits that appear, in ascending digit order.",
   "constraints": "- 0 ≤ n ≤ 10¹⁸",
   "examples": [
-    { "input": "n = 122333", "output": "1:1\n2:2\n3:3", "explanation": "1 appears once, 2 twice, 3 three times." },
-    { "input": "n = 1000",   "output": "0:3\n1:1",      "explanation": "Three zeros and one 1." },
-    { "input": "n = 5",      "output": "5:1",            "explanation": "Single digit." }
+    {
+      "input": "n = 122333",
+      "output": "1:1\n2:2\n3:3",
+      "explanation": "1 appears once, 2 twice, 3 three times."
+    },
+    {
+      "input": "n = 1000",
+      "output": "0:3\n1:1",
+      "explanation": "Three zeros and one 1."
+    },
+    {
+      "input": "n = 5",
+      "output": "5:1",
+      "explanation": "Single digit."
+    }
   ],
   "testCases": [
-    { "input": "122333",              "expectedOutput": "1:1\n2:2\n3:3",             "order": 1, "isHidden": false },
-    { "input": "1000",                "expectedOutput": "0:3\n1:1",                  "order": 2, "isHidden": false },
-    { "input": "5",                   "expectedOutput": "5:1",                       "order": 3, "isHidden": false },
-    { "input": "1234567890",          "expectedOutput": "0:1\n1:1\n2:1\n3:1\n4:1\n5:1\n6:1\n7:1\n8:1\n9:1", "order": 4, "isHidden": true },
-    { "input": "9999999999",          "expectedOutput": "9:10",                      "order": 5, "isHidden": true },
-    { "input": "1010101",             "expectedOutput": "0:3\n1:4",                  "order": 6, "isHidden": true },
-    { "input": "0",                   "expectedOutput": "0:1",                       "order": 7, "isHidden": true }
+    {
+      "input": "122333",
+      "expectedOutput": "1:1\n2:2\n3:3",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "1000",
+      "expectedOutput": "0:3\n1:1",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "5",
+      "expectedOutput": "5:1",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1234567890",
+      "expectedOutput": "0:1\n1:1\n2:1\n3:1\n4:1\n5:1\n6:1\n7:1\n8:1\n9:1",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "9999999999",
+      "expectedOutput": "9:10",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1010101",
+      "expectedOutput": "0:3\n1:4",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "0",
+      "expectedOutput": "0:1",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Hash Map"
   ]
 }

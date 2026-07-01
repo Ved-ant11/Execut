@@ -5,17 +5,68 @@
   "statement": "Given a roman numeral string `s`, convert it to an integer.\n\nRoman numerals use the following symbols:\n\n| Symbol | Value |\n|--------|-------|\n| I | 1 |\n| V | 5 |\n| X | 10 |\n| L | 50 |\n| C | 100 |\n| D | 500 |\n| M | 1000 |\n\nWhen a smaller value precedes a larger one, it is subtracted (e.g., IV = 4, IX = 9).\n\n**Input:** A single roman numeral string `s`.\n**Output:** Print the integer value.",
   "constraints": "- 1 ≤ s.length ≤ 15\n- s contains only valid roman numeral characters.\n- 1 ≤ answer ≤ 3999",
   "examples": [
-    { "input": "s = \"III\"",  "output": "3",    "explanation": "I + I + I = 3." },
-    { "input": "s = \"LVIII\"","output": "58",   "explanation": "L=50, V=5, III=3." },
-    { "input": "s = \"MCMXCIV\"","output": "1994","explanation": "M=1000, CM=900, XC=90, IV=4." }
+    {
+      "input": "s = \"III\"",
+      "output": "3",
+      "explanation": "I + I + I = 3."
+    },
+    {
+      "input": "s = \"LVIII\"",
+      "output": "58",
+      "explanation": "L=50, V=5, III=3."
+    },
+    {
+      "input": "s = \"MCMXCIV\"",
+      "output": "1994",
+      "explanation": "M=1000, CM=900, XC=90, IV=4."
+    }
   ],
   "testCases": [
-    { "input": "III",     "expectedOutput": "3",    "order": 1, "isHidden": false },
-    { "input": "LVIII",   "expectedOutput": "58",   "order": 2, "isHidden": false },
-    { "input": "MCMXCIV", "expectedOutput": "1994", "order": 3, "isHidden": false },
-    { "input": "IV",      "expectedOutput": "4",    "order": 4, "isHidden": true },
-    { "input": "IX",      "expectedOutput": "9",    "order": 5, "isHidden": true },
-    { "input": "MMMCMXCIX","expectedOutput": "3999","order": 6, "isHidden": true },
-    { "input": "I",       "expectedOutput": "1",    "order": 7, "isHidden": true }
+    {
+      "input": "III",
+      "expectedOutput": "3",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "LVIII",
+      "expectedOutput": "58",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "MCMXCIV",
+      "expectedOutput": "1994",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "IV",
+      "expectedOutput": "4",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "IX",
+      "expectedOutput": "9",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "MMMCMXCIX",
+      "expectedOutput": "3999",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "I",
+      "expectedOutput": "1",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Strings",
+    "Math"
   ]
 }

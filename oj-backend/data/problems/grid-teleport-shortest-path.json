@@ -2,13 +2,13 @@
   "id": "grid-teleport-shortest-path",
   "title": "Grid with Teleporters",
   "difficulty": "HARD",
-  "statement": "You are on an `n \u00d7 m` grid. Each cell is either passable (`.`) or blocked (`#`). Additionally, there are `k` teleporter pairs: stepping on cell A instantly moves you to cell B (and vice versa) at zero cost. Find the shortest path (in steps) from the top-left `(0,0)` to the bottom-right `(n-1, m-1)`. Return -1 if unreachable.\n\n**Input:** First line: n m k. Next n lines: grid row (no spaces). Next k lines: r1 c1 r2 c2 (teleporter pairs).\n**Output:** Minimum steps or -1.",
-  "constraints": "- 1 \u2264 n, m \u2264 500\n- 0 \u2264 k \u2264 100\n- Teleporter cells are always passable",
+  "statement": "You are on an `n × m` grid. Each cell is either passable (`.`) or blocked (`#`). Additionally, there are `k` teleporter pairs: stepping on cell A instantly moves you to cell B (and vice versa) at zero cost. Find the shortest path (in steps) from the top-left `(0,0)` to the bottom-right `(n-1, m-1)`. Return -1 if unreachable.\n\n**Input:** First line: n m k. Next n lines: grid row (no spaces). Next k lines: r1 c1 r2 c2 (teleporter pairs).\n**Output:** Minimum steps or -1.",
+  "constraints": "- 1 ≤ n, m ≤ 500\n- 0 ≤ k ≤ 100\n- Teleporter cells are always passable",
   "examples": [
     {
       "input": "3 3 1\n...\n.#.\n...\n0 2 2 0",
       "output": "3",
-      "explanation": "Normal BFS around obstacle costs 4. Teleporter (0,2)\u2194(2,0): go (0,0)\u2192(0,1)\u2192(0,2)\u2192teleport to (2,0)\u2192(2,1)\u2192(2,2). That's 4 steps. Or (0,0)\u2192(0,1)\u2192(0,2)\u2192(2,0)\u2192(2,1)\u2192(2,2)=5. Without teleport around is also possible. Min=4."
+      "explanation": "Normal BFS around obstacle costs 4. Teleporter (0,2)↔(2,0): go (0,0)→(0,1)→(0,2)→teleport to (2,0)→(2,1)→(2,2). That's 4 steps. Or (0,0)→(0,1)→(0,2)→(2,0)→(2,1)→(2,2)=5. Without teleport around is also possible. Min=4."
     },
     {
       "input": "2 2 0\n..\n..",
@@ -64,5 +64,10 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Graphs",
+    "BFS",
+    "Matrix"
   ]
 }

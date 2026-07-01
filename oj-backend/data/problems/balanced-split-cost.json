@@ -3,7 +3,7 @@
   "title": "Minimum Cost Balanced Split",
   "difficulty": "MEDIUM",
   "statement": "Given array `nums`, split into exactly **two non-empty contiguous parts**. The cost is `|sum(left) - sum(right)|`. Find the minimum cost and all split indices (0-indexed, where left = nums[0..i] inclusive) achieving it.\n\n**Input:** Space-separated integers.\n**Output:** First line: minimum cost. Second line: space-separated valid split indices in sorted order.",
-  "constraints": "- 2 \u2264 n \u2264 10\u2075\n- -10\u2074 \u2264 nums[i] \u2264 10\u2074",
+  "constraints": "- 2 ≤ n ≤ 10⁵\n- -10⁴ ≤ nums[i] ≤ 10⁴",
   "examples": [
     {
       "input": "1 2 3 4",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Greedy",
+    "Prefix Sum"
   ]
 }

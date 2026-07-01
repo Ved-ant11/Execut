@@ -3,7 +3,7 @@
   "title": "Find Equilibrium Index",
   "difficulty": "EASY",
   "statement": "The equilibrium index of an array is an index `i` such that the sum of elements at lower indices equals the sum of elements at higher indices. Return the first such index, or `-1` if none exists.\n\n**Input:** Space-separated integers.\n**Output:** Print the first equilibrium index, or `-1`.",
-  "constraints": "- 1 \u2264 arr.length \u2264 10\u2075\n- -10\u2074 \u2264 arr[i] \u2264 10\u2074",
+  "constraints": "- 1 ≤ arr.length ≤ 10⁵\n- -10⁴ ≤ arr[i] ≤ 10⁴",
   "examples": [
     {
       "input": "[-7,1,5,2,-4,3,0]",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Arrays",
+    "Prefix Sum"
   ]
 }

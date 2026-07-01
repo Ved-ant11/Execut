@@ -3,7 +3,7 @@
   "title": "Minimum Number of Jumps to Reach End",
   "difficulty": "MEDIUM",
   "statement": "Given an array where `arr[i]` is the maximum jump length from position `i`, find the minimum number of jumps to reach the last index from index 0. Return `-1` if unreachable.\n\n**Input:** Space-separated non-negative integers.\n**Output:** Print the minimum jumps or `-1`.",
-  "constraints": "- 1 \u2264 arr.length \u2264 10\u2074\n- 0 \u2264 arr[i] \u2264 1000",
+  "constraints": "- 1 ≤ arr.length ≤ 10⁴\n- 0 ≤ arr[i] ≤ 1000",
   "examples": [
     {
       "input": "[2,3,1,1,4]",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Greedy",
+    "Arrays"
   ]
 }

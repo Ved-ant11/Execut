@@ -3,12 +3,12 @@
   "title": "Domino Chain",
   "difficulty": "EASY",
   "statement": "You are given a set of dominoes, each represented as a pair `[a, b]`. You may flip any domino (turning `[a,b]` into `[b,a]`). Determine if you can arrange **all** dominoes end-to-end in a single chain where every adjacent pair shares a matching number.\n\n**Input:** First line: n (number of dominoes). Next n lines: a b.\n**Output:** YES or NO.",
-  "constraints": "- 0 \u2264 n \u2264 10\u2075\n- 1 \u2264 a, b \u2264 100",
+  "constraints": "- 0 ≤ n ≤ 10⁵\n- 1 ≤ a, b ≤ 100",
   "examples": [
     {
       "input": "3\n1 2\n2 3\n3 4",
       "output": "YES",
-      "explanation": "[1,2]\u2192[2,3]\u2192[3,4] forms a valid chain."
+      "explanation": "[1,2]→[2,3]→[3,4] forms a valid chain."
     },
     {
       "input": "2\n1 2\n3 4",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming",
+    "Greedy"
   ]
 }

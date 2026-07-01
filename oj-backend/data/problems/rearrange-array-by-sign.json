@@ -3,7 +3,7 @@
   "title": "Rearrange Array by Sign",
   "difficulty": "EASY",
   "statement": "Given an array with an equal number of positive and negative integers, rearrange them so positives and negatives alternate, starting with a positive. Maintain the relative order of positives among themselves and negatives among themselves.\n\n**Input:** Space-separated integers (equal count of positives and negatives).\n**Output:** Print the rearranged array space-separated.",
-  "constraints": "- 2 \u2264 nums.length \u2264 10\u2075 (always even)\n- nums[i] \u2260 0\n- Equal number of positive and negative integers.",
+  "constraints": "- 2 ≤ nums.length ≤ 10⁵ (always even)\n- nums[i] ≠ 0\n- Equal number of positive and negative integers.",
   "examples": [
     {
       "input": "nums=[3,1,-2,-5,2,-4]",
@@ -64,5 +64,8 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Arrays"
   ]
 }

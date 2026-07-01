@@ -3,7 +3,7 @@
   "title": "Split Array Largest Sum Minimized",
   "difficulty": "HARD",
   "statement": "Split array `nums` into `m` non-empty contiguous subarrays to **minimize the largest subarray sum**. Return that minimum.\n\n**Input:** First line: space-separated integers. Second line: m.\n**Output:** Minimized largest subarray sum.",
-  "constraints": "- 1 \u2264 nums.length \u2264 1000\n- 0 \u2264 nums[i] \u2264 10\u2076\n- 1 \u2264 m \u2264 min(50, nums.length)",
+  "constraints": "- 1 ≤ nums.length ≤ 1000\n- 0 ≤ nums[i] ≤ 10⁶\n- 1 ≤ m ≤ min(50, nums.length)",
   "examples": [
     {
       "input": "7 2 5 10 8\n2",
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Binary Search",
+    "Dynamic Programming"
   ]
 }

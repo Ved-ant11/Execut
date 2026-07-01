@@ -5,18 +5,72 @@
   "statement": "An array `nums` is a **mountain array** if:\n- It has at least 3 elements\n- There exists some index `i` where `nums[0] < nums[1] < ... < nums[i] > nums[i+1] > ... > nums[n-1]`\n\nGiven a mountain array, return the index of the peak element using `O(log n)` time.\n\n**Input:** Space-separated integers forming a mountain array.\n**Output:** Print the 0-based index of the peak.",
   "constraints": "- 3 ≤ nums.length ≤ 10⁵\n- 0 ≤ nums[i] ≤ 10⁶\n- nums is guaranteed to be a mountain array.",
   "examples": [
-    { "input": "nums = [0,1,0]",         "output": "1", "explanation": "Peak is at index 1." },
-    { "input": "nums = [0,2,1,0]",       "output": "1", "explanation": "Peak is at index 1." },
-    { "input": "nums = [0,10,5,2]",      "output": "1", "explanation": "10 is peak at index 1." },
-    { "input": "nums = [3,5,7,9,6,3,1]","output": "3", "explanation": "9 is peak at index 3." }
+    {
+      "input": "nums = [0,1,0]",
+      "output": "1",
+      "explanation": "Peak is at index 1."
+    },
+    {
+      "input": "nums = [0,2,1,0]",
+      "output": "1",
+      "explanation": "Peak is at index 1."
+    },
+    {
+      "input": "nums = [0,10,5,2]",
+      "output": "1",
+      "explanation": "10 is peak at index 1."
+    },
+    {
+      "input": "nums = [3,5,7,9,6,3,1]",
+      "output": "3",
+      "explanation": "9 is peak at index 3."
+    }
   ],
   "testCases": [
-    { "input": "0 1 0",           "expectedOutput": "1", "order": 1, "isHidden": false },
-    { "input": "0 2 1 0",         "expectedOutput": "1", "order": 2, "isHidden": false },
-    { "input": "3 5 7 9 6 3 1",   "expectedOutput": "3", "order": 3, "isHidden": false },
-    { "input": "1 3 5 4 2",       "expectedOutput": "2", "order": 4, "isHidden": true },
-    { "input": "0 10 5 2",        "expectedOutput": "1", "order": 5, "isHidden": true },
-    { "input": "1 2 3 4 5 3 1",   "expectedOutput": "4", "order": 6, "isHidden": true },
-    { "input": "0 1 2 3 4 3 2 1 0","expectedOutput": "4","order": 7, "isHidden": true }
+    {
+      "input": "0 1 0",
+      "expectedOutput": "1",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "0 2 1 0",
+      "expectedOutput": "1",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "3 5 7 9 6 3 1",
+      "expectedOutput": "3",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "1 3 5 4 2",
+      "expectedOutput": "2",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "0 10 5 2",
+      "expectedOutput": "1",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "1 2 3 4 5 3 1",
+      "expectedOutput": "4",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "0 1 2 3 4 3 2 1 0",
+      "expectedOutput": "4",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Binary Search"
   ]
 }

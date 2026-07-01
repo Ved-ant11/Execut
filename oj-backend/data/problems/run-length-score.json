@@ -3,22 +3,22 @@
   "title": "Run-Length Score",
   "difficulty": "EASY",
   "statement": "The **run-length score** of a binary string is the sum of squares of lengths of all maximal consecutive runs of identical characters.\n\nFind the maximum run-length score achievable by flipping **at most one** character.\n\n**Input:** A binary string.\n**Output:** Maximum run-length score after at most one flip.",
-  "constraints": "- 1 \u2264 s.length \u2264 10\u2075\n- s consists of '0' and '1' only",
+  "constraints": "- 1 ≤ s.length ≤ 10⁵\n- s consists of '0' and '1' only",
   "examples": [
     {
       "input": "100001",
       "output": "26",
-      "explanation": "Original: 1|0000|1 \u2192 1+16+1=18. Flip last '1'\u2192'0': '100000' \u2192 1+25=26."
+      "explanation": "Original: 1|0000|1 → 1+16+1=18. Flip last '1'→'0': '100000' → 1+25=26."
     },
     {
       "input": "0000",
       "output": "16",
-      "explanation": "Flipping any bit hurts the score. Keep as-is: 4\u00b2=16."
+      "explanation": "Flipping any bit hurts the score. Keep as-is: 4²=16."
     },
     {
       "input": "01",
       "output": "4",
-      "explanation": "Flip either bit: '11' or '00' \u2192 score=4."
+      "explanation": "Flip either bit: '11' or '00' → score=4."
     }
   ],
   "testCases": [
@@ -70,5 +70,9 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Greedy",
+    "Strings"
   ]
 }

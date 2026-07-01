@@ -5,17 +5,68 @@
   "statement": "Given an integer `n` between 1 and 19 inclusive, return its English word representation.\n\n**Input:** A single integer `n` (1 to 19).\n**Output:** Print the word in lowercase.",
   "constraints": "- 1 ≤ n ≤ 19",
   "examples": [
-    { "input": "n = 1",  "output": "one",      "explanation": "Basic mapping." },
-    { "input": "n = 13", "output": "thirteen", "explanation": "Teen number." },
-    { "input": "n = 19", "output": "nineteen", "explanation": "Last teen." }
+    {
+      "input": "n = 1",
+      "output": "one",
+      "explanation": "Basic mapping."
+    },
+    {
+      "input": "n = 13",
+      "output": "thirteen",
+      "explanation": "Teen number."
+    },
+    {
+      "input": "n = 19",
+      "output": "nineteen",
+      "explanation": "Last teen."
+    }
   ],
   "testCases": [
-    { "input": "1",  "expectedOutput": "one",       "order": 1, "isHidden": false },
-    { "input": "13", "expectedOutput": "thirteen",  "order": 2, "isHidden": false },
-    { "input": "19", "expectedOutput": "nineteen",  "order": 3, "isHidden": false },
-    { "input": "5",  "expectedOutput": "five",      "order": 4, "isHidden": true },
-    { "input": "10", "expectedOutput": "ten",       "order": 5, "isHidden": true },
-    { "input": "11", "expectedOutput": "eleven",    "order": 6, "isHidden": true },
-    { "input": "15", "expectedOutput": "fifteen",   "order": 7, "isHidden": true }
+    {
+      "input": "1",
+      "expectedOutput": "one",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "13",
+      "expectedOutput": "thirteen",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "19",
+      "expectedOutput": "nineteen",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "5",
+      "expectedOutput": "five",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "10",
+      "expectedOutput": "ten",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "11",
+      "expectedOutput": "eleven",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "15",
+      "expectedOutput": "fifteen",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Math",
+    "Strings"
   ]
 }

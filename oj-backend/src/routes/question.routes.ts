@@ -13,6 +13,7 @@ router.get("/", async (_req: Request, res: Response) => {
           id: true,
           title: true,
           difficulty: true,
+          tags: true,
         },
       }),
     );
@@ -37,6 +38,7 @@ router.get("/:id", async (req: Request, res: Response) => {
           statement: true,
           examples: true,
           constraints: true,
+          tags: true,
         },
       }),
     );

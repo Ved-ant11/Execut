@@ -23,6 +23,7 @@ export default function Navbar() {
           <div className="flex items-center gap-5">
             {[
               { label: "Problems",    href: "/problems"    },
+              { label: "Practice",    href: "/practice"    },
               { label: "Leaderboard", href: "/leaderboard" },
               { label: "Rooms",       href: "/rooms"       },
               { label: "Feedback",    href: "/feedback"    },

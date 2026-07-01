@@ -3,7 +3,7 @@
   "title": "Score Sequence",
   "difficulty": "EASY",
   "statement": "You are receiving scores one by one. After each new score arrives, report how many **previously received scores** are strictly less than the current one.\n\n**Input:** First line: n. Second line: n space-separated integers.\n**Output:** n space-separated counts.",
-  "constraints": "- 1 \u2264 n \u2264 10\u2075\n- 0 \u2264 scores[i] \u2264 10\u2076",
+  "constraints": "- 1 ≤ n ≤ 10⁵\n- 0 ≤ scores[i] ≤ 10⁶",
   "examples": [
     {
       "input": "5\n1 2 3 4 5",
@@ -70,5 +70,8 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Dynamic Programming"
   ]
 }

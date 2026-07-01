@@ -3,12 +3,12 @@
   "title": "Longest Subarray with Absolute Difference Limit",
   "difficulty": "MEDIUM",
   "statement": "Given an array of integers `nums` and a limit `limit`, return the size of the longest subarray such that the absolute difference between any two elements is less than or equal to `limit`.\n\n**Input:**\n- Line 1: space-separated integers.\n- Line 2: integer `limit`.\n\n**Output:** Print the length of the longest valid subarray.",
-  "constraints": "- 1 \u2264 nums.length \u2264 10\u2075\n- 1 \u2264 nums[i] \u2264 10\u2079\n- 0 \u2264 limit \u2264 10\u2079",
+  "constraints": "- 1 ≤ nums.length ≤ 10⁵\n- 1 ≤ nums[i] ≤ 10⁹\n- 0 ≤ limit ≤ 10⁹",
   "examples": [
     {
       "input": "nums=[8,2,4,7], limit=4",
       "output": "2",
-      "explanation": "[2,4] has max abs diff 2 \u2264 4."
+      "explanation": "[2,4] has max abs diff 2 ≤ 4."
     },
     {
       "input": "nums=[10,1,2,4,7,2], limit=5",
@@ -64,5 +64,9 @@
       "order": 7,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Sliding Window",
+    "Queue"
   ]
 }

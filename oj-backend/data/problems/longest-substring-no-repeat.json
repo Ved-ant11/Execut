@@ -22,12 +22,52 @@
     }
   ],
   "testCases": [
-    { "input": "abcabcbb", "expectedOutput": "3", "order": 1, "isHidden": false },
-    { "input": "bbbbb",    "expectedOutput": "1", "order": 2, "isHidden": false },
-    { "input": "pwwkew",   "expectedOutput": "3", "order": 3, "isHidden": false },
-    { "input": "dvdf",     "expectedOutput": "3", "order": 4, "isHidden": true },
-    { "input": "abcdefg",  "expectedOutput": "7", "order": 5, "isHidden": true },
-    { "input": "aab",      "expectedOutput": "2", "order": 6, "isHidden": true },
-    { "input": "a",        "expectedOutput": "1", "order": 7, "isHidden": true }
+    {
+      "input": "abcabcbb",
+      "expectedOutput": "3",
+      "order": 1,
+      "isHidden": false
+    },
+    {
+      "input": "bbbbb",
+      "expectedOutput": "1",
+      "order": 2,
+      "isHidden": false
+    },
+    {
+      "input": "pwwkew",
+      "expectedOutput": "3",
+      "order": 3,
+      "isHidden": false
+    },
+    {
+      "input": "dvdf",
+      "expectedOutput": "3",
+      "order": 4,
+      "isHidden": true
+    },
+    {
+      "input": "abcdefg",
+      "expectedOutput": "7",
+      "order": 5,
+      "isHidden": true
+    },
+    {
+      "input": "aab",
+      "expectedOutput": "2",
+      "order": 6,
+      "isHidden": true
+    },
+    {
+      "input": "a",
+      "expectedOutput": "1",
+      "order": 7,
+      "isHidden": true
+    }
+  ],
+  "tags": [
+    "Strings",
+    "Sliding Window",
+    "Hash Map"
   ]
 }

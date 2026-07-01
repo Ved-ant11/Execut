@@ -3,7 +3,7 @@
   "title": "Minimum Deletions for Unique Frequencies",
   "difficulty": "EASY",
   "statement": "Given a string, find the **minimum number of character deletions** so that all character frequencies are unique (no two distinct characters share the same non-zero count).\n\n**Input:** A single lowercase string.\n**Output:** Minimum deletions.",
-  "constraints": "- 1 \u2264 s.length \u2264 10\u2075\n- s consists of lowercase English letters",
+  "constraints": "- 1 ≤ s.length ≤ 10⁵\n- s consists of lowercase English letters",
   "examples": [
     {
       "input": "aab",
@@ -13,12 +13,12 @@
     {
       "input": "aaabbbcc",
       "output": "2",
-      "explanation": "freq(a)=3, freq(b)=3, freq(c)=2. Delete 2 b's \u2192 freqs 3,1,2. Unique. 2 deletions."
+      "explanation": "freq(a)=3, freq(b)=3, freq(c)=2. Delete 2 b's → freqs 3,1,2. Unique. 2 deletions."
     },
     {
       "input": "aabbcc",
       "output": "3",
-      "explanation": "freq(a)=freq(b)=freq(c)=2. Reduce: 2,1,0 \u2192 delete 1 b, delete both c's = 3 deletions."
+      "explanation": "freq(a)=freq(b)=freq(c)=2. Reduce: 2,1,0 → delete 1 b, delete both c's = 3 deletions."
     }
   ],
   "testCases": [
@@ -70,5 +70,10 @@
       "order": 8,
       "isHidden": true
     }
+  ],
+  "tags": [
+    "Greedy",
+    "Hash Map",
+    "Sorting"
   ]
 }
