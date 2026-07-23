@@ -434,9 +434,9 @@ export default function RoomArena({ params }: PageProps) {
               </span>
             ) : (
               [...events].reverse().map((ev, i) => (
-                <div key={i} className="flex items-start gap-2 text-neutral-700 hover:text-neutral-400 transition-colors duration-100">
-                  <span className="text-neutral-800 shrink-0 mt-px">›</span>
-                  <span className="font-mono-custom text-[10px]">{ev}</span>
+                <div key={i} className="flex items-center gap-2 text-neutral-700 hover:text-neutral-400 transition-colors duration-100">
+                  <span className="text-neutral-800 shrink-0">›</span>
+                  <span className="font-mono-custom text-[10px] leading-none">{ev}</span>
                 </div>
               ))
             )}
