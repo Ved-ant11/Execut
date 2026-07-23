@@ -347,6 +347,20 @@ export const submitFeedback = async ({
   return response.json();
 };
 
+export const deleteFeedback = async (id: string) => {
+  const response = await fetch(`${API_BASE_URL}/feedback/${id}`, {
+    method: "DELETE",
+    headers: getAuthHeaders(),
+    credentials: "include",
+    cache: "no-store",
+  });
+  if (!response.ok) {
+    const data = await response.json().catch(() => ({}));
+    throw new Error(data.error || "Failed to delete feedback");
+  }
+  return response.json();
+};
+
 // ==================== PRACTICE / FSRS ====================
 
 export const fetchReviewQueue = async () => {

@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import { fetchFeedback, submitFeedback } from "@/lib/api";
+import toast from "react-hot-toast";
+import { fetchFeedback, submitFeedback, fetchAuthStatus, deleteFeedback } from "@/lib/api";
 
 type FeedbackItem = {
   id: string;
@@ -9,6 +10,7 @@ type FeedbackItem = {
   rating: number;
   createdAt: string;
   username: string;
+  userId: string;
 };
 
 const CATEGORIES = [
@@ -49,6 +51,7 @@ function timeAgo(dateStr: string) {
 
 export default function FeedbackPage() {
   const [feedbackList, setFeedbackList] = useState<FeedbackItem[]>([]);
+  const [currentUserId, setCurrentUserId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -60,10 +63,14 @@ export default function FeedbackPage() {
   const [hoveredStar, setHoveredStar] = useState(0);
 
   useEffect(() => {
-    fetchFeedback()
-      .then(setFeedbackList)
-      .catch(() => {})
-      .finally(() => setLoading(false));
+    Promise.all([
+      fetchFeedback().catch(() => []),
+      fetchAuthStatus().catch(() => null),
+    ]).then(([feedback, auth]) => {
+      setFeedbackList(feedback);
+      if (auth) setCurrentUserId(auth.id);
+      setLoading(false);
+    });
   }, []);
 
   const handleSubmit = async () => {
@@ -88,6 +95,16 @@ export default function FeedbackPage() {
       setError(message);
     } finally {
       setSubmitting(false);
+    }
+  };
+
+  const handleDelete = async (id: string) => {
+    try {
+      await deleteFeedback(id);
+      setFeedbackList(feedbackList.filter(f => f.id !== id));
+      toast.success("Feedback deleted");
+    } catch (err: unknown) {
+      toast.error(err instanceof Error ? err.message : "Failed to delete");
     }
   };
 
@@ -282,18 +299,28 @@ export default function FeedbackPage() {
                       {item.content}
                     </p>
                   </div>
-                  {item.rating > 0 && (
-                    <div className="flex items-center gap-0.5 shrink-0 pt-1">
-                      {[1, 2, 3, 4, 5].map((s) => (
-                        <span
-                          key={s}
-                          className={`text-[11px] ${s <= item.rating ? "text-amber-400" : "text-neutral-800"}`}
-                        >
-                          ★
-                        </span>
-                      ))}
-                    </div>
-                  )}
+                  <div className="flex flex-col items-end gap-2 shrink-0 pt-1">
+                    {item.rating > 0 && (
+                      <div className="flex items-center gap-0.5">
+                        {[1, 2, 3, 4, 5].map((s) => (
+                          <span
+                            key={s}
+                            className={`text-[11px] ${s <= item.rating ? "text-amber-400" : "text-neutral-800"}`}
+                          >
+                            ★
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    {currentUserId === item.userId && (
+                      <button
+                        onClick={() => handleDelete(item.id)}
+                        className="text-[10px] font-mono-custom tracking-[0.15em] uppercase text-red-500/70 hover:text-red-400 transition-colors duration-200 mt-2"
+                      >
+                        Delete
+                      </button>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
