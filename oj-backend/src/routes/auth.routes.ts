@@ -96,5 +96,32 @@ router.post('/logout', (_req, res) => {
   res.status(200).json({ message: "Logged out" });
 });
 
+router.get('/check-username', async (req: Request, res: Response) => {
+  try {
+    const { username } = req.query;
+    if (!username || typeof username !== 'string') {
+      return res.status(400).json({ error: 'Username required' });
+    }
+    const exists = await prisma.user.findFirst({ 
+      where: { username: { equals: username, mode: 'insensitive' } } 
+    });
+    return res.status(200).json({ available: !exists });
+  } catch (error) {
+    return res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+router.get('/check-email', async (req: Request, res: Response) => {
+  try {
+    const { email } = req.query;
+    if (!email || typeof email !== 'string') {
+      return res.status(400).json({ error: 'Email required' });
+    }
+    const exists = await prisma.user.findUnique({ where: { email } });
+    return res.status(200).json({ available: !exists });
+  } catch (error) {
+    return res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 export default router;

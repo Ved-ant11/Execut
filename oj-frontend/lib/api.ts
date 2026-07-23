@@ -437,3 +437,23 @@ export const fetchTopicGuide = async (id: string) => {
   return response.json();
 };
 
+export const checkUsernameAvailability = async (username: string) => {
+  const response = await fetch(`${API_BASE_URL}/auth/check-username?username=${encodeURIComponent(username)}`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+    cache: "no-store",
+  });
+  if (!response.ok) return { available: false };
+  return response.json();
+};
+
+export const checkEmailAvailability = async (email: string) => {
+  const response = await fetch(`${API_BASE_URL}/auth/check-email?email=${encodeURIComponent(email)}`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+    cache: "no-store",
+  });
+  if (!response.ok) return { available: false };
+  return response.json();
+};
+
