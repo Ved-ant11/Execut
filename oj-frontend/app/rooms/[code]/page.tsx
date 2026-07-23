@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState, use } from "react";
 import { useRouter } from "next/navigation";
-import { fetchAuthStatus, fetchRoom, fetchQuestionById } from "@/lib/api";
+import { fetchAuthStatus, fetchRoom, fetchQuestionById, joinRoom } from "@/lib/api";
 import { useRoomSocket } from "@/hooks/useRoomSocket";
 import Editor from "@monaco-editor/react";
 import toast from "react-hot-toast";
@@ -45,13 +45,15 @@ export default function RoomArena({ params }: PageProps) {
         if (!auth) { router.push("/login"); return; }
         setUserId(auth.id);
 
-        const joinRes = await fetch(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/rooms/${roomCode}/join`,
-          { method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${localStorage.getItem("token")}` }, credentials: "include" }
-        );
-        if (!joinRes.ok) { router.push("/rooms"); toast.error("Failed to join room"); return; }
+        let joinData;
+        try {
+          joinData = await joinRoom(roomCode);
+        } catch (err) {
+          router.push("/rooms"); 
+          toast.error("Failed to join room"); 
+          return;
+        }
 
-        const joinData = await joinRes.json();
         setRoomId(joinData.roomId);
 
         const roomData = await fetchRoom(joinData.roomId);

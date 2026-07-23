@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { getAuthHeaders } from "@/lib/api";
 
 type Example  = { input: string; output: string; explanation: string };
 type TestCase = { input: string; expectedOutput: string; isHidden: boolean; timeLimitMs: number };
@@ -37,7 +38,7 @@ export default function Contribute() {
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/questions`, {
         method: "POST",
-        headers: { "Content-Type": "application/json", Authorization: `Bearer ${localStorage.getItem("token")}` },
+        headers: getAuthHeaders(),
         credentials: "include",
         body: JSON.stringify({ title, difficulty, statement, constraints, examples, testCases }),
       });
