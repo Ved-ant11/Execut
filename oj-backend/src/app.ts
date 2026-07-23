@@ -18,9 +18,7 @@ import cors from "cors";
 const app = express();
 app.use(
   cors({
-    origin: [
-      process.env.FRONTEND_URL || "http://localhost:3000"
-    ],
+    origin: true,
     credentials: true,
   }),
 );
