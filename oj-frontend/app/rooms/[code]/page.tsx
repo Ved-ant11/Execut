@@ -162,8 +162,8 @@ export default function RoomArena({ params }: PageProps) {
                 </span>
               </div>
               <div className="divide-y divide-neutral-800/40">
-                {players.map((p) => (
-                  <div key={p.userId} className="px-5 py-3.5 flex items-center justify-between hover:bg-neutral-800/20 transition-colors duration-150">
+                {players.map((p, i) => (
+                  <div key={`${p.userId}-${i}`} className="px-5 py-3.5 flex items-center justify-between hover:bg-neutral-800/20 transition-colors duration-150">
                     <div className="flex items-center gap-3">
                       <div className="w-7 h-7 rounded-md bg-neutral-800 flex items-center justify-center font-sans text-[11px] font-bold text-neutral-400">
                         {p.username.charAt(0).toUpperCase()}
