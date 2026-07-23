@@ -4,6 +4,7 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ToastProvider from "@/components/ToastProvider";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
         <ToastProvider />
         <Navbar />
         <main>{children}</main>
+        <Analytics />
       </body>
     </html>
   );
